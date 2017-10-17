@@ -4,7 +4,7 @@ email:       ayratin555@gmail.com
 author:      Ayrat Badykov
 description: "Programming and stuff"
 baseurl:     ""
-url:         "http://badykov.com"
+url:         "http://www.badykov.com"
 date_format: "%b %-d, %Y"
 header_pages:
  - about.md
