@@ -4,7 +4,7 @@ email:       ayratin555@gmail.com
 author:      Ayrat Badykov
 description: "Programming and stuff"
 baseurl:     ""
-url:         "http://www.badykov.com"
+url:         "http://badykov.com"
 date_format: "%b %-d, %Y"
 header_pages:
  - about.md
@@ -71,13 +71,13 @@ vk_id: id13886710
 # Post sharing icons
 show_sharing_icons: false
 # Change to 'true' to enable individual icons
-share_facebook: false
-share_twitter: false
+share_facebook: true
+share_twitter: true
 share_googleplus: false
 share_linkedin: false
 share_digg: false
 share_tumblr: false
-share_reddit: false
+share_reddit: true
 share_stumbleupon: false
 share_hackernews: false
 
