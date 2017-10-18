@@ -12,12 +12,12 @@ categories: elixir
 
 First, a bit of background. A couple of months ago I got interested in Ethereum. I decided to write a simple Elixir wrapper for its [JSON RPC api](https://github.com/ethereum/wiki/wiki/JSON-RPC) methods. JSON RPC is light-weight remote procedure call protocol.
 
-JSON RPCE message must consist of three properties:
+JSON RPC message must consist of three properties:
 - method - the name of the method
-- params - object or array of values (in case of ethereum it's array)
+- params - object or array of values (In Etherem's case, an array)
 - id - the id of the request
 
-Let's consider Ethereum's web3_sha3 method that calculates sha3 hash of the input data. It has one parameter - the string to be converted into a sha3 hash. So you should wrap this parameter into an array and call it like that:
+Let's consider Ethereum's web3_sha3 method that calculates sha3 hash of the input data. It has one parameter - the string to be converted into a sha3 hash. To call this method wrap the parameter info in an array and call it like so:
 
 ```bash
 // Request
@@ -35,7 +35,7 @@ Ethereum JSON RPC consists of more than 50 methods. Note that parameters can hav
 
 ### The first approach
 
-"That's easy.", I thought at the time. "If method requests differ only in their names and input parameters I should write macro that would generate all this methods for me"
+"That's easy.", I thought at the time. "If method requests differ only in their names and input parameters I should write macro that would generate all of these methods for me"
 
 And I wrote this macro. Here's a simplified version:
 ```elixir
@@ -75,9 +75,9 @@ But unfortunately the solution had a couple of problems.
 
 ### Problems with the first approach.
 
-Soon issue with request for implementation of smart contract compilation and interaction was opened in the repository. The requested feature is more high level comparing to the original API methods and it used different combinations of them.
+Soon an issue with request for implementation of smart contract compilation and interaction was opened in the repository. The requested feature is more high level compared to the original API methods and it used different combinations of them.
 
-I decided to test this feature with mox library created by our lord and savior Jose Valim himself. As described in its readme, the mox library follows the principles outlined in ["Mocks and explicit contracts"](http://blog.plataformatec.com.br/2015/10/mocks-and-explicit-contracts/), summarized below:
+I decided to test this feature with the mox library created by our lord and savior Jose Valim. As described in its readme, the mox library follows the principles outlined in ["Mocks and explicit contracts"](http://blog.plataformatec.com.br/2015/10/mocks-and-explicit-contracts/), summarized below:
 
 - No ad-hoc mocks. You can only create mocks based on behaviours
 
@@ -87,7 +87,7 @@ I decided to test this feature with mox library created by our lord and savior J
 
 - Rely on pattern matching and function clauses for asserting on the input instead of complex expectation rules
 
-As you can see I couldn't mock with mox because all methods are dynamically generated and don't abide any behaviour. So I created issue in mox library asking should I define behaviour with all api method or there is some other way.
+As you can see I couldn't mock with mox because all methods are dynamically generated and don't abide any behaviour. So I created an issue in the mox library asking if I should define behaviour with all api methods or if there is some other way.
 
 One minute later I got an answer from Jose:
 
@@ -98,7 +98,7 @@ One minute later I got an answer from Jose:
   <footer><cite title="Jose Valim">Jose Valim</cite></footer>
 </blockquote>
 
-Another problem with current implementation was signature of the methods. It's not apparent what parameters every method accept.
+Another problem with the current implementation was the method signatures. It's not apparent what parameters every method accepts.
 
 ```elixir
 # map in list
@@ -113,7 +113,7 @@ To summarize, there were two problems:
 - Methods were hard to mock
 - Ugly method signature
 
-So I began refactring the library to get rid of this problems.
+So I began refactoring the library to get rid of this problems.
 
 ### The second approach
 
@@ -159,11 +159,11 @@ defmodule Ethereumex.Client.Macro do
 
 So now I can easily mock any method and all method signatures have explicit parameter types.
 
-I implemented behaviour in the macro because Ethereum JSON RPC has two type of clients:
-- ipc client using unix sockets
-- http client
+I implemented behaviour in the macro because Ethereum JSON RPC has two types of clients:
+- ipc clients using unix sockets
+- http clients
 
-So to define this client I only needed to include the macro in client modules and override request/2 method like this:
+So to define this client I only needed to include the macro in client modules and override the request/2 method like this:
 
 ```elixir
 defmodule MyClient do
@@ -177,8 +177,8 @@ end
 
 ### Conclusion
 
-So elixir macros as all powerfull tools should be used responsibly.
+So Elixir macros as all powerful tools should be used responsibly.
 
 If your have any remarks or thoughts on the matter please leave comments.
 
-The library has github repository - [https://github.com/exthereum/ethereumex](https://github.com/exthereum/ethereumex)
+The library has a GitHub repository - [https://github.com/exthereum/ethereumex](https://github.com/exthereum/ethereumex)
