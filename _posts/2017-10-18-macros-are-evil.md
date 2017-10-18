@@ -14,10 +14,10 @@ First, a bit of background. A couple of months ago I got interested in Ethereum.
 
 JSON RPC message must consist of three properties:
 - method - the name of the method
-- params - object or array of values (In Etherem's case, an array)
+- params - object or array of values (In Ethereum's case, an array)
 - id - the id of the request
 
-Let's consider Ethereum's web3_sha3 method that calculates sha3 hash of the input data. It has one parameter - the string to be converted into a sha3 hash. To call this method wrap the parameter info in an array and call it like so:
+Let's consider Ethereum's web3_sha3 method that calculates a sha3 hash of the input data. It has one parameter - the string to be converted into a sha3 hash. To call this method wrap the parameter info in an array and call it like so:
 
 ```bash
 // Request
@@ -71,11 +71,11 @@ end
 
 I was satisfied with this solution because it was concise, without any boilerplate code. I felt like Hercules when he killed the lernean hydra cutting its heads and searing the headless tendons of the neck but instead of the power of fire I had the power of elixir macros.
 
-But unfortunately the solution had a couple of problems.
+But unfortunately, the solution had a couple of problems.
 
-### Problems with the first approach.
+### Problems with the first approach
 
-Soon an issue with request for implementation of smart contract compilation and interaction was opened in the repository. The requested feature is more high level compared to the original API methods and it used different combinations of them.
+Soon an issue with the request for implementation of smart contract compilation and interaction was opened in the repository. The requested feature is more high level compared to the original API methods and it used different combinations of them.
 
 I decided to test this feature with the mox library created by our lord and savior Jose Valim. As described in its readme, the mox library follows the principles outlined in ["Mocks and explicit contracts"](http://blog.plataformatec.com.br/2015/10/mocks-and-explicit-contracts/), summarized below:
 
@@ -159,7 +159,7 @@ defmodule Ethereumex.Client.Macro do
 
 So now I can easily mock any method and all method signatures have explicit parameter types.
 
-I implemented behaviour in the macro because Ethereum JSON RPC has two types of clients:
+I implemented the behaviour in the macro because Ethereum JSON RPC has two types of clients:
 - ipc clients using unix sockets
 - http clients
 
