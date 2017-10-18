@@ -179,6 +179,6 @@ end
 
 So Elixir macros as all powerful tools should be used responsibly.
 
-If your have any remarks or thoughts on the matter please leave comments.
+If you have any remarks or thoughts on the matter please leave comments.
 
 The library has a GitHub repository - [https://github.com/exthereum/ethereumex](https://github.com/exthereum/ethereumex)
