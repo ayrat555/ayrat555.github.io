@@ -35,6 +35,7 @@ Applications:
 ### Ethereum bloom filter function
 
 Here's excerpt from the [yellow paper](https://ethereum.github.io/yellowpaper/paper.pdf):
+
 ![ethereum-bloom](https://i.imgur.com/IFEyqRU.jpg)
 
 If you didn't understand anything, no worries, I will try to describe its implementation in the next section.
@@ -89,6 +90,38 @@ The bit_numbers/1 method gets indices from the low order 11-bits of the first th
       bloom ||| (1 <<< bit_number)
     end)
   end
+```
+
+The last thing left to do is to define method to check if filter have an object:
+
+``` elixir
+  @spec contains?(integer(), binary()) :: boolean()
+  def contains?(current_bloom, val)
+      when is_integer(current_bloom) and
+           is_binary(val) do
+    temp_bloom = bloom(val)
+
+    (temp_bloom &&& current_bloom) == temp_bloom
+  end
+```
+
+Now we can use our Bloom filter:
+
+```elixir
+iex(1)> filter = EthBloom.create("rock")
+364236115780354413527177740824718248475191169123433179704674083584030171707548895141763338864017157468044931245187476551639917006481686358559826056819612140499456696964058447681377941080842953023782344796365486712958202642967905678562795813182653349819408730761190197772532753708011416878102770310284058867224260870159690230717337345574083724951534664321152788810106636281468311475567122070065682554961594780791945980493299780947753165983844578885074727735505366654109046841451940478976
+
+iex(2)> new_filter = EthBloom.add(filter, "blues")
+364236115780354413527177740824718248475191169123433179704674083584030171707548895141763338864017157468044931245187476551639917008583551526575664755314165081912131926893248480084782472542419712838325886207711387518315201817289948316059274529230320334129359156724892064138319603709966466517388006639868069257972765204989827007471817298541374196685568760261999794300328280707725224364790299899128819784076530509337252429855458993811873518002173094917629136344228828519818452981281942732800
+
+iex(3)> EthBloom.contains?(new_filter, "punk")
+false
+
+iex(4)> EthBloom.contains?(new_filter, "rock")
+true
+
+iex(5)> EthBloom.contains?(new_filter, "blues")
+true
 ```
 
 Described code has a GitHub repository - [https://github.com/ayrat555/eth_bloom](https://github.com/ayrat555/eth_bloom)
