@@ -92,7 +92,7 @@ The bit_numbers/1 method gets indices from the low order 11-bits of the first th
   end
 ```
 
-The last thing left to do is to define method to check if filter have an object:
+The last thing left to do is to define method to check if filter has an object:
 
 ``` elixir
   @spec contains?(integer(), binary()) :: boolean()
