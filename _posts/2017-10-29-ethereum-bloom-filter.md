@@ -70,8 +70,8 @@ Bloom filter generation can be divided into three parts:
     {result, _} =
       1..3
       |> Enum.reduce({[], hash}, fn(_, acc) ->
-        {bits, <<a1, a2, tail::bitstring>>} = acc
-        new_bit = ((a1 <<< 8) + a2) &&& 2047
+        {bits, <<head::integer-size(16), tail::bitstring>>} = acc
+        new_bit = head &&& 2047
 
         {[new_bit|bits], tail}
       end)
