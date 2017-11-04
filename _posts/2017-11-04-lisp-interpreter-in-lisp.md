@@ -10,7 +10,7 @@ categories: general
 
 ### Introduction
 
-Since the end of August, every saturday my colleagues at Bookmate and I are watching "Structure and Interpretation of Computer Programs" [course lectures](https://www.youtube.com/playlist?list=PL4kmJpCNr9UJtH-YZkSqkUhgRku55_Pf6). Here excerpts from the course culmination - The Metacircular Evaluator.
+Since the end of August, every saturday my colleagues at Bookmate and I are watching "Structure and Interpretation of Computer Programs" [course lectures](https://www.youtube.com/playlist?list=PL4kmJpCNr9UJtH-YZkSqkUhgRku55_Pf6). Here's excerpt from the course culmination - The Metacircular Evaluator.
 
 ![eval-apply](http://sicp.phoenixinquis.net/4.1-eval-apply.svg)
 
