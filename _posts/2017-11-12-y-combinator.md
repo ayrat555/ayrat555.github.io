@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Y combinator
-date:       2017-11-04
+date:       2017-11-12
 summary:    also known as WTF combinator
 categories: general
 ---
