@@ -8,11 +8,11 @@ categories: general
 
 ![mit-logo](http://xahlee.info/UnixResource_dir/gki/lambda/Mit_Scheme_lisp_logo.svg)
 
-In the [previous post](http://www.badykov.com/general/2017/11/04/lisp-interpreter-in-lisp/) I wrote about Metacircular Evaluator - list interpeter that is written in lisp. Now I will give a short description of the Curry's Paradoxical Combinator. It will help to comprehend the idea that a thing can be described by itself.
+In the [previous post](http://www.badykov.com/general/2017/11/04/lisp-interpreter-in-lisp/) I wrote about Metacircular Evaluator - list interpeter that is written in lisp. Now I will give a short description of the Curry's Paradoxical Combinator. It will help to comprehend the idea that a thing can be described in terms of itself.
 
 [Haskell Brooks Curry](https://en.wikipedia.org/wiki/Haskell_Curry) was an American mathematician. He was so cool that there are three programming languages named after him, Haskell, Brook and Curry. By the way, I can't find time to learn Haskell. I heard that when you know Haskell, your life is complete and you can die peacefully.
 
-Anothing awesome thing that he created was Curry's Paradoxical Combinator, aka Y combinator, aka WTF combinator (by the people who try to understand it).
+Another awesome thing that he created was Curry's Paradoxical Combinator, aka Y combinator, aka WTF combinator (by the people who try to understand it).
 
 ```lisp
 Y = (lambda (f)
