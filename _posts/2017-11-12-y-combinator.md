@@ -35,4 +35,5 @@ A fixed point of a function is an element of the function's domain that is mappe
 f(x0) = x0
 ```
 
->! So Lisp is a fixed point of the of the Metacircular Evaluator. ![explosion](https://i.imgur.com/BuIwKkd.gif)
+> So Lisp is a fixed point of the of the Metacircular Evaluator.
+![explosion](https://i.imgur.com/BuIwKkd.gif)
