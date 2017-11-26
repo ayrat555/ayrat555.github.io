@@ -6,9 +6,11 @@ summary:    Yet another telegram bot
 categories: elixir
 ---
 
+![robot](https://i.imgur.com/wHB01sq.jpg)
+
 ### Background
 
-Recently I got an opportunity to write a simple Telegram bot. The purpose of this bot is very simple: it has to send random quotes of [Victor Pelevin](https://en.wikipedia.org/wiki/Victor_Pelevin) for every interaction with a user. I decided to write this bot in Elixir. So in this post I will try describe the bot's implementation.
+Recently I got an opportunity to write a simple Telegram bot. The purpose of this bot is very simple: it has to send random quotes of [Victor Pelevin](https://en.wikipedia.org/wiki/Victor_Pelevin) for any user interaction. I decided to write this bot in Elixir. So in this post I will try describe the bot's implementation.
 
 ### Telegram bot updates
 
@@ -16,9 +18,9 @@ Telegram API provides two mutually exclusive ways of getting bot updates:
 - [webhooks](https://core.telegram.org/bots/api#setwebhook)
 - polling via [getUpdates method](https://core.telegram.org/bots/api#getupdates)
 
-I think, the first way is more scalable because webhook requests can be loadbalanced between unlimited instances of your bot apps. But the second way is much easier to implement, you do not even need a web server.
+I think, the first way is more scalable because webhook requests can be loadbalanced between unlimited instances of your bot apps. But the second way is much easier to implement, because you do not even need a web server.
 
-This bot is dedicated to Pelevin's birthday which is the 22th of November. The idea of the bot was proposed on the 21 of November. So I didn't have much time and I chose the second variant of getting updates from Telegram.
+This bot is dedicated to Pelevin's birthday which is the 22th of November. I started to develop a day before his birthday so I didn’t have much time to be messing around with webhooks so I chose the second variant of getting updates from Telegram.
 
 ### The main design
 
@@ -26,15 +28,15 @@ The bot consists of two parts:
 - Polling process
 - Replying processes
 
-Polling process every 100ms gets bot updates and then sends them via replying processes.
+Every 100 ms polling process gets bot updates and then sends them via replying processes.
 
 ### Polling process
 
 I divided polling process into two modules:
-- QuotesBot.Polling.Logic - module with polling logic
-- QuotesBot.Polling.Server - module with GenServer callbacks
+- `QuotesBot.Polling.Logic` - module with polling logic
+- `QuotesBot.Polling.Server` - module with GenServer callbacks
 
-QuotesBot.Polling.Logic:
+`QuotesBot.Polling.Logic`:
 
 ```elixir
 defmodule QuotesBot.Polling.Logic do
@@ -73,9 +75,9 @@ defmodule QuotesBot.Polling.Logic do
   end
 end
 ```
-I'm getting telegram_api from config file because I use mocked version of it in the test environment with the awesome [mox library](https://github.com/plataformatec/mox). poll/1 method gets updates from telegram and replies to every update with replying process (QuotesBot.Bot.Server), it returns id of the last update that was processed.
+To be able to mock `telegram_api` in tests with the awesome [mox library](https://github.com/plataformatec/mox) I'm getting `telegram_api` from config file. `poll/1` method gets updates from Telegram and replies to every update with replying processes (`QuotesBot.Bot.Server`), it returns id of the last update that was processed.
 
-Here's QuotesBot.Polling.Server:
+Here's `QuotesBot.Polling.Server`:
 
 ```elixir
 defmodule QuotesBot.Polling.Server do
@@ -110,15 +112,15 @@ defmodule QuotesBot.Polling.Server do
 end
 ```
 
-Its implementation is straightforward. In init callback it schedules update polling. And in handle_info callback it polls updates and schedules the next update polling.
+Its implementation is straightforward. In `init` callback it schedules update polling. And in `handle_info` callback it polls updates and schedules the next update polling.
 
 ### Replying processes
 
 I also divided replying process into two modules:
-- QuotesBot.Bot.Server - module with GenServer callbacks
-- QuotesBot.Bot.Logic - module with replying logic
+- `QuotesBot.Bot.Server` - module with GenServer callbacks
+- `QuotesBot.Bot.Logic` - module with replying logic
 
-QuotesBot.Bot.Server:
+`QuotesBot.Bot.Server`:
 
 ```elixir
 defmodule QuotesBot.Bot.Server do
@@ -148,9 +150,9 @@ end
 ```
 
 
-Here I'm using [poolboy](https://github.com/devinus/poolboy) library. reply/1 method sends a telegram update to process from process pool. :poolboy.transaction/1 gets process from process pool.
+Here I'm using [poolboy](https://github.com/devinus/poolboy) library. `reply/1` method sends a telegram update to process from process pool. `:poolboy.transaction/1` gets process from process pool.
 
-poolboy is configured on the bot startup:
+`poolboy` is configured on the bot startup:
 
 ```elixir
 defmodule QuotesBot do
@@ -179,11 +181,11 @@ defmodule QuotesBot do
 end
 ```
 
-I don't provide the source code of QuotesBot.Bot.Logic, because it is the domain logic of getting quotes that is not necessary to understand the bot implementatoin.
+I don't provide the source code of `QuotesBot.Bot.Logic`, because it is the domain logic of getting quotes that is not necessary to understand the bot implementation.
 
 ### See also
 
-the bot available at http://telegram.me/pelevin_quotes_bot. Notice: the bot is written for russian speaking users so it replies only with russian quotes.
+- the bot available at http://telegram.me/pelevin_quotes_bot. Notice: the bot is written for russian speaking users so it replies only with russian quotes.
 
-https://core.telegram.org/
-https://elixirschool.com/en/lessons/libraries/poolboy/
+- https://core.telegram.org/
+- https://elixirschool.com/en/lessons/libraries/poolboy/
