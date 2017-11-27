@@ -185,7 +185,7 @@ I don't provide the source code of `QuotesBot.Bot.Logic`, because it is the doma
 
 ### See also
 
-- the bot available at http://telegram.me/pelevin_quotes_bot. Notice: the bot is written for russian speaking users so it replies only with russian quotes.
+- the bot is available at [http://telegram.me/pelevin_quotes_bot](http://telegram.me/pelevin_quotes_bot). Notice: the bot is written for russian speaking users so it replies only with russian quotes.
 
-- https://core.telegram.org/
-- https://elixirschool.com/en/lessons/libraries/poolboy/
+- [https://core.telegram.org/](https://core.telegram.org/)
+- [https://elixirschool.com/en/lessons/libraries/poolboy/](https://elixirschool.com/en/lessons/libraries/poolboy/)
