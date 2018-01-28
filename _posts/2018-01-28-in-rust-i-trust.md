@@ -37,7 +37,7 @@ I created a plan to learn Rust as effectively as possible:
 2. Finish all of 78 exercises from [Exercism](http://exercism.io/languages/rust/about). You can start doing exercises while reading the book.
 3. Write a couple of simple libraries.
 
-I hope after finishing step 3 I can say that I have basic a knowledge of Rust. At the time of writing this post I have finished 47 of 78 exercises (finished exercises are available in the github repository - https://github.com/ayrat-playground/exercism_rust).
+I hope after finishing step 3 I can say that I have a basic knowledge of Rust. At the time of writing this post I have finished 47 of 78 exercises (finished exercises are available in the github repository - https://github.com/ayrat-playground/exercism_rust).
 
 I experienced firsthand the steep learning curve of this language. Concepts of ownership, references and lifetime were the hardest to grasp.
 
@@ -50,7 +50,7 @@ There is a great site called [Are we game yet?](http://arewegameyet.com/) that l
 - Operating systems.
 [Redox](https://www.redox-os.org/) is a Unix-like operating system written in Rust
 https://os.phil-opp.com/ - This blog series creates a small operating system.
-- Elixir/Elixir Nifs/
+- Elixir Nifs.
 [Rustler](https://github.com/hansihe/rustler) - Safe Rust bridge for creating Erlang NIF functions.
 - Ruby extensions.
 [Helix](https://github.com/tildeio/helix)
