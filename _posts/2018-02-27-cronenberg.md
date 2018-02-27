@@ -14,13 +14,13 @@ So here comes the first library that I wrote in Rust - Cronenberg.
 
 ### Background
 
-A couple of weeks ago I finally found some time to dive into emacs's [org-mode](https://orgmode.org/) and I found it very useful. For those who don't what org-mode is, it is a mode for keeping notes, maintaining TODO lists, and doing project planning with a fast and effective plain-text system.
+A couple of weeks ago I finally found some time to dive into emacs's [org-mode](https://orgmode.org/) and I found it very useful. For those who don't know what org-mode is, it is a mode for keeping notes, maintaining TODO lists, and doing project planning with a fast and effective plain-text system.
 
 I personally use it for planning my day, keeping track of my work tasks and gym programs. I synchronize org-mode files with my Android phone using open source [Orgzly](http://www.orgzly.com/) app (by the way, there are a couple of apps for ios too).
 
-Org-mode has amazing deadlines and scheduling feature. I got an idea to write a simple Rust app that will notify me about scheduled events in my org-mode files. [The project](https://github.com/ayrat555/doomsday) has working title 'Doomsday'. I use macOS at work and some linux distro at home so I decided to use cron for scheduling system notifications.
+Org-mode has an amazing deadlines and scheduling feature. I got an idea to write a simple Rust app that will notify me about scheduled events in my org-mode files. [The project](https://github.com/ayrat555/doomsday) has a working title of 'Doomsday'. I use macOS at work and a linux distro at home so I decided to use cron for scheduling system notifications.
 
-I encountered the first problem when I was writing interaction with crontab files: rust ecosystem has a library for parsing cron command entries but it uses nighly version of Rust, also the older version of [nom](https://github.com/Geal/nom) (parser combinator framework) is used there. I decided to write a simple cron parser myself.
+I encountered the first problem when I was writing interaction with crontab files: rust ecosystem has a library for parsing cron command entries but it uses nightly version of Rust and an older version of [nom](https://github.com/Geal/nom) (parser combinator framework). I decided to write a simple cron parser myself.
 
 ### Parsing cron command entries
 
@@ -79,7 +79,7 @@ assert_eq!("1,10 1-4 1-11 1,2,5 * sudo rm -rf /", cron_item.to_string());
 ```
 
 
-I used [nom](https://github.com/Geal/nom) library for parsing. Although I heard good things about this crate, I'm not quite fond of it. It extensively uses macros and learning this library was like learning a new programming learning.
+I used [nom](https://github.com/Geal/nom) library for parsing. Although I heard good things about this crate, I'm not particularly fond of it. It extensively uses macros and learning this library was like learning a new programming language.
 
 Here's example of parsing cron time item:
 ```rust
