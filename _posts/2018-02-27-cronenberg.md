@@ -1,4 +1,4 @@
-˘---
+---
 layout:     post
 title:      Cronenberg
 date:       2018-02-27
