@@ -7,6 +7,6 @@ tags: about
 
 Ayrat Badykov.
 
-Software developer. I live in Moscow and work at Bookmate.
+Software developer.
 
 I'm not a big fan of Javascript but I love new shiny things.
