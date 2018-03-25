@@ -143,7 +143,7 @@ I ended up sending all requests to the same topic:
 Filtering of posts occures in the moment of their dispatch. Clients sometimes receive empty messages.
 
 ```elixir
-defmodule HamstersWeb.GraphQL.Resolvers.Frontend.PostAddedResolver do
+defmodule PostAddedResolver do
   alias Absinthe.Resolution
 
   @spec filter_post(map(), map(), Resolution.t()) :: {:ok, Post.t() | nil}
