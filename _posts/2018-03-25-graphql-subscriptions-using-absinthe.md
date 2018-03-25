@@ -17,8 +17,8 @@ GraphQL is a data query language similar to SQL but instead of quering data in y
 Key concepts of the GraphQL query language are:
 
 * Hierarchical
-* Strongly‐typed
-* Client‐specified queries
+* Strongly typed
+* Client-specified queries
 
 Advantages of GraphQL:
 
@@ -28,7 +28,7 @@ Advantages of GraphQL:
 
 Disadvantages of GraphQL:
 
-* Complexity on a server-side
+* Complexity on the server-side
 
 Fortunately, the problem with backend complexity has been solved for us by Absinthe.
 
@@ -36,36 +36,36 @@ There are three main query types in GraphQL schema:
 
 1. Query - a way to fetch data.
 
-```
-query {
-  allPosts {
-    description
-    text
-  }
-}
-```
+   ```
+   query {
+     allPosts {
+       description
+       text
+     }
+   }
+   ```
 
 2. Mutation - a way to change data.
 
 
-```
-mutation {
-  updatePost(id: 1, text: "text") {
-    text
-  }
-}
-```
+   ```
+   mutation {
+     updatePost(id: 1, text: "text") {
+       text
+     }
+   }
+   ```
 
 3. Subscription - a way to subscribe to real-time data.
 
-```
-subscription {
-  newPost(category: [1]) {
-    description
-    text
-  }
-}
-```
+   ```
+   subscription {
+     newPost(category: [1]) {
+       description
+       text
+     }
+   }
+   ```
 
 ### Subscriptions using Absinthe
 
@@ -110,15 +110,15 @@ subscription {
 
 In Absinthe clients subscribe to a topic and when new data comes to this topic, it is sent to client. Topics have to be strings.
 
-My first idea was to somehow normalize input params and create a string from it, that string would be our topic. The downside of this solution is that you'd have to create topics from all combinations of possible filter values and publish to all of them.
+My first idea was to somehow normalize input params and create a string from it; that string would be our topic. The downside of this solution is that you'd have to create topics from all combinations of possible filter values and publish to all of them.
 
-Confused with the problem, I went to Absinthe slack channel and asked about possible solutions.
+Stumped by this problem, I went to Absinthe slack channel and asked about possible solutions.
 
 The reply I got from one of Absinthe creators - Ben Wilson:
 
 ![ben-wilson-slack](https://i.imgur.com/BGT4Iny.png)
 
-By the way, you can check his amazing talk ["Live APIs with GraphQL Subscriptions"](https://www.youtube.com/watch?v=PEckzwggd78) on ElixirConf 2017.
+By the way, you can check out his amazing talk ["Live APIs with GraphQL Subscriptions"](https://www.youtube.com/watch?v=PEckzwggd78) on ElixirConf 2017.
 
 #### Solution
 
@@ -140,7 +140,7 @@ I ended up sending all requests to the same topic:
   end
 ```
 
-Filtering of posts occures in the moment of their dispatch. Clients sometimes receive empty messages.
+Filtering of posts occurs in the moment of their dispatch. Clients sometimes receive empty messages.
 
 ```elixir
 defmodule PostAddedResolver do
