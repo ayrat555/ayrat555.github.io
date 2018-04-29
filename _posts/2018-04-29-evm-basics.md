@@ -10,7 +10,7 @@ categories: elixir
 
 ### Introduction
 
-This week we, at Mana project, finally made all official EVM tests pass. I think it's time to write a post describing its inner magic with code examples from our project. So every crypto alchemist<a name="footnote1">1</a> interested in Ethereum can follow along.
+This week we, at Mana project, finally made all official EVM tests pass. I think it's time to write a post describing its inner magic with code examples from our project. So every crypto alchemist<sup>[1](#footnote1)</sup> interested in Ethereum can follow along.
 
 ### Background
 
@@ -113,7 +113,7 @@ Let's exemine programming code file `lib/evm/vm.ex':
 To follow along executing code examples you need to clone our [Ethereum client](https://github.com/exthereum/evm) from GitHub:
 
 ```bash
-git clone https://github.com/poanetwork/mana
+git clone https://github.com/exthereum/evm
 ```
 
 Fetch dependencies:
@@ -440,4 +440,4 @@ I hope this post was helpful in understanding Ethereum Virtual Machine. Currentl
 
 ### Footnotes
 
-<sup>[1](#footnote1)</sup> Elixir developer interested in blockchain technologies
+<a name="footnote1">1</a> Elixir developer interested in blockchain technologies
