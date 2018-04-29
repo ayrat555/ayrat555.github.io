@@ -16,18 +16,18 @@ This week we, at Mana project, finally made all official EVM tests pass. I think
 
 #### EVM
 
-From Ethereum offical web site: Ethereum is a decentralized platform for applications that run exactly as programmed without any chance of fraud, censorship or third-party interference.
+From Ethereum official website: Ethereum is a decentralized platform for applications that run exactly as programmed without any chance of fraud, censorship or third-party interference.
 
-So what's Ethereum Virtual Machine? To put it simply, it's virtual machine that executes machine code compiled from high level smart contracts programming languages. There are several languages that are compiled to EVM machine code: Solidity (similar to Javascript), LLL (Lisp Like Language) etc.
+So what's Ethereum Virtual Machine? To put it simply, it's virtual machine that executes machine code compiled from high-level smart contracts programming languages. There are several languages that are compiled to EVM machine code: Solidity (similar to Javascript), LLL (Lisp Like Language) etc.
 
 EVM is a simple stack machine. Its memory is a word-addressed byte array. The stack has a maximum size of 1024.
 
-EVM can execute 132 operation that are divided into 11 categories:
+EVM can execute 132 operations that are divided into 11 categories:
 
 1. Stop and Arithmetic Operation
 
    Examples:
-     - `ADD` - adds two first items on stack saves result and to first stack item.
+     - `ADD` - adds two first items on stack saves the result and to first stack item.
      - `STOP` - halts execution.
 
 2. Comparison & Bitwise Logic Operation
@@ -44,8 +44,8 @@ EVM can execute 132 operation that are divided into 11 categories:
 4. Environmental Information
 
    Examples:
-     - `ADDRESS` - gets address of currently executing account.
-     - `CALLDATACOPY` - copies input data in current environment to memory.
+     - `ADDRESS` - gets address of a currently executing account.
+     - `CALLDATACOPY` - copies input data in the current environment to memory.
 
 5. Block Information
 
@@ -56,14 +56,14 @@ EVM can execute 132 operation that are divided into 11 categories:
 6. Stack, Memory, Storage and Flow Operation
 
    Examples:
-     - `POP` - removes item from stack.
+     - `POP` - removes an item from stack.
      - `JUMP` - alters program counter.
 
 7. Push Operation
 
    Examples:
-     - `PUSH1` - places 1 byte item on stack.
-     - `PUSH17` - places 17 byte item on stack.
+     - `PUSH1` - places 1 byte item on a stack.
+     - `PUSH17` - places 17 byte item on a stack.
 
 8. Duplication Operation
 
@@ -89,13 +89,13 @@ EVM can execute 132 operation that are divided into 11 categories:
       - `RETURN` - halts execution returning output data.
       - `CREATE` - Creates a new account with associated code.
 
-Every operation consumes some amount of gas. Gas is the internal pricing for code execution in EVM. If not enough gas was provided than the execution halts with out of gas error.
+Every operation consumes some amount of gas. Gas is the internal pricing for code execution in EVM. If not enough gas was provided then the execution halts with out of gas error.
 
-#### How Ethereum's yellow paper corresponds to programing code
+#### How Ethereum's yellow paper corresponds to programming code
 
 This section is intended for acute readers that read Yellow Paper and want to know how our programming code in Elixir corresponds to execution model described in the paper. If you haven't read Ethereum's yellow paper, you can skip this section or return to it later.
 
-Here's exerpt from Ethereum's yellow paper:
+Here's excerpt from Ethereum's yellow paper:
 
 ![execution-model](https://i.imgur.com/5xJ9lFl.jpg)
 
@@ -148,7 +148,7 @@ iex -S mix
 
 #### Code examples
 
-So finally we came to examples. Examples illustrated here are taken from [Ethereum's official evm tests](https://github.com/ethereum/tests).
+So finally we came to examples. Examples illustrated here are taken from [Ethereum's official EVM tests](https://github.com/ethereum/tests).
 
 ##### Example 1
 
@@ -179,7 +179,7 @@ iex> env = %EVM.ExecEnv{
 
 ```
 
-The only field in env variable we are interested in is `machine_code`. It is represented as a binary. Let's decompile it to human readable form:
+The only field in env variable we are interested in is `machine_code`. It is represented as a binary. Let's decompile it in human readable form:
 
 ```elixir
 iex> env.machine_code |> EVM.MachineCode.decompile
@@ -350,7 +350,7 @@ iex> 108072616621495115728666252674775380750164271619691439750117644576584916463
 108072616621495115728666252674775380750164271619691439750117644576584916463342
 ```
 
-Result is equal to storage value after evm execution.
+Result is equal to storage value after EVM execution.
 
 ##### Example 3
 
