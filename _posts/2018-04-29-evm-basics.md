@@ -110,7 +110,7 @@ Let's exemine programming code file `lib/evm/vm.ex':
 
 #### Prerequisites
 
-To follow along executing code examples you need to clone our [Ethereum client](https://github.com/poanetwork/mana) from GitHub:
+To follow along executing code examples you need to clone our [Ethereum client](https://github.com/exthereum/evm) from GitHub:
 
 ```bash
 git clone https://github.com/poanetwork/mana
@@ -426,9 +426,11 @@ stack:
 
 As you can see it works as expected.
 
-### Conclustion
+### Conclusion
 
-I hope this post was helpful in understanding Ethereum Virtual Machine. Currently we are working hard our Ethereum client in Elixir.
+I hope this post was helpful in understanding Ethereum Virtual Machine. Currently we are working hard on our Ethereum client in Elixir.
+
+[We are hiring](https://www.workable.com/j/FD37318ABC)
 
 ### See also
 
