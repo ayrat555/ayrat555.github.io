@@ -110,7 +110,7 @@ Let's exemine programming code file `lib/evm/vm.ex':
 
 #### Prerequisites
 
-To follow along executing code examples you need to clone our [Ethereum client](https://github.com/exthereum/evm) from GitHub:
+To follow along executing code examples you need to clone our [EVM implementation](https://github.com/exthereum/evm) from GitHub:
 
 ```bash
 git clone https://github.com/exthereum/evm
