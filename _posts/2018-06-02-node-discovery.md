@@ -20,7 +20,7 @@ Ethereum nodes find each other using node discovery protocol based on Kademlia a
 
 #### Storage
 
-Kademlia stores nodes it knows about in a routing table. A routing table consists of buckets, nodes are stored in this buckets.
+Kademlia stores nodes it knows about in a routing table. A routing table consists of buckets, nodes are stored in these buckets.
 
 The novely of Kadmlia algorithm is the XOR metric it uses. Each node is identified by a unique key, distance between nodes is defined as XOR of their keys. Each Bucket contains `k` nodes (that's why they're called k-buckets) with a common prefix in relation to a current node. K-buckets are kept sorted by time last seen - least-recently seen node at the head, most-recently seen at the tail. `k` is a system wide replication parameter, `k` is chosen such that any given `k` nodes are very unlikely to fail within an hour of each other.
 
@@ -37,8 +37,118 @@ In Ethereum's version of the algorithm distributed hash table related features a
 
 The most important part of Kademlia algorithm is a node lookup procedure which is used for initial population of a routing table. Node lookup is a recursive procedure. The initiator sends parallel, asynchronous `FindNeighbours` RPCs to the `alpha` nodes it has chosen. `alpha` is a system-wide concurrency parameter. In the recursive step, the initiator resends `FindNeighbours` to `alpha` nodes it has learned about from previous RPCs.
 
+### Implementation
 
-##### Algorithm
+#### Process architecture
+
+Node discovery consists of two GenServer processess:
+
+- `ExWire.Network` - sends and receives messages.
+- `ExWire.Kademlia.Server` - incapsulates Kademlia algorithm's state.
+
+Each of these processes have references to each other. When network process receives messages from other nodes, it redirects them to Kademlia process so it can process it according to Kademlia's logic. Kademlia sends async request using network process.
+
+Both of these processes depend on each other so they are started by separate supervisor:
+
+```elixir
+defmodule ExWire.NodeDiscoverySupervisor do
+  use Supervisor
+
+  @moduledoc """
+  The Node Discovery Supervisor manages two processes. The first process is kademlia
+  algorithm's routing table state - ExWire.Kademlia.Server,  the second one is process
+  that sends and receives all messages that are used for node discovery (ping, pong etc)
+  """
+
+  ...
+
+  def start_link(params \\ []) do
+    supervisor_name = discovery_param(params, :supervisor_name)
+
+    Supervisor.start_link(__MODULE__, params, name: supervisor_name)
+  end
+
+  def init(params) do
+    {udp_module, udp_process_name} = discovery_param(params, :network_adapter)
+    kademlia_name = discovery_param(params, :kademlia_process_name)
+    port = discovery_param(params, :port)
+    bootnodes = (params[:nodes] || nodes()) |> Enum.map(&Node.new/1)
+
+    children = [
+      {KademliaServer,
+       [
+         name: kademlia_name,
+         current_node: current_node(),
+         network_client_name: udp_process_name,
+         nodes: bootnodes
+       ]},
+      {udp_module,
+       [
+         name: udp_process_name,
+         network_module: {Network, [kademlia_process_name: kademlia_name]},
+         port: port
+       ]}
+    ]
+
+    Supervisor.init(children, strategy: :rest_for_one)
+  end
+
+  ...
+```
+
+#### Data structures
+
+As described in the first part of the post there are three main data structures in Kademlia: node, bucket, routing tabe. In our implementation we defined three modules for each of these entities which contain methods directly related to Kademlia along with helper methods.
+
+Here's node module definition:
+
+```elixir
+defmodule ExWire.Kademlia.Node do
+  @moduledoc """
+  Represents a node in Kademlia algorithm; an entity on the network.
+  """
+  alias ExWire.Crypto
+
+  defstruct [
+    :public_key,
+    :key,
+    :endpoint
+  ]
+
+  @type t :: %__MODULE__{
+          public_key: binary(),
+          key: binary(),
+          endpoint: Endpoint.t()
+        }
+
+  @doc """
+  Constructs a new node.
+  """
+  @spec new(binary(), Endpoint.t()) :: t()
+  def new(public_key, endpoint = %Endpoint{}) do
+    key = Crypto.hash(public_key)
+
+    %__MODULE__{
+      public_key: public_key,
+      key: key,
+      endpoint: endpoint
+    }
+  end
+
+  ...
+end
+```
+
+
+
+
+
+
+
+
+
+
+
 
 Kademlia parameters:
 
