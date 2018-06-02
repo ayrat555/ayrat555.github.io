@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      Ethereum's node discovery in Elixir. Part I.
-date:       2018-05-13
+title:      Ethereum's node discovery in Elixir.
+date:       2018-06-02
 summary:    Mostly Kademlia in Elixir
 categories: elixir
 ---
@@ -10,19 +10,38 @@ categories: elixir
 
 ### Introduction
 
-Warning: This post is in early stage.
+Ethereum is a decentralized platform where each second nodes on the network send zillion messages to each other. Message contents depend on communicaton protocol (swarm, eth, whisper). Nodes need a way to find other nodes. This post will try to give a concise description of node discovery implementation in [Mana Project](https://github.com/poanetwork/mana) - Ethereum client written in Elixir.
 
-### Background
+### Kademlia
 
-#### Kademlia
+Ethereum nodes find each other using node discovery protocol based on Kademlia algorithm.
 
-Ethereum nodes connect with each other using RLPx - node discovery protocol based on Kademlia algorithm. Kademlia stores nodes it knows about in routing table. Routing table consists of buckets, nodes are stored in buckets.
+[Kademlia](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf) is a distributed hash table for decentralized peer-to-peer computer networks designed by Petar Maymounkov and David Mazières in 2002. It specifies the structure of the network and the exchange of information through node lookups.
 
-The novely of Kadmlia algorithm is the XOR metric it uses. Each node is identified by unique key, distance between nodes is defined as XOR of their keys. Buckets contain nodes with common prefix with current node so they are closer by XOR metric
+#### Storage
 
-Kademlia parameters (that is currently used in implementation):
+Kademlia stores nodes it knows about in a routing table. A routing table consists of buckets, nodes are stored in this buckets.
 
-- `k` - bucket size
+The novely of Kadmlia algorithm is the XOR metric it uses. Each node is identified by a unique key, distance between nodes is defined as XOR of their keys. Each Bucket contains `k` nodes (that's why they're called k-buckets) with a common prefix in relation to a current node. K-buckets are kept sorted by time last seen - least-recently seen node at the head, most-recently seen at the tail. `k` is a system wide replication parameter, `k` is chosen such that any given `k` nodes are very unlikely to fail within an hour of each other.
+
+#### Protocol
+
+Kademlia's paper defines four RPCs: PING, STORE, FIND_NODE, FIND_VALUE. When a Kademlia node receive any message (request or reply) from another node, it updates appropriate k-bucket for the sender's node id.
+.
+In Ethereum's version of the algorithm distributed hash table related features are excluded. So FIND_VALUE and STORE RPCs are not implemented. Ethereum's node discovery consists of four packets:
+
+- `Ping` - pings a node in the network.
+- `Pong` - response to ping packet. Returns data from ping message.
+- `FindNeighbours` - find the closest (by common prefix distance) nodes to specified node id.
+- `Neighbours` - response to FindNeighbours packet.
+
+The most important part of Kademlia algorithm is a node lookup procedure which is used for initial population of a routing table. Node lookup is a recursive procedure. The initiator sends parallel, asynchronous `FindNeighbours` RPCs to the `alpha` nodes it has chosen. `alpha` is a system-wide concurrency parameter. In the recursive step, the initiator resends `FindNeighbours` to `alpha` nodes it has learned about from previous RPCs.
+
+
+##### Algorithm
+
+Kademlia parameters:
+
 - `alpha` - concurrency
 - `key size` - 160 bits (as described in paper)
 
