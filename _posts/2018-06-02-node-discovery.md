@@ -27,7 +27,7 @@ The novely of Kadmlia algorithm is the XOR metric it uses. Each node is identifi
 #### Protocol
 
 Kademlia's paper defines four RPCs: PING, STORE, FIND_NODE, FIND_VALUE. When a Kademlia node receive any message (request or reply) from another node, it updates appropriate k-bucket for the sender's node id.
-.
+
 In Ethereum's version of the algorithm distributed hash table related features are excluded. So FIND_VALUE and STORE RPCs are not implemented. Ethereum's node discovery consists of four packets:
 
 - `Ping` - pings a node in the network.
@@ -149,7 +149,7 @@ end
 
 SHA-3 hash of a node's public key is used for node's id (defined simply as key in struct definition). So distance calculated not between public keys but between their hashes.
 
-Common prefix can be easily calculated using pattern mathing againt the first bits:
+Common prefix can be easily calculated using pattern matching againt the first bits:
 
 ```elixir
   @spec common_prefix(binary(), binary()) :: integer()
@@ -200,7 +200,7 @@ end
 - `nodes` - nodes it contains.
 - `updated_at` - last time it was updated. It is used for updating stale buckets.
 
-The only method we should pay attention to in this module is `refresh node/3` metho. It returns tuple with atom describing insertion result, inserted node and updated bucket:
+The only method we should pay attention to in this module is `refresh node/3` method. It returns tuple with atom describing insertion result, inserted node and updated bucket:
 
 ```elixir
   @spec refresh_node(t(), Node.t(), Keyword.t()) :: {atom, t()}
@@ -285,7 +285,7 @@ end
 
 Again, in this module them most important method is `refresh_node/2` taht add a node to a routing table:
 
-```
+```elixir
   @spec refresh_node(t(), Node.t()) :: t()
   def refresh_node(table = %__MODULE__{buckets: buckets}, node = %Node{}) do
     node_bucket_id = bucket_id(table, node)
