@@ -320,6 +320,8 @@ There are also a couple of other method worth mentition in this module:
 
 #### Node Discovery
 
+Node discovery starts on Kademlia process startup. Node discovery logic incapsulated in `ExWire.Kademlia.Discovery` module:
+
 ```elixir
 defmodule ExWire.Kademlia.Discovery do
   @moduledoc """
@@ -366,7 +368,17 @@ defmodule ExWire.Kademlia.Discovery do
 end
 ```
 
+As described in the section above node discovery is a recursive process. So `ExWire.Kademlia.Discovery` describes single iteration:
+
+- On the first interation our routing table do not have any nodes, so we add bootnodes to routing table, and send them `FindNeighbours` messages.
+- On next iterations we send `FindNeighbours` messages to nodes that we received from previous iterations.
 
 ### Conclustion
 
-// Add conclustion after finishing this post.
+I hope after reading this post you got a basic understanding of node discovery in Ethereum.
+
+### See also
+
+- [Kademlia Paper](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf)
+- [Mana Project](https://github.com/poanetwork/mana)
+- [RLPx](https://github.com/ethereum/devp2p/blob/master/rlpx.md)
