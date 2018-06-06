@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Ethereum's node discovery in Elixir.
+title:      Ethereum's node discovery in Elixir
 date:       2018-06-02
 summary:    Mostly Kademlia in Elixir
 categories: elixir
