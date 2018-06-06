@@ -111,7 +111,7 @@ defmodule ExWire.NodeDiscoverySupervisor do
 
 #### Node Discovery
 
-Node discovery starts onthe Kademlia process startup. Node discovery logic is encapsulated in the s`ExWire.Kademlia.Discovery` module:
+Node discovery starts on the Kademlia process startup. Node discovery logic is encapsulated in the `ExWire.Kademlia.Discovery` module:
 
 ```elixir
 defmodule ExWire.Kademlia.Discovery do
