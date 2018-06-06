@@ -24,7 +24,7 @@ Ethereum nodes find each other using a node discovery protocol based on the Kade
 
 Kademlia stores nodes it knows about in a routing table. A routing table consists of buckets and  nodes are stored in these buckets.
 
-The novelty of the Kadmlia algorithm is the XOR metric it uses. Each node is identified by a unique key, the distance between nodes is defined as XOR of their keys. 
+The novelty of the Kademlia algorithm is the XOR metric it uses. Each node is identified by a unique key, the distance between nodes is defined as XOR of their keys. 
 
 Each Bucket contains `k` nodes (that's why they're called k-buckets) with a common prefix in relation to a current node. K-buckets are kept sorted by time:
 - Head: last seen - least-recently seen node
@@ -33,7 +33,7 @@ Each Bucket contains `k` nodes (that's why they're called k-buckets) with a comm
 
 #### Protocol
 
-Kademlia’s paper defines four remote procedure calls (RPCs): PING, STORE, FIND_NODE, FIND_VALUE. Only PING and FIND_NODE are implemented in Ethereum. When a Kademlia node receives any message (request or reply) from another node, it updates the appropriate k-bucket for the sender’s node id.
+Kademlia’s paper defines four RPCs (remote procedure calls): PING, STORE, FIND_NODE, FIND_VALUE. Only PING and FIND_NODE are implemented in Ethereum. When a Kademlia node receives any message (request or reply) from another node, it updates the appropriate k-bucket for the sender’s node id.
 
 Ethereum's node discovery consists of four packets:
 
@@ -167,11 +167,15 @@ Node discovery is a recursive process. So `ExWire.Kademlia.Discovery` describes 
 
 #### Data structures
 
-As described earlier there are three main data structures in Kademlia: node, bucket, routing tabe. In our implementation we defined three modules for each of these entities which contain methods directly related to Kademlia along with helper methods.
+As described earlier there are three main data structures in Kademlia:
+- node 
+- bucket
+- routing table
+In our implementation we defined three modules for each of these entities which contain methods directly related to Kademlia along with helper methods.
 
 ##### Node
 
-Here's a module for working with nodes:
+A module for working with nodes:
 
 ```elixir
 defmodule ExWire.Kademlia.Node do
@@ -235,7 +239,7 @@ The common prefix can be calculated easily using pattern matching against the fi
 
 ##### Bucket
 
-Nodes are stored in buckets. A bucket is chosen by the common prefix value to current node. That's why there are 256 buckets; SHA-3 hash returns 256 bit values and common prefix values are in range of [0, 255].
+Nodes are stored in buckets (k-buckets). A bucket is chosen by the common prefix value to current node. That's why there are 256 buckets; SHA-3 hash returns 256 bit values and common prefix values are in range of [0, 255].
 
 ```elixir
 defmodule ExWire.Kademlia.Bucket do
@@ -264,7 +268,7 @@ The `k-Bucket` struct consists of three fields:
 - `nodes` - nodes it contains.
 - `updated_at` - last time it was updated. It is used for updating stale buckets.
 
-The only method we will pay attention to in this module is the `refresh node/3` method. It returns tuple with atom describing insertion result, inserted node and updated bucket:
+The only method we will pay attention to in this module is the `refresh node/3` method. It returns a tuple with an atom describing insertion result, inserted node and updated bucket:
 
 ```elixir
   @spec refresh_node(t(), Node.t(), Keyword.t()) :: {atom, t()}
@@ -321,7 +325,7 @@ defmodule ExWire.Kademlia.RoutingTable do
 end
 ```
 
-`RoutingTable` struct field names are self-explanatory except for the last three fields. Let's look closer at `expected_pongs`. `expected_pongs` is a hash with a ping message mdc as key and tuple of removal candidate, insertion candidate and expiration time as value. This hash is filled by the `ping/3` method:
+`RoutingTable` struct field names are self-explanatory except for the last three fields. Let's look closer at `expected_pongs`. `expected_pongs` is a hash with a ping message mdc as key and tuple of removal candidate, insertion candidate and expiration time as a value. This hash is filled by the `ping/3` method:
 
 ```elixir
   @spec ping(t(), Node.t()) :: Network.handler_action()
@@ -375,12 +379,12 @@ Again, in this module the most important method is `refresh_node/2` which adds a
   end
 ```
 
- First we calculate a common prefix between the current node and a node that we’re adding, - the id of the k-bucket a node will be added to. Then we try to add a node to the bucket. If the bucket is full we ping the least-recently seen node in the bucket.f a node was added to bucket, we replace the updated bucket in routing table.
+ First we calculate a common prefix between the current node and a node that we’re adding - the id of the k-bucket a node will be added to. Then we try to add a node to the bucket. If the bucket is full we ping the least-recently seen node in the bucket. If a node was added to the bucket, we replace the updated bucket in the routing table.
 
 There are several other methods worth mentioning  in this module:
 
 
-- `neighbours/3` - returns the closest nodes to specified node by common prefix distance.
+- `neighbours/3` - returns the closest nodes to the specified node by common prefix distance.
 - `handle_neighbours/2` - receives requested neighbours from other nodes and pings them.
 - `handle_pong/2` - adds a node to the routing table if a pong was found in `expected_pongs`.
 
