@@ -43,15 +43,23 @@ Output values are:
 4. `z` - execution halt status.
 5. `o` - output data.
 
-Message call starts with transferring value `v` from sender's balanse `s` to recipient's balance `r`. Then, all other input values used in the execution context of the call.
+Message call starts with transferring value `v` from sender's balance `s` to recipient's balance `r`. All other input values are used in the execution context of the call.
 
-If the message-stack `e` is exceeded 1024 or there is not enough value to transfer `v` from sender's address, the message call is not executed.
+If the message-stack `e` will exceed 1024 or there is not enough value to transfer `v` from sender's address, the message call is not executed.
 
 ### Message call types
 
-EVM has 4 types of message call instructions
+EVM has 4 types of message call instructions:
 
 1. `CALL`
 2. `CALCODE`
 3. `DELEGATECODE`
 4. `STATICCALL`
+
+#### `CALL`
+
+#### `CALLCODE`
+
+#### `DELEGATECODE`
+
+#### `STATICCALL`
