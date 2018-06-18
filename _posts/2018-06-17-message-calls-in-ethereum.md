@@ -10,13 +10,13 @@ categories: ethereum
 
 ### Background
 
-Ethereum Virtual Machine (EVM) allows smart contracts to call other contracts and trigger their execution, allowing for complex contracts with deeply nested message calls. This post describes all currently available message calls in Ethereum.
+In the Ethereum Virtual Machine (EVM), smart contracts can call other contracts and trigger their execution. This allows for complex contracts with deeply nested message calls. 
 
-First I provide a short summary related to the message calls section of [Ethereum's Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf). Then, I describe each message call in more detail.
+Below I provide a short summary related to the message calls section of [Ethereum's Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf). Then, I describe each message call in more detail.
 
-### Message-call
+### Message call
 
-As outlined in the Yellow Paper, message-call is the function `Θ` that takes 12 arguments. See the paper for details associated with each value.
+As outlined in the Yellow Paper, message call is the function `Θ` that takes 12 arguments. See the paper for details associated with each value.
 
 ![theta](https://i.imgur.com/kpxGzGK.png)
 
@@ -32,7 +32,7 @@ As outlined in the Yellow Paper, message-call is the function `Θ` that takes 12
 08. `v` - value to be be transferred from sender to recipient
 09. `v with overline`  - value used in the call's execution context
 10. `d` - input data of the call
-11. `e` - present depth of the message-call stack
+11. `e` - present depth of the message call stack
 12. `w` - the permission to make modifications to the state
 
 **Output values:**
@@ -43,9 +43,9 @@ As outlined in the Yellow Paper, message-call is the function `Θ` that takes 12
 4. `z` - execution halt status
 5. `o` - output data
 
-Message-call starts with transferring value `v` from sender's address `s` to recipient's address `r`. All other input values are used in the execution context of the call.
+Message call starts with transferring value `v` from sender's address `s` to recipient's address `r`. All other input values are used in the execution context of the call.
 
-If the message-call stack `e` exceeds 1024 or there is not enough value to transfer `v` from sender's address, the message call is not executed.
+If the message call stack `e` exceeds 1024 or there is not enough value to transfer `v` from sender's address, the message call is not executed.
 
 ### Message call types
 
@@ -64,7 +64,7 @@ EVM has 4 types of message call instructions:
 2. `μ1` - recipient's address.
 3. `μ2` - value that will be transferred from sender to recipient.
 
-So our message-call function `Θ` will look like `Θ(σ, I_a, I_o, μ1, μ1, C_callgas, I_p, μ2, μ2, i, I_e + 1, I_w)` where:
+So our message call function `Θ` will look like `Θ(σ, I_a, I_o, μ1, μ1, C_callgas, I_p, μ2, μ2, i, I_e + 1, I_w)` where:
 
 * `I` - current execution environment
 * `C_callgas` - cost of the call operation that is calculated using `μ0` and `σ`
