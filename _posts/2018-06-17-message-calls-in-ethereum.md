@@ -56,10 +56,33 @@ EVM has 4 types of message call instructions:
 3. `DELEGATECODE`
 4. `STATICCALL`
 
-#### `CALL`
+#### CALL
 
-#### `CALLCODE`
+`CALL` is the most straightforward type of message call. It takes takes 7 arguments, the last four of which are used for reading input data from the memory and writing result of the execution to the memory. The first three arguments:
 
-#### `DELEGATECODE`
+1. `μ0` - gas.
+2. `μ1` - recipient's address.
+3. `μ2` - value that will be trasferred from sender to recipient.
 
-#### `STATICCALL`
+So our message call function `Θ` will look like `Θ(σ, I_a, I_o, μ1, μ1, C_callgas, I_p, μ_2, μ_2, i, I_e + 1, I_w)` where
+
+`I` - current execution environment,
+`C_callgas` - cost of the call operation that is calculated using `μ0` and `σ`,
+`i` - input data that was read from the memory.
+
+From the function we can see that recipient and code owner are the same acount, also the same value is used for transferring and execution.
+
+#### CALLCODE
+
+`CALLCODE` is used for message-call into current account with an alternative account’s code. Arguments of this instruction are identical to `CALL`.
+
+Let's see how `Θ` function looks like:
+
+`Θ(σ, I_a, I_o, I_a, μ1, C_callgas, I_p, μ_2, μ_2, i, I_e + 1, I_w)`.
+
+The only difference is in the fourth parameter, this means that the recipient is the same account.
+
+#### DELEGATECODE
+
+
+#### STATICCALL
