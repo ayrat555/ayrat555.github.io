@@ -58,7 +58,7 @@ EVM has 4 types of message call instructions:
 
 #### CALL
 
-`CALL` is the most straightforward type of message call. It takes 7 arguments, the last four of which are used for reading input data from the memory and writing result of the execution to the memory. The first three arguments:
+`CALL` is the most straightforward type of message call. It takes 7 arguments, the last four of which are used for reading input data from the memory and writing the result of the execution to the memory. The first three arguments:
 
 1. `μ0` - gas.
 2. `μ1` - recipient's address.
@@ -85,7 +85,7 @@ CALLCODE function:
 
 This instruction was introduced by [Ethereum Improvement Proposal (EIP) №7](https://eips.ethereum.org/EIPS/eip-7). `DELEGATECODE` is used for a message call into the current account with an alternative account’s code, but the current values for sender and value are persistent.
 
-As described in EIP, propagating the sender and value from the parent scope to the child scope makes it easier for a contract to store another address as a mutable source of code and ‘‘pass through’’ calls to it, as the child code would execute in essentially the same environment as the parent.
+As described in the EIP, propagating the sender and value from the parent scope to the child scope makes it easier for a contract to store another address as a mutable source of code and ‘‘pass through’’ calls to it, as the child code would execute in essentially the same environment as the parent.
 
 This instruction omits a `μ2` argument, otherwise it is the same as `CALL`. 
 
@@ -96,7 +96,7 @@ DELEGATECODE function:
 
 #### STATICCALL
 
-This instruction was introduced by [EIP №214](https://eips.ethereum.org/EIPS/eip-214). As stated in EIP's summary, the opcode can be used to call another contract (or itself) while disallowing any modifications to the state during the call (and its subcalls, if present). Any opcode that attempts to modify the state results in an exception rather than performing the modification.
+This instruction was introduced by [EIP №214](https://eips.ethereum.org/EIPS/eip-214). As stated in the EIP's summary, the opcode can be used to call another contract (or itself) while disallowing any modifications to the state during the call (and its subcalls, if present). Any opcode that attempts to modify the state results in an exception rather than performing the modification.
 
 `STATICCALL` is equivalent to `CALL` except `μ2` is replaced with 0 and the `w` flag is false.
 
