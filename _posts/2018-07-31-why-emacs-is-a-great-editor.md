@@ -12,13 +12,13 @@ Often arguments arise from the fact that I use emacs as my main text editor. In 
 
 ### History
 
-Before using emacs I've tried different text editors (Atom, Brackets etc) but I've primarily used Sublime for a couple of years before switching to emacs. There are two fundamental reasons that motivated me to learn it.
+Before using emacs I tried different text editors (Atom, Brackets etc) but I primarily used Sublime for a couple of years before switching to emacs. There are two fundamental reasons that motivated me to learn it.
 
 The first thought that I should level up my text editor usage skills came to me when I was pair programming with my colleague solving a task at work. He uses Vim as his text editor. And in his turns he used his time much more productively than me navigating only with shortcuts, also he had shortcuts for every action he used. This experience was mind-blowing for me, he was like code wizard master compared to me navigating using a touchpad.
 
-The reason why I chose to learn emacs and not vim is that in that period of time in Elixir community emacs was very popular (and still is) and people were talking about it in podcasts and blogs. Also, there are some good plugins for Emacs for writing Elixir (alchemist, elixir-mode).
+The reason why I chose to learn emacs and not vim is that in that period of time in Elixir community emacs was very popular (and still is) and people were talking about it in podcasts and blogs. Also, there are some good plugins for Emacs for writing Elixir ([alchemist](https://github.com/tonini/alchemist.el), [elixir-mode](https://github.com/elixir-editors/emacs-elixir)).
 
-Now I'm using emacs for more than 1.5 years.
+Now I've been using emacs for more than 1.5 years.
 
 ### Advantages
 
@@ -33,8 +33,8 @@ Some people call emacs an operating system because there is a lot of functionali
 
 Other things worth mentioning:
 
-- Terminal emulation
-- Server mode
+- [Terminal emulation](https://www.gnu.org/software/emacs/manual/html_node/emacs/Terminal-emulator.html)
+- [Server mode](https://www.emacswiki.org/emacs/EmacsAsDaemon)
 
 ### Disadvantages
 
@@ -46,4 +46,4 @@ There are a couple of downsides in emacs, especially for new users:
 
 ### Conclusion
 
-I remember a quote from another my colleague, "I learned emacs so I could use a text editor like I'm playing guitar". This quote contains some kind of truth. Like musical instruments for musicians, text editors are the same tools for developers.
+I remember a quote from another of my colleagues, "I learned emacs so I could use a text editor like I'm playing guitar". This quote contains some kind of truth. Like musical instruments for musicians, text editors are the same tools for developers.
