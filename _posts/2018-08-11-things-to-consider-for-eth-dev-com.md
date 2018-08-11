@@ -6,6 +6,8 @@ summary:    Just some inconveniences I encountered
 categories: ethereum
 ---
 
+![hide-the-pain](https://i.imgur.com/OV9UXAA.jpg)
+
 Disclaimer: In this post, I'll describe my own thoughts and concerns and they may be wrong.
 
 ### Background
