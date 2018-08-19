@@ -41,6 +41,6 @@ Some aspectss of Ethereum are poorly documented. One of these is DEVp2p - a prot
 
 Also, there are no common tests for this part of the protocol which results in communication logic differences in different clients.
 
-##### Conclusion
+### Conclusion
 
 Currently, Ethereum is one of the most exciting new technologies in existence. As development progresses, I hope these issues are addressed to help future developers better understand and implement the protocol.

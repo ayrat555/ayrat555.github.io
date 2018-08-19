@@ -10,7 +10,7 @@ categories: ethereum
 
 ### Background
 
-In the Ethereum Virtual Machine (EVM), smart contracts can call other contracts and trigger their execution. This allows for complex contracts with deeply nested message calls. 
+In the Ethereum Virtual Machine (EVM), smart contracts can call other contracts and trigger their execution. This allows for complex contracts with deeply nested message calls.
 
 Below I provide a short summary related to the message calls section of [Ethereum's Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf). Then, I describe each message call in more detail.
 
@@ -52,8 +52,8 @@ If the message call stack `e` exceeds 1024 or there is not enough value to trans
 EVM has 4 types of message call instructions:
 
 1. `CALL`
-2. `CALCODE`
-3. `DELEGATECODE`
+2. `CALLCODE`
+3. `DELEGATECALL`
 4. `STATICCALL`
 
 #### CALL
@@ -81,15 +81,15 @@ CALLCODE function:
 `Θ(σ, I_a, I_o, I_a, μ1, C_callgas, I_p, μ2, μ2, i, I_e + 1, I_w)`.
 
 
-#### DELEGATECODE
+#### DELEGATECALL
 
-This instruction was introduced by [Ethereum Improvement Proposal (EIP) №7](https://eips.ethereum.org/EIPS/eip-7). `DELEGATECODE` is used for a message call into the current account with an alternative account’s code, but the current values for sender and value are persistent.
+This instruction was introduced by [Ethereum Improvement Proposal (EIP) №7](https://eips.ethereum.org/EIPS/eip-7). `DELEGATECALL` is used for a message call into the current account with an alternative account’s code, but the current values for sender and value are persistent.
 
 As described in the EIP, propagating the sender and value from the parent scope to the child scope makes it easier for a contract to store another address as a mutable source of code and ‘‘pass through’’ calls to it, as the child code would execute in essentially the same environment as the parent.
 
-This instruction omits a `μ2` argument, otherwise it is the same as `CALL`. 
+This instruction omits a `μ2` argument, otherwise it is the same as `CALL`.
 
-DELEGATECODE function:
+DELEGATECALL function:
 
 `Θ(σ, I_s, I_o, I_a, μ1, μ0, I_p, 0, μ2, i, I_e + 1, I_w)`
 
