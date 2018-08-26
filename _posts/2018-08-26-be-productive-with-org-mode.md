@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Be productive with Org mode
+title:      Be productive with Org-mode
 date:       2018-08-26
 summary:    Note manager and organizer
 categories: emacs
@@ -10,15 +10,15 @@ categories: emacs
 
 ### Introduction
 
-In my [previous post about emacs](http://www.badykov.com/emacs/2018/07/31/why-emacs-is-a-great-editor/) I mentioned [org mode](https://orgmode.org/), note manager and organizer. Org mode has very extensive functionality and I use only a small subset of it. In this post I'll describe my day-to-day org mode use cases.
+In my [previous post about emacs](http://www.badykov.com/emacs/2018/07/31/why-emacs-is-a-great-editor/) I mentioned [Org-mode](https://orgmode.org/), note manager and organizer. In this post, I'll describe my day-to-day Org-mode use cases.
 
-### Todo lists
+### Notes and to-do lists
 
-First and foremost, Org mode is a tool for managing notes and todo lists and all work in org mode is centered around writing notes in plain text files. I manage several kinds of notes using org mode.
+First and foremost, Org-mode is a tool for managing notes and to-do lists and all work in Org-mode is centered around writing notes in plain text files. I manage several kinds of notes using Org-mode.
 
 #### General notes
 
-The most basic org mode use case is writing simple notes about things that you want to remember. For example, here's my notes about things I'm learning right now:
+The most basic Org-mode use case is writing simple notes about things that you want to remember. For example, here are my notes about things I'm learning right now:
 
 ```plain
 * Learn
@@ -51,14 +51,14 @@ How it looks using [org-bullets](https://github.com/sabof/org-bullets):
 
 ![notes](https://i.imgur.com/lGi60Uw.png)
 
-In this simple example you can see some of org mode features:
+In this simple example you can see some of the Org-mode features:
 - nested notes
 - links
 - lists with checkboxes
 
 #### Project todos
 
-Often  when I'm working on some task I notice things that I can improve or fix. Instead of leaving TODO comment in source code files (bad smell) I use [https://github.com/IvanMalison/org-projectile](org-projectile) whuch allows me to write TODO items with a single shortcut in a separate file. Here's example:
+Often when I'm working on some task I notice things that I can improve or fix. Instead of leaving TODO comment in source code files (bad smell) I use [org-projectile](https://github.com/IvanMalison/org-projectile) which allows me to write TODO items with a single shortcut in a separate file. Here's an example of this file:
 
 
 ```plain
@@ -80,7 +80,7 @@ Often  when I'm working on some task I notice things that I can improve or fix. 
    CLOSED: [2018-08-14 Вт 21:25]
 *** DONE operation cost changes
     CLOSED: [2018-08-08 Ср 20:31]
-*** DONE 1/64th for call and create
+*** DONE 1/64th for a call and create
     CLOSED: [2018-08-14 Вт 21:25]
 ** TODO [#C] Refactor interfaces
 ** TODO [#B] Caching for storage during execution
@@ -102,15 +102,15 @@ How it looks in Emacs:
 
 In this example you can see more Org mode features:
 
-- todo items have state - `TODO`, `DONE`. You can define your own states (`WAITING` etc)
+- todo items have states - `TODO`, `DONE`. You can define your own states (`WAITING` etc)
 - closed items have `CLOSED` timestamp
 - some items have priorities - A, B, C.
 - links can be internal (`[[file:~/...]`)
 
 #### Capture templates
 
-As described in org mode's documentation, capture lets you quickly store notes with little interruption of your
-work flow.
+As described in Org-mode's documentation, capture lets you quickly store notes with little interruption of your
+workflow.
 
 I configured several capture templates which help me to quickly create notes about things that I want to remember.
 
@@ -132,28 +132,44 @@ I configured several capture templates which help me to quickly create notes abo
            "* %^{book name} by %^{author} %^g")))
 ```
 
-For a book note I should add its name and its author, for a movie template I should add tags etc.
+For a book note I should add its name and its author, for a movie note I should add tags etc.
 
-### Schedule
+### Planning
+
+Another great feature of Org-mode is that you can use it as a day planner. Let's see an example of one of my days:
 
 ![schedule](https://i.imgur.com/z5HpuB0.png)
 
+I didn't give a lot of thought to this example, it's my real file for today. It doesn't look like much but it helps to spend your time on things that important to you and fight with procrastination.
+
 #### Habits
+
+From Org mode's documentation, Org has the ability to track the consistency of a special category of
+TODOs, called “habits”. I use this feature along with day planning when I want to create new habits:
 
 ![habits](https://i.imgur.com/YJIp3d0.png)
 
+As you can see currently I'm trying to wake early every day and workout once in two days. Also, it helped to start reading books every day.
+
 #### Agenda views
+
+Last but not least I use agenda views. Todo items can be scattered throughout different files (in my case daily plan and habits are in separate files), agenda views give an overview of all todo items:
 
 ![agenda](https://i.imgur.com/CKX9BL9.png)
 
-### More features
+### More Org mode features
 
-- sync
+- Smartphone apps ([Android](https://play.google.com/store/apps/details?id=com.orgzly&hl=en), [ios](https://itunes.apple.com/app/id1238649962))
 
-- Integration, exporting
+- [Exporting Org mode files into different formats](https://orgmode.org/manual/Exporting.html) (html, markdown, pdf, latex etc)
 
-- expenses
+- [Tracking Finances](https://orgmode.org/worg/org-tutorials/weaving-a-budget.html) with [ledger](https://github.com/ledger/ledger-mode)
 
 ### Conclusion
 
-Most of the day in emacs
+In this post, I described a small subset of Org-mode's extensive functionality that helps me be productive every day, spend time on things that important to me.
+
+### See also
+
+- [Org mode documentation](https://orgmode.org/)
+- [My emacs config](https://github.com/ayrat555/dot-emacs)
