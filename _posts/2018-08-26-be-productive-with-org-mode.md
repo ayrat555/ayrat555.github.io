@@ -2,7 +2,7 @@
 layout:     post
 title:      Be productive with Org-mode
 date:       2018-08-26
-summary:    Note manager and organizer
+summary:    A note manager and organizer
 categories: emacs
 ---
 
@@ -10,7 +10,7 @@ categories: emacs
 
 ### Introduction
 
-In my [previous post about emacs](http://www.badykov.com/emacs/2018/07/31/why-emacs-is-a-great-editor/) I mentioned [Org-mode](https://orgmode.org/), note manager and organizer. In this post, I'll describe my day-to-day Org-mode use cases.
+In my [previous post about emacs](http://www.badykov.com/emacs/2018/07/31/why-emacs-is-a-great-editor/) I mentioned [Org-mode](https://orgmode.org/), a note manager and organizer. In this post, I'll describe my day-to-day Org-mode use cases.
 
 ### Notes and to-do lists
 
@@ -167,7 +167,7 @@ Last but not least I use agenda views. Todo items can be scattered throughout di
 
 ### Conclusion
 
-In this post, I described a small subset of Org-mode's extensive functionality that helps me be productive every day, spend time on things that important to me.
+In this post, I described a small subset of Org-mode's extensive functionality that helps me be productive every day, spending time on things that important to me.
 
 ### See also
 
