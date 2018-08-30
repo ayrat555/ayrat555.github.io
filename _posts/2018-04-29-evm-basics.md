@@ -110,16 +110,16 @@ Let's exemine programming code file `lib/evm/vm.ex':
 
 #### Prerequisites
 
-To follow along executing code examples you need to clone our [EVM implementation](https://github.com/exthereum/evm) from GitHub:
+To follow along executing code examples you need to clone our [EVM implementation](https://github.com/poanetwork/mana/tree/master/apps/evm) from GitHub:
 
 ```bash
-git clone https://github.com/exthereum/evm
+git clone https://github.com/poanetwork/mana
 ```
 
 Fetch dependencies:
 
 ```bash
-mix deps.get
+./bin/setup
 ```
 
 We should print debugging information to see how code executes.
@@ -143,7 +143,7 @@ def cycle(machine_state, sub_state, exec_env) do
 And start Elixir REPL:
 
 ```bash
-iex -S mix
+cd apps/evm && iex -S mix
 ```
 
 #### Code examples
@@ -169,7 +169,7 @@ iex> env = %EVM.ExecEnv{
   },
   data: "",
   gas_price: <<90, 243, 16, 122, 64, 0>>,
-  machine_code: <<96, 0, 96, 0, 1, 96, 0, 85>>,
+  machine_code: <<96, 1, 96, 1, 1, 96, 1, 85>>,
   originator: <<205, 23, 34, 242, 148, 125, 239, 76, 241, 68, 103, 157, 163,
     156, 76, 50, 189, 195, 86, 129>>,
   sender: 1170859069521887415590932569929099639409724315265,
@@ -183,29 +183,29 @@ The only field in env variable we are interested in is `machine_code`. It is rep
 
 ```elixir
 iex> env.machine_code |> EVM.MachineCode.decompile
-[:push1, 0, :push1, 0, :add, :push1, 0, :sstore]
+[:push1, 1, :push1, 1, :add, :push1, 1, :sstore]
 ```
 
-As we can see it places two zeros to stack, adds them, places another zero to stack and finally stores the second stack item to storage, storage index is the first stack item.
+As we can see it places two ones to stack, adds them, places another one to stack and finally stores the second stack item to storage, storage index is the first stack item.
 Let's execute it:
 
 ```elixir
-iex>  EVM.VM.run(10000, env)
+iex>  EVM.VM.run(1000000, env)
 
 stack:
 []
 operation: push1
 stack:
-[0]
+[1]
 operation: push1
 stack:
-[0, 0]
+[1, 1]
 operation: add
 stack:
-[0]
+[2]
 operation: push1
 stack:
-[0, 0]
+[1, 2]
 operation: sstore
 stack:
 []
@@ -218,7 +218,7 @@ stack:
        87579061662017136990230301793909925042452127430 => %{
          balance: 0,
          nonce: 0,
-         storage: %{0 => 0}
+         storage: %{1 => 2}
        }
      },
      contract_result: %{gas: nil, output: nil, sub_state: nil}
@@ -239,7 +239,7 @@ stack:
  }, ""}
 ```
 
-As you can see it executes as expected printing exact operations described above. Also note account storage now has new value `storage: %{0 => 0}`.
+As you can see it executes as expected printing exact operations described above. Also note account storage now has new value `storage: %{1 => 2}`.
 
 ##### Example 2
 
@@ -285,7 +285,7 @@ It places 32 bytes to stack two times, then does bitwise `AND` operation with th
 Let's execute it:
 
 ```elixir
-iex> EVM.VM.run(100000, evm)
+iex> EVM.VM.run(100000, env)
 
 stack:
 []
