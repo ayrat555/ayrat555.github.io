@@ -20,11 +20,13 @@ My name is Ayrat Badykov. I am a software developer based in Moscow.
 ### Experience
 
 - **POA Network** April 2018 - Present
+
   Ethereum protocol-level developer (Elixir)
   - Ethereum client in Elixir - [Mana](https://github.com/poanetwork/mana)
 
 
 - **Bookmate** August 2016 - April 2018
+
   Backend developer (Ruby, ROR, Kotlin, Java, Elixir)
   - Digital book processing service in Java
   - Digital comic book processing service in Kotlin
@@ -33,6 +35,7 @@ My name is Ayrat Badykov. I am a software developer based in Moscow.
 
 
 - **Govermedia plus** Septemper 2015 - August 2016
+
   Backend developer (Ruby, ROR, Elixir)
   - Media file storage service using amazon s3, riak cs
   - Media file processing service
