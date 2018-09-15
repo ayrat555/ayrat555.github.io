@@ -12,9 +12,11 @@ My name is Ayrat Badykov. I am a software developer based in Moscow.
 ### Education
 
 - **Kazan Federal University - Institute of Computer Science and Information Technology**  Kazan, Russia
+
   Master of Applied Mathematics and Informatics (Honours), 2014-2017
 
 - **Kazan Federal University - Institute of Computer Science and Information Technology**  Kazan, Russia
+
   Bachelor of Applied Mathematics and Informatics (Honours), 2011-2014
 
 ### Experience
