@@ -10,7 +10,7 @@ categories: ethereum
 
 ### Background
 
-This week at the [Mana Project](https://github.com/poanetwork/mana), we finished implementing the EIPs (Ethereum Improvement Proposals) for the Byzantium hard fork. The hardest EIPs to implement were those related to zero-knowledge proofs, or zkSNAKRs:
+This week at the [Mana Project](https://github.com/poanetwork/mana), we finished implementing the EIPs (Ethereum Improvement Proposals) for the Byzantium hard fork. The hardest EIPs to implement were those related to zero-knowledge proofs, or zkSNARKs:
 
 - [EIP-196](https://eips.ethereum.org/EIPS/eip-196) | [Mana implementation](https://github.com/poanetwork/mana/pull/397)
 
@@ -52,7 +52,7 @@ We all know that blockchain technology is based on the idea of a decentralized l
 
 #### Zcash
 
-Zcash is the first cryptocurrency that based on zero-knowledge proofs. Zcash provides privacy options backed by zkSnarks. Transactions can be configured to hide the sender, recipient, and value on the blockchain.
+Zcash is the first cryptocurrency that based on zero-knowledge proofs. Zcash provides privacy options backed by zkSNARKs. Transactions can be configured to hide the sender, recipient, and value on the blockchain.
 
 #### Ethereum
 
@@ -62,7 +62,7 @@ It is still early but there are already several DApps for Ethereum that use this
 
 ### Conclusion
 
-Zero-knowledge proofs allow for cryptographically secure blockchain transactions. The Ethereum Byzantium hard fork incorporated the ability to use zkSNARks for zero-knowledge proofs. While zkSNARks is a nice addition to the Ethereum toolbox, it’s too early to see if it will be widely adopted by the Ethereum community.
+Zero-knowledge proofs allow for cryptographically secure blockchain transactions. The Ethereum Byzantium hard fork incorporated the ability to use zkSNARKs for zero-knowledge proofs. While zkSNARks is a nice addition to the Ethereum toolbox, it’s too early to see if it will be widely adopted by the Ethereum community.
 
 ### See also
 
