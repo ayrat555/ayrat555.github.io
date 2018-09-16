@@ -5,8 +5,6 @@ permalink: /about/
 tags: about
 ---
 
-### About me
-
 My name is Ayrat Badykov. I am a software developer based in Moscow.
 
 ### Education
