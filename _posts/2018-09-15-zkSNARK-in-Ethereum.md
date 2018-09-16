@@ -10,48 +10,59 @@ categories: ethereum
 
 ### Background
 
-This week we, at Mana Project, finished implementing Byzantium hard fork's EIPs (The Ethereum Improvement Proposals). The hardest EIPs to implement were EIPs related to zkSNARKs - [EIP-196](https://eips.ethereum.org/EIPS/eip-196) ([implementation in Mana](https://github.com/poanetwork/mana/pull/397)), [EIP-197](https://eips.ethereum.org/EIPS/eip-197)  ([implementation in Mana](https://github.com/poanetwork/mana/pull/406)).
+This week at the [Mana Project](https://github.com/poanetwork/mana), we finished implementing the EIPs (Ethereum Improvement Proposals) for the Byzantium hard fork. The hardest EIPs to implement were those related to zero-knowledge proofs, or zkSNAKRs:
 
-To mark this milestone, In this post, I'll try to give a short summary of a zero-knowledge proof and try to describe why it can be useful for Ethereum without going into too much detail because it uses pretty advanced elliptic curve cryptography based on elliptic curves over finite fields. But if you're interested in implementation details you can visit [BN](https://github.com/poanetwork/bn) - our implementation of BN128 elliptic curve operations.
+- [EIP-196](https://eips.ethereum.org/EIPS/eip-196) | [Mana implementation](https://github.com/poanetwork/mana/pull/397)
+
+- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) | [Mana implementation](https://github.com/poanetwork/mana/pull/406)
+
+
+To mark this milestone, I'll give a short description of what a zero knowledge proof is and describe it's usefulness. I won't go into too much detail because it uses advanced elliptic curve cryptography based on elliptic curves over finite fields. But if you're interested in the implementation details please visit [BN](https://github.com/poanetwork/bn) - our implementation of BN128 elliptic curve operations.
 
 ### Zero-knowledge proof
 
 Zero-Knowledge Succinct Non-interactive ARgument of Knowledge, or zkSNARKs, is a form of zero-knowledge proof. A zero-knowledge proof is a type of cryptography that allows one party (the prover) to prove to another party (the verifier) that it possesses some information without revealing any details about information itself.
 
-Zero-knowledge proof must have three properties:
-- Completeness. If the statement is true, the verifier will be convinced that the prover is honest.
-- Soundness If the statement is false, nothing can convince the verifier that the statement is true.
-- Zero-knowledge. If the statement is true, the verifier can not learn any additional information from the statement.
+A zero-knowledge proof must have three properties:
+- **Completeness:** If the statement is true, the verifier will be convinced that the prover is honest.
+- **Soundness:** If the statement is false, nothing can convince the verifier that the statement is true.
+- **Zero-knowledge:** If the statement is true, the verifier can not learn any additional information from the statement.
 
 #### Example
 
-Let's see the easiest and the most understandable example of a zero-knowledge proof that was inspired by the work of Professor Oded Goldreich.
+The following example is inspired by the work of Professor Oded Goldeich. In this scenario, you are the prover and your friend is the verifier.
 
-Imagine that your friend is color-blind (by the way, you can't be color-blind in this example, I'm sorry if you are) and you have two identical green and red balls. Your friend shows you these balls and puts them behind his back. He can swap around the balls behind his back and then he shows them to you again. Your job is to convince him that the balls are of a different color. After many switches, it will be obvious to your friend that the balls are of a different color because your statements will be true every time.
+Imagine your friend is colorblind (and you are not). He has a red ball and a green ball, one in each hand. Your task is to prove to him the 2 balls are different colors without giving him any additional information. He takes the balls behind his back and either switches them between hands or keeps them in the same hand. He brings them back out and you inform him whether or not he switched.
+
+Because you can see the colors, you can tell him each time with certainty whether or not he switched. After a number of rounds, your friend will become convinced the balls are different colors because you accurately tell him whether or not he switched each time. Your statements are always true, and your friend gains no knowledge about which ball is red and which is green
 
 This example satisfies all three zero-knowledge proof properties.
 
 #### Use cases
 
 - Authentication without revealing your identity
-- Proving that you have some private information (for example, private key) without revealing information itself
-- All other NP-class problems
+- Proving that you have some private information (for example, a private key) without revealing any information about the key
+- All other NP-class problems (for example mathematical operations).
+
 
 ### Zero-knowledge proof in blockchains
 
-We all know that blockchain technology is based on the idea of a decentralized ledger that records transactions and so forth. But the problem in the naive "ledger" approach is that it's transparent. Everybody can see all running transactions, payment history, balances etc. This is where Zero-knowledge proof comes into play.
+We all know that blockchain technology is based on the idea of a decentralized ledger that records transactions and so forth. But the problem in the naive "ledger" approach is that it's transparent. Everybody can see all running transactions, payment history, balances etc. This is where zero-knowledge proofs come into play.
+
 
 #### Zcash
 
-Zcash is the first cryptocurrency that based on zero-knowledge proofs. The novelty of Zcash is privacy which is backed by zkSnarks. Its transactions have the option to hide the sender, recipient, and value on the blockchain.
+Zcash is the first cryptocurrency that based on zero-knowledge proofs. Zcash provides privacy options backed by zkSnarks. Transactions can be configured to hide the sender, recipient, and value on the blockchain.
 
 #### Ethereum
 
-In the Byzantium hard fork, a zkSNARK functionality was added to Ethereum in the form of precompiled contracts. It still early but there are already a couple of apps for Ethereum that use this technology. One of them is [Open Vote Network[(https://github.com/stonecoldpat/anonymousvoting) - 2-round decentralized voting protocol.
+In the Byzantium hard fork, a zkSNARK functionality was added to Ethereum in the form of precompiled contracts.
+
+It is still early but there are already several DApps for Ethereum that use this technology. One of them is [Open Vote Network](https://github.com/stonecoldpat/anonymousvoting), a 2-round decentralized voting protocol.
 
 ### Conclusion
 
-zkSNARks is a nice addition to Ethereum toolbox but it's too early to conclude that it will be vastly adopted by Ethereum community.
+Zero-knowledge proofs allow for cryptographically secure blockchain transactions. The Ethereum Byzantium hard fork incorporated the ability to use zkSNARks for zero-knowledge proofs. While zkSNARks is a nice addition to the Ethereum toolbox, it’s too early to see if it will be widely adopted by the Ethereum community.
 
 ### See also
 
