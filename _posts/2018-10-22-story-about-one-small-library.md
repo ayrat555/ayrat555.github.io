@@ -30,7 +30,7 @@ Surprisingly, some people used this version, I even received [one pull request](
 
 In October of 2017, I decided to take a week-long holiday. My full-time job at the time was pretty exhausting: I was writing digital book/comic-book processing services in Java and Kotlin and physically didn't have time for anything else.
 
-On this holiday I rewrote Ethereumex from scratch. I got rid of automatic code generation, public API methods were defined using Elixir's behaviours. There is a [detailed post called "Elixir macros are evil (sometimes)"](https://www.badykov.com/elixir/2017/10/18/macros-are-evil/) about this rewrite on my blog. I was satisfied with what I ended up with. I even got a comment from Jose Valim (creator of Elixir), Read my post about rewrite if you're interested.
+On this holiday I rewrote Ethereumex from scratch. I got rid of automatic code generation, public API methods were defined using Elixir's behaviours. There is a [detailed post called "Elixir macros are evil (sometimes)"](https://www.badykov.com/elixir/2017/10/18/macros-are-evil/) about this rewrite on my blog. I was satisfied with what I ended up with. I even got a comment from Jose Valim (creator of Elixir). Read my post about rewrite if you're interested.
 
 The rewritten library was published as `0.2.0` version. After releasing this version, I took back seat and no new features were developed by me. I only have been reviewing pull requests and releasing new versions. Also, I created a couple of issues in the GitHub repo for the community. One of these issues was to implement IPC client that uses UNIX sockets under the hood.
 
@@ -50,6 +50,8 @@ At the beginning of October of 2018 [a new pull request](https://github.com/exth
 
 ### Projects that use Ethereumex
 
+One advantage of open source software is that anybody can use it in their own projects. There're a couple of open source projects that use Ethereumex:
+
 - [elixir-omg](https://github.com/omisego/elixir-omg) - OmiseGO's Elixir implementation of Plasma and forms the basis for the OMG Network.
 - [eth](https://hex.pm/packages/eth) - Ethereum utilities for Elixir.
 - [eth_contract](https://hex.pm/packages/eth_contract) - A set of helper methods for calling ETH Smart Contracts via JSON RPC.
@@ -57,4 +59,13 @@ At the beginning of October of 2018 [a new pull request](https://github.com/exth
 
 ### Conclusion
 
-At the beginning of this article is an illustration of [the Tower of Babel](https://en.wikipedia.org/wiki/Tower_of_Babel). It's not accidental. In my opinion, open source community (GitHub) is like this tower - people are working together to create something wonderful. I hope big corporations (Microsoft) won't destroy it.
+I hope this article will motivate somebody to write open source projects or contribute to existing open source projects. The more people are involved in open source community, the higher quality of open source software on average.
+
+#### PS
+
+At the beginning of this post is an illustration of [the Tower of Babel](https://en.wikipedia.org/wiki/Tower_of_Babel). It's not accidental. In my opinion, open source community (GitHub) is like this tower - people are working together to create something wonderful. I hope big corporations (Microsoft) won't destroy it.
+
+### See also
+
+- [Ethereumex](https://github.com/exthereum/ethereumex)
+- [Elixir macros are evil (sometimes)](https://www.badykov.com/elixir/2017/10/18/macros-are-evil/)
