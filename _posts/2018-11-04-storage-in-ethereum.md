@@ -42,11 +42,19 @@ In-memory trie will read not existing in-memory nodes from permanent disk storag
 
 ![block-cache](https://i.imgur.com/w9w0yhQ.jpg)
 
+We can commit changes from in-memory trie storage after every valid block or after multiple valid blocks.
+
 ### Optimisations
 
 We can use a couple more optimisations to make working with storage even faster:
 
 - Batch updates. We can use batch updates when committing modified data to the permanent storage
-- Single trie traversal.
+- Single trie traversal. We can commit in-memory trie changes by dumping all modified nodes from it to the permanent storage. It will save us from the second tree traversal for updating raw key-value pairs.
 
 ### Conclusion
+
+The final memory model described here is what we're using in [the Mana-Ethereum](https://github.com/mana-ethereum/mana) project. We were moving to it step by step and we're still improving it. I hope this post will be useful for anyone implementing an Ethereum client.
+
+### See also
+
+- [Mana-Ethereum](https://github.com/mana-ethereum/mana)
