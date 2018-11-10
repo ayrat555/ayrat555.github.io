@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Storage in Ethereum
-date:       2018-11-08
+date:       2018-11-10
 summary:    Storage levels in the Mana-Ethereum client
 categories: ethereum
 ---
