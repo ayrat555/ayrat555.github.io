@@ -10,7 +10,7 @@ categories: ethereum
 
 ### Introduction
 
-In [the Mana-Ethereum](https://github.com/mana-ethereum/mana) project, we're creating Ethereum client implementation in Elixir. Ethereum is like any software needs constant maintenance, improvement and optimisation. In this post, I'll describe how hard fork configuration is done in our client using built-in polymorphism mechanisms in Elixir.
+In [the Mana-Ethereum](https://github.com/mana-ethereum/mana) project, we're creating Ethereum client implementation in Elixir. Ethereum is like any software needs constant maintenance, improvement and optimization. In this post, I'll describe how hard fork configuration is done in our client using built-in polymorphism mechanisms in Elixir.
 
 ### Hard forks
 
@@ -222,6 +222,6 @@ defmodule EVM.Configuration.Frontier do
 
 By the way, this implementation was improved further using macros. For those interested, see [this PR](https://github.com/mana-ethereum/mana/pull/536/files).
 
-### Conclustion
+### Conclusion
 
 Protocols and behaviours are powerful tools for polymorphism in Elixir. I hope this post was helpful in understanding them.
