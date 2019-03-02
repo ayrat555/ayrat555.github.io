@@ -17,14 +17,13 @@ Byte code is used inside EVM and it's not readable by a human. Users of smart co
 
 In this post, I'll describe how smart contracts can be verified. Blockchain explorers use the same concepts described in this post.
 
-
 ### Input parameters
 
 You should have the following data related to a smart contract that you want to verify:
 
 Required:
 - byte code
-- Solidity contract code
+- solidity contract code
 - contract name
 - compiler version
 - optimization
@@ -52,7 +51,42 @@ The compiler API expects a JSON formatted input and outputs the compilation resu
   <footer><cite title="Solidity compiler docs">Solidity compiler docs</cite></footer>
 </blockquote>
 
+Let's generate JSON input parameters for the compiler's JSON-input-output interface:
+
+```
+{
+  language: 'Solidity',
+  sources: {
+    [newContractName]: {
+      content: sourceCode
+    }
+  },
+  settings: {
+    evmVersion: 'byzantium',
+    optimizer: {
+      enabled: optimize == '1',
+      runs: 200
+    },
+    libraries: {
+      [newContractName]: externalLibraries
+    },
+    outputSelection: {
+      '*': {
+        '*': ['*']
+      }
+    }
+  }
+}
+```
+
+`newContractName` is the name of our contract
+`sourceCode` is the source code of our contract
+`optimize` is equal to `1` if we enabled compiler optimization
+`externalLibraries` is key-value pairs of external libraries that we used in our contract
 
 
+We pass the version of Solidity compiler directly to `solc.loadRemoteVersion` as the first argument
 
-### Examples
+#### Constructor Arguments
+
+The only thing left to do is to append constructor arguments to the compiled bytecode and check if it equals to the manually compiled byte code.
