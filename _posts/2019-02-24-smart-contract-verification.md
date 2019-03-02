@@ -79,10 +79,10 @@ Let's generate JSON input parameters for the compiler's JSON-input-output interf
 }
 ```
 
-`newContractName` is the name of our contract
-`sourceCode` is the source code of our contract
-`optimize` is equal to `1` if we enabled compiler optimization
-`externalLibraries` is key-value pairs of external libraries that we used in our contract
+- `newContractName` is the name of our contract
+- `sourceCode` is the source code of our contract
+- `optimize` is equal to `1` if we enabled compiler optimization
+- `externalLibraries` is key-value pairs of external libraries that we used in our contract
 
 
 We pass the version of Solidity compiler directly to `solc.loadRemoteVersion` as the first argument
