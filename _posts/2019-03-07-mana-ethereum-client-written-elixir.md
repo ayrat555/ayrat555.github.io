@@ -13,4 +13,4 @@ Slides are available in my [talks repo](https://github.com/ayrat555/talks/tree/m
 
 The talk is in Russian.
 
-<iframe width="480" height="360" src="https://www.youtube.com/embed/ozAoHm90rNI" frameborder="0"> </iframe>
+<iframe width="480" height="360" src="https://www.youtube.com/embed/ozAoHm90rNI" frameborder="0" allowfullscreen> </iframe>
