@@ -40,6 +40,9 @@ My name is Ayrat Badykov. I am a software developer based in Moscow.
   - Media file storage service using amazon s3, riak cs
   - Media file processing service
 
+### Talks
+
+- [Mana - Ethereum client written in Elixir](https://www.badykov.com/talks/2019/03/07/mana-ethereum-client-written-elixir/)
 
 ### Open Source projects
 
