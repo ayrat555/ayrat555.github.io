@@ -36,7 +36,7 @@ Let me share a few easy ways to get started with it.
 
 To create a new branch all you have to do is to press `b` and choose a branch to create a new branch from:
 
-![creating-a-branch](https://i.imgur.com/n87Cdgl.png)
+![creating-a-branch](https://i.imgur.com/uYHOUtP.png)
 
 ### Committing your changes
 
@@ -48,13 +48,13 @@ You can create a new commit by pressing `c` two times. You can stage a file by p
 
 Once you committed your changes, you can push them by pressing `p` `p` two times.
 
-![push](https://i.imgur.com/xjAIOPo.png)
+![push](https://i.imgur.com/QPq3ePa.png)
 
 ### Logging and blaming
 
 To use `git-blame` all you have to do is to call `magit-blame` function on a file you want to inspect
 
-![blaming](https://i.imgur.com/hopHzvU.png)
+![blaming](https://i.imgur.com/mItP5im.png)
 
 
 
