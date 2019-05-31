@@ -5,6 +5,8 @@ summary: Magit
 categories: common
 ---
 
+![cover](https://i.imgur.com/OkR7dM2.png)
+
 Effective people optimize common tasks to save time.
 
 <blockquote>
