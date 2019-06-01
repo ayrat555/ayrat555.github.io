@@ -20,7 +20,7 @@ Software developers perform a lot of routine tasks throughout the day. For examp
 
 Git is the most used version-control system. There are a lot of GUI interfaces for it but most of them just make it more obscure by adding new levels of abstraction. That's why the majority of git users prefer staying on the terminal.
 
-But let me tell me about a git interface that is not like the others. If you start using it you won't be able to return to the terminal version ever again.
+But let me tell you about a git interface that is not like the others. If you start using it you won't be able to return to the terminal version ever again.
 
 ### Magit
 
