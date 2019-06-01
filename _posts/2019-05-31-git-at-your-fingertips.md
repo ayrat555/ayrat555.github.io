@@ -7,7 +7,7 @@ categories: common
 
 ![cover](https://i.imgur.com/OkR7dM2.png)
 
-Effective people optimize common tasks to save time.
+Effective people optimize routine tasks to save time.
 
 <blockquote>
   <p>
@@ -16,7 +16,7 @@ Effective people optimize common tasks to save time.
   <footer><cite title="Baltasar Gracian">Baltasar Gracian</cite></footer>
 </blockquote>
 
-Software developers perform a lot of common tasks throughout the day. For example, saving and uploading code changes using a version-control system, running ci, deploying an application etc. People underestimate the amount of time they spend doing these common tasks.
+Software developers perform a lot of routine tasks throughout the day. For example, saving and uploading code changes using a version-control system, running ci, deploying an application, etc. People underestimate the amount of time they spend doing these common tasks.
 
 Git is the most used version-control system. There are a lot of GUI interfaces for it but most of them just make it more obscure by adding new levels of abstraction. That's why the majority of git users prefer staying on the terminal.
 
