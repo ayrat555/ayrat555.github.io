@@ -13,29 +13,37 @@ I've been in crypto community (mostly Ethereum) for some time ([Mana Project](ht
 
 ### Libra vs Ethereum
 
-Let's compare some points described in the Libra's technical paper that I found important. Note, that I'll compare fundamental things without comparing technical details. Of cource, Libra tries to improve on Ethereum but so does Ethereum 2.0.
-
+Let's compare some points described in the Libra's technical paper that I found important. Note, that I'll compare fundamental things without comparing technical details. Of cource, Libra tries to improve on Ethereum but so does Ethereum 2.0 and other blockchains (Pokadot, POA Network, etc).
 
 #### Specification
 
+As it was said above Libra has a [technical paper](https://developers.libra.org/docs/assets/papers/the-libra-blockchain.pdf). Comparing it with Ethereum's [Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf) it seems rather shallow.
 
-vs Ethereum yellow paper
+Considering there are fifty people who wrote this paper, they could provide more implementation details. You can say there is an implementation that you can look for required details. But with Ethereum's Yellow Paper you can implement your own client only with by studying it, it includes all the required equations and formulas. Also, Yello Paper has only one main author - Gavin Wood.
 
-####  Smart Contracts
+#### Smart Contracts
 
-Virtual Machine and Programming Language
+Intiially Turing complete programming language was Ethereum's novelty. It was what got me interested in Ethereum in the first place. From Ethereum official website: Ethereum is a decentralized platform for applications that run exactly as programmed without any chance of fraud, censorship or third-party interference.
 
-#### Consensus algotithmb
+Ethereum has virtual machine that executes machine code compiled from high-level smart contracts programming languages. There are several languages that are compiled to EVM machine code: Solidity (similar to Javascript), LLL (Lisp Like Language) etc.
 
-- Transaction
+It doesn't look like Libra improves on Ethereum here. It also has virtual machine that executes smart contracts compiled to bytecode. Smart contract language is called Move. It's not finished yet.
 
-events - logs and receipts
+#### Transactions
+
+Again, there are a lot of similarities in Libra and Ethereum in ransactions and their execution.
+
+Gas is the internal pricing for running a transaction or a contract in Ethereum. Transaction sender sets gas price when he executes transaction. From Libra's technical paper: `Validators prioritize executing transactions with higher gas prices and may drop transactions with low prices when the system is congested`. So gas is exactly the same in Libra.
+
+Receipt in Ethereum is a atructure that contains various information about transaction execution (gas used, status etc). In libra receipts are called event.
 
 #### Custom coins
 
+In the Libra paper they emphasize that multiple different currencies can be implemented using Libra. But it's not innovative since ERC-20 and ERC-721 tokens exist in Ethereum ecosystem for a long time and they are already widele used.
 
-Poa
+#### Consensus algotithm
 
+I didn't go deep into the Libra's consensus algorithms. It some kind of Proof of Authority (POA) type of consensus since there are special nodes called validator which validate and publish new transactions. Ethereum ecosystem already have working POA solutions (POA Network, xDai etc). So nothing new here.
 
 
 
