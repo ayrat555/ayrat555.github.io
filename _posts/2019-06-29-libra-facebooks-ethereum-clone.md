@@ -16,7 +16,7 @@ I've been in crypto community (mostly Ethereum) for some time ([Mana Project](ht
 
 ### Libra vs Ethereum
 
-Let's compare some points described in Libra's technical paper that I found important. Note, that I'll compare fundamental things without comparing technical details. Of course, Libra tries to improve on Ethereum but so does Ethereum 2.0 and other blockchains (Pokadot, POA Network, etc).
+Let's compare some points described in Libra's technical paper that I found important. Note, that I'll compare fundamental things without comparing technical details. Of course, Libra tries to improve on Ethereum but so does Ethereum 2.0 and other blockchains (Polkadot, POA Network, etc).
 
 #### Specification
 
