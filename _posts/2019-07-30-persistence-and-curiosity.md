@@ -2,7 +2,7 @@
 layout: post
 title: Persistence and curiosity
 date: 2019-07-30
-summary: The learning process is a marathon not a race.
+summary: A couple of thoughts about the learning process.
 categories: common
 ---
 
@@ -18,15 +18,12 @@ Curiosity may seem like a simple thing to most people because we hear about it a
 
 We found what makes you interested in a specific activity. But what makes you good at it? The first thing that comes to mind is aptitude to this activity. Maybe you have physique so you're good at sport or you're a brainy type so you enjoy math. That's only part of the story. When you see a person that good at what he/she's doing don't attribute it talent/aptitude, attribute it to hard work.
 
-There is a book called "Outliers: The Story of Success" by Malcolm Gladwell. In this book, the '10,000-Hour Rule' is introduced. The rule claims that you have to spend 10,000 hours to achieve world-class expertise in any skill. For example, practising a specific task that can be accomplished with 20 hours of work a week for 10 years. I believe that's true so persistence is what makes you good at something.
+There is a book called "Outliers: The Story of Success" by Malcolm Gladwell. In this book, the '10,000-Hour Rule' is introduced. The rule claims that you have to spend 10,000 hours to achieve world-class expertise in any skill. For example, practising a specific task that can be accomplished with 20 hours of work a week for 10 years. I believe that's true so persistence is what makes you good at something. So keep in mind the learning process is a marathon, not a race.
 
-### Example 1. University
+### Curiosity and Persistence
 
-### Example 2. Job
-
-### Example 3. Hobby
-
-- sport
-- Creative hobbys
-
-### Conclustion
+The more you do something, the better you become at it. People tend to enjoy doing what they do well. So we came to the useful sequence:
+1. Curiosity makes you interested in something.
+2. Persistence makes you good at it
+3. You enjoy activity if you're good at it.
+4. Profit!
