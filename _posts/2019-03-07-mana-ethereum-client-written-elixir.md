@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Mana - Ethereum client written in Elixir (Talk)
+date: 2019-03-07
 summary: The talk I gave on the ElixirLangMocow #9 (Warning: The talk is in Russian)
 categories: talks
 ---
