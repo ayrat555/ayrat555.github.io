@@ -49,6 +49,8 @@ My name is Ayrat Badykov. I am a software developer based in Moscow.
 
 #### Blockchain
 
+- [Blockscout](https://github.com/poanetwork/blockscout) - Blockchain explorer for Ethereum based networks
+
 - [Mana](https://github.com/poanetwork/mana) - Ethereum full node implementation written in Elixir
 
 - [ExRLP](https://github.com/exthereum/ex_rlp) - Elixir implementation of Ethereum's RLP (Recursive Length Prefix) encoding
