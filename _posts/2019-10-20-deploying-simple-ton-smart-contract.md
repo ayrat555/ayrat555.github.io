@@ -10,7 +10,7 @@ categories: ton
 
 ### Intro
 
-The last couple of months have been pretty busy for the blockchain community. In June 2019 Facebook announced that they're working on Libra. I have a [post](https://www.badykov.com/blockchain/2019/06/29/libra-facebooks-ethereum-clone/) about it with comparison to Ethereum. Now (the end of September 2019) Telegram released [technical papers](https://test.ton.org/) and [the project](https://github.com/ton-blockchain/ton) of Telegram Open Network (TON) - a blockchain by Telegram. If you don't know Telegram, is a messaging service that makes emphasis on security.
+The last couple of months have been pretty busy for the blockchain community. In June 2019 Facebook announced that they're working on Libra. I have a [post](https://www.badykov.com/blockchain/2019/06/29/libra-facebooks-ethereum-clone/) about it with comparison to Ethereum. Now (the end of September - the beginning of October 2019) Telegram released [technical papers](https://test.ton.org/) and [the project](https://github.com/ton-blockchain/ton) of Telegram Open Network (TON) - a blockchain by Telegram. If you don't know what Telegram is, Telegram is a messaging service that makes emphasis on security.
 
 There are millions of Telegram users worldwide. So if the company releases its blockchain, it will be available for all Telegram users and TON may become the most massively adopted blockchain platform in the world. That's why TON is also a very promising technology to learn for developers.
 
@@ -61,17 +61,17 @@ recv_external PROC:<{
 
 There are two main issues related to  using  bleeding-edge technologies:
 - There are a lot of bugs.
-- There are not enough tools for developer tools (testing, debugging, code highlighting for your favourite editor etc)
+- There are not enough tools for developer happiness (testing, debugging, code highlighting for your favorite editor, etc)
 
-With TON smart contracts you will experience all points described above. But we have to cut some slack to TON platform developers because they resolve GitHub issues pretty fast.
+With TON smart contracts you will experience all points described above. But we have to cut some slack to the TON platform developers because they resolve GitHub issues pretty fast.
 
 ### Money giver contract
 
-Let's create a a simple smart contract called `Money Sender`.
+Let's create a simple smart contract called `Money Sender`.
 
 #### Money sender contract
 
-It's a simple wallet smart contract which can be used to store, send and receive grams - currency in TON network. It's meant  to understand the full process of creating a smart contract in Func, deploying it using Fift and writing external messages to it in Fift.
+It's a simple wallet smart contract that can be used to store, send and receive grams - currency in the TON network. It's meant to understand the full process of creating a smart contract in Func, deploying it using Fift and writing external messages to it in Fift.
 
 It consists of several files located in `money_sender` folder:
 1. `money_sender.fc` - the contract that proxies internal messages. It doesn't have any checks (seqno, signature) because it's used only as an example. It increments its seqno after every request.
