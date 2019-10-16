@@ -6,6 +6,8 @@ summary: The first look at TON
 categories: ton
 ---
 
+![img](https://davidgerard.co.uk/blockchain/wp-content/uploads/2018/12/ton-graphic.jpg)
+
 ### Intro
 
 The last couple of months have been pretty busy for the blockchain community. In June 2019 Facebook announced that they're working on Libra. I have a [post](https://www.badykov.com/blockchain/2019/06/29/libra-facebooks-ethereum-clone/) about it with comparison to Ethereum. Now (the end of September 2019) Telegram released [technical papers](https://test.ton.org/) and [the project](https://github.com/ton-blockchain/ton) of Telegram Open Network (TON) - a blockchain by Telegram. If you don't know Telegram, is a messaging service that makes emphasis on security.
