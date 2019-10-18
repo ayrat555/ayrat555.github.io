@@ -30,6 +30,8 @@ TON smart contracts can be written in three languages which differ in abstractio
   var ds = get_data().begin_parse();
 ```
 
+This language is very practical. It won't be hard to understand for any seasoned developer.
+
 - Fift - a stack-based prefix notation language.
 
 Example with execution comments:
@@ -43,6 +45,14 @@ Example with execution comments:
 // Stack 2 1; -
 // Stack 1;
 ```
+
+This example is not very hard to understand. But in reality even relatively simple expressions are very cryptic for an untrained developer. For example:
+
+```
+{ <b swap $, b> <s  public_keys_dict@ swap 16  udict!+  drop public_key# 1+  2 'nop does : public_keys_dict } : add_public_key
+```
+
+This expression adds a new key-value pair to the dictionary. Fift may be compared to Lisp languages. Although many people hate Lisp for its brackets, they make code much more readable.
 
 - Fift assembly - a low-level language that Func programs are compiled to.
 
@@ -197,7 +207,7 @@ drop
 PROGRAM{ "money_sender.fif" include }END>s constant code // code
 "init_data.boc" file>B B>boc constant storage // data
 
-//  let's send an empty message and check that seqno is changed in storage
+//  let's send an empty message and check that seqno is changed in the storage
 
 <b b> <s constant empty_message
 
