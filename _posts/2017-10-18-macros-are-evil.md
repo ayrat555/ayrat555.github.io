@@ -6,7 +6,7 @@ summary:    Exciting story of dynamic code generation.
 categories: elixir
 ---
 
-![hydra](https://orig00.deviantart.net/557f/f/2014/084/9/f/hydra_by_yoso999-d7bmpqg.jpg)
+![hydra](/images/2017-10-18-hydra.jpg)
 
 ### Introduction
 
