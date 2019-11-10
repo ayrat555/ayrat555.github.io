@@ -6,13 +6,13 @@ summary:    SICP course culmination
 categories: general
 ---
 
-![wizard](https://i.imgur.com/kN7MYLz.jpg)
+![wizard](/images/2017-11-04-wizard.jpg)
 
 ### Introduction
 
 Since the end of August, every saturday my colleagues at Bookmate and I are watching "Structure and Interpretation of Computer Programs" [course lectures](https://www.youtube.com/playlist?list=PL4kmJpCNr9UJtH-YZkSqkUhgRku55_Pf6). Here's excerpt from the course culmination - The Metacircular Evaluator.
 
-![eval-apply](http://sicp.phoenixinquis.net/4.1-eval-apply.svg)
+![eval-apply](/images/2017-11-04-eval-apply.svg)
 
 ### Eval
 
@@ -121,4 +121,4 @@ Apply takes two arguments, a procedure and a list of arguments to which the proc
 
 ### Wizard
 
-![true-wizard](https://i.imgur.com/UFHzdBV.jpg)
+![true-wizard](/images/2017-11-04-true-wizard.jpg)

@@ -6,11 +6,11 @@ summary:    Yet another telegram bot
 categories: elixir
 ---
 
-![robot](https://i.imgur.com/wHB01sq.jpg)
+![robot](/images/2017-11-26-robot.jpg)
 
-### Background
+### background
 
-Recently I got an opportunity to write a simple Telegram bot. The purpose of this bot is very simple: it has to send random quotes of [Victor Pelevin](https://en.wikipedia.org/wiki/Victor_Pelevin) for any user interaction. I decided to write this bot in Elixir. So in this post I will try describe the bot's implementation.
+Recently i got an opportunity to write a simple Telegram bot. The purpose of this bot is very simple: it has to send random quotes of [Victor Pelevin](https://en.wikipedia.org/wiki/Victor_Pelevin) for any user interaction. I decided to write this bot in Elixir. So in this post I will try describe the bot's implementation.
 
 ### Telegram bot updates
 

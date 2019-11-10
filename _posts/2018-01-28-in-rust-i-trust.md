@@ -6,7 +6,7 @@ summary:    My thoughts on Rust
 categories: rust
 ---
 
-![rusty gears](https://i.imgur.com/jog2gTN.jpg)
+![rusty gears](/images/2018-01-28-gears.jpg)
 
 So it's time to write my first post in 2018. I've been busy learning the Rust language. In this post I'll try to explain why I decided to learn it, how I'm learning it and awesome things this language can be used for.
 

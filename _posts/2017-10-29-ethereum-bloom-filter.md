@@ -6,7 +6,7 @@ summary:    Let’s examine Ethereum's bloom filters
 categories: ethereum
 ---
 
-![bloom](https://i.pinimg.com/736x/6c/d6/5d/6cd65d49e6e9bd27700b4d50da8c6760--brothers-grimm-grimm-fairy-tales.jpg)
+![bloom](/images/2017-10-29-tom-thumb.jpg)
 
 ### Background
 
@@ -36,7 +36,7 @@ Applications:
 
 Here's excerpt from the [yellow paper](https://ethereum.github.io/yellowpaper/paper.pdf):
 
-![ethereum-bloom](https://i.imgur.com/IFEyqRU.jpg)
+![ethereum-bloom](/images/2017-10-29-eth-bloom.jpg)
 
 If you didn't understand anything, no worries, I will try to describe its implementation in the next section.
 
