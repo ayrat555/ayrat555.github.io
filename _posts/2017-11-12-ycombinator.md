@@ -6,7 +6,7 @@ summary:    also known as WTF combinator
 categories: general
 ---
 
-![mit-logo](http://xahlee.info/UnixResource_dir/gki/lambda/Mit_Scheme_lisp_logo.svg)
+![mit-logo](/images/2017-11-12-mit-logo.svg)
 
 In the [previous post](http://www.badykov.com/general/2017/11/04/lisp-interpreter-in-lisp/) I wrote about Metacircular Evaluator - list interpeter that is written in lisp. Now I will give a short description of the Curry's Paradoxical Combinator. It will help to comprehend the idea that a thing can be described in terms of itself.
 
@@ -36,4 +36,4 @@ f(x0) = x0
 ```
 
 > So Lisp is a fixed point of the of the Metacircular Evaluator.
-![explosion](https://i.imgur.com/BuIwKkd.gif)
+![explosion](/images/2017-11-12-explosion.gif)
