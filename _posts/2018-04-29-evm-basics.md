@@ -6,7 +6,7 @@ summary:    EVM execution basics in Elixir
 categories: elixir
 ---
 
-![ethereum](https://i.imgur.com/zaIytOk.jpg)
+![ethereum](/images/2018-04-29-ethereum.jpg)
 
 ### Introduction
 
@@ -97,7 +97,7 @@ This section is intended for acute readers that read Yellow Paper and want to kn
 
 Here's excerpt from Ethereum's yellow paper:
 
-![execution-model](https://i.imgur.com/5xJ9lFl.jpg)
+![execution-model](/images/2018-04-29-execution.jpg)
 
 Let's exemine programming code file `lib/evm/vm.ex':
 

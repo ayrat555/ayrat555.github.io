@@ -6,7 +6,7 @@ summary:    Simple cron command entry parser
 categories: rust
 ---
 
-![time](https://i.imgur.com/snhaQpU.jpg)
+![time](/images/2018-02-27-time.jpg)
 
 In [my previous post](http://www.badykov.com/rust/2018/01/28/in-rust-i-trust/) I wrote about the plan of how I am going to learn the Rust language. One of the the plans's points was to write a couple of simple libraries.
 
@@ -102,4 +102,4 @@ I'm planning to add more features to `cronenberg` in the future:
 
 The library has a GitHub repository - [cronenberg](https://github.com/ayrat555/cronenberg).
 
-![cronenberg_quote](https://i.imgur.com/JGWZGUI.jpg)
+![cronenberg_quote](/images/2018-02-27-cronenberg.jpg)

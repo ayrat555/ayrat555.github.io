@@ -6,11 +6,11 @@ summary:    Mostly Kademlia in Elixir
 categories: elixir
 ---
 
-![net](https://i.imgur.com/vAMxgVz.png)
+![net](/images/2018-06-02-discovery.png)
 
 ### Introduction
 
-Each second, millions of messages are sent between nodes on the Ethereum platform. Message contents depend on a communication protocol ([swarm](http://swarm-guide.readthedocs.io/en/latest/introduction.html), [eth](https://github.com/ethereum/wiki/wiki/Ethereum-Wire-Protocol), [whisper](https://github.com/ethereum/wiki/wiki/Whisper)). Nodes need a way to find other nodes. 
+Each second, millions of messages are sent between nodes on the Ethereum platform. Message contents depend on a communication protocol ([swarm](http://swarm-guide.readthedocs.io/en/latest/introduction.html), [eth](https://github.com/ethereum/wiki/wiki/Ethereum-Wire-Protocol), [whisper](https://github.com/ethereum/wiki/wiki/Whisper)). Nodes need a way to find other nodes.
 
 This post provides  a concise description of node discovery implementation in the [Mana Project](https://github.com/poanetwork/mana) - an Ethereum client written in Elixir. Included is a description of the Kademlia algorithm used by Etherium and the methods required to work with the 3 Kademlia data structures: nodes, k-buckets and routing tables.
 
@@ -24,7 +24,7 @@ Ethereum nodes find each other using a node discovery protocol based on the Kade
 
 Kademlia stores nodes it knows about in a routing table. A routing table consists of buckets and  nodes are stored in these buckets.
 
-The novelty of the Kademlia algorithm is the XOR metric it uses. Each node is identified by a unique key, the distance between nodes is defined as XOR of their keys. 
+The novelty of the Kademlia algorithm is the XOR metric it uses. Each node is identified by a unique key, the distance between nodes is defined as XOR of their keys.
 
 Each Bucket contains `k` nodes (that's why they're called k-buckets) with a common prefix in relation to a current node. K-buckets are kept sorted by time:
 - Head: last seen - least-recently seen node
@@ -168,7 +168,7 @@ Node discovery is a recursive process. So `ExWire.Kademlia.Discovery` describes 
 #### Data structures
 
 As described earlier there are three main data structures in Kademlia:
-- node 
+- node
 - bucket
 - routing table
 In our implementation we defined three modules for each of these entities which contain methods directly related to Kademlia along with helper methods.
@@ -214,7 +214,7 @@ defmodule ExWire.Kademlia.Node do
 end
 ```
 
-SHA-3 hash of a node’s public key is used for the node’s id (defined simply as key in struct definition). Distance is calculated between the hashes - not the public keys. 
+SHA-3 hash of a node’s public key is used for the node’s id (defined simply as key in struct definition). Distance is calculated between the hashes - not the public keys.
 
 The common prefix can be calculated easily using pattern matching against the first bits:
 
@@ -286,7 +286,7 @@ There are several possibilites when adding a node to a k-bucket:
 1. **Sending node already exists in recipients k-bucket**: recipient moves it to the tail of the list.
 2. **Node is not already in the appropriate k-bucket and bucket has fewer than k entries**: recipient  inserts the new sender at the tail of the list.
 3. **Appropriate k-bucket is full**: the recipient pings the k-bucket’s least-recently seen node to decide what to do.
-    1. **least-recently seen node fails to respond**: Node is is evicted from the k-bucket and the new sender inserted at the tail.  
+    1. **least-recently seen node fails to respond**: Node is is evicted from the k-bucket and the new sender inserted at the tail.
     2. **least-recently seen node responds**: node is moved to the tail of the list, and the new sender’s contact is discarded.
 
 The `refresh/3` method handles parts 1 and 2 of the insertion algorithm. It checks if the node is already a member of the bucket, if it is, the node is reinserted (moved to the tail of the list). If the bucket is full, it returns the least-recently seen node. Otherwise, it just inserts the node.

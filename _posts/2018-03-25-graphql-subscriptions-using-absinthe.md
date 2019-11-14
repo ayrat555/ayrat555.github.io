@@ -6,7 +6,7 @@ summary:    GraphQL in Elixir
 categories: elixir
 ---
 
-![absinthe](https://i.imgur.com/ru7Oe96.png)
+![absinthe](/images/2018-03-25-absinthe.png)
 
 Recently I've been playing around with GraphQL using [Absinthe](http://absinthe-graphql.org/) - The GraphQL toolkit for Elixir. Here's a quick overview of this data query language and an explanation on how to create filtered GraphQL subscriptions with Absinthe.
 
@@ -116,7 +116,7 @@ Stumped by this problem, I went to Absinthe slack channel and asked about possib
 
 The reply I got from one of Absinthe creators - Ben Wilson:
 
-![ben-wilson-slack](https://i.imgur.com/BGT4Iny.png)
+![ben-wilson-slack](/images/2018-03-25-wilson.png)
 
 By the way, you can check out his amazing talk ["Live APIs with GraphQL Subscriptions"](https://www.youtube.com/watch?v=PEckzwggd78) on ElixirConf 2017.
 
