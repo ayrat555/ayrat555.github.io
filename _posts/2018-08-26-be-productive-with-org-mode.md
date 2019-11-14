@@ -6,7 +6,7 @@ summary:    A note manager and organizer
 categories: emacs
 ---
 
-![org-mode-collage](https://i.imgur.com/hgqCyen.jpg)
+![org-mode-collage](/images/2018-08-26-org1.jpg)
 
 ### Introduction
 
@@ -49,7 +49,7 @@ The most basic Org-mode use case is writing simple notes about things that you w
 
 How it looks using [org-bullets](https://github.com/sabof/org-bullets):
 
-![notes](https://i.imgur.com/lGi60Uw.png)
+![notes](/images/2018-08-26-org2.png)
 
 In this simple example you can see some of the Org-mode features:
 - nested notes
@@ -98,7 +98,7 @@ Often when I'm working on some task I notice things that I can improve or fix. I
 
 How it looks in Emacs:
 
-![project-todos](https://i.imgur.com/Hbu8ilX.png)
+![project-todos](/images/2018-08-26-org3.png)
 
 In this example you can see more Org mode features:
 
@@ -138,7 +138,7 @@ For a book note I should add its name and its author, for a movie note I should 
 
 Another great feature of Org-mode is that you can use it as a day planner. Let's see an example of one of my days:
 
-![schedule](https://i.imgur.com/z5HpuB0.png)
+![schedule](/images/2018-08-26-org4.png)
 
 I didn't give a lot of thought to this example, it's my real file for today. It doesn't look like much but it helps to spend your time on things that important to you and fight with procrastination.
 
@@ -147,7 +147,7 @@ I didn't give a lot of thought to this example, it's my real file for today. It 
 From Org mode's documentation, Org has the ability to track the consistency of a special category of
 TODOs, called “habits”. I use this feature along with day planning when I want to create new habits:
 
-![habits](https://i.imgur.com/YJIp3d0.png)
+![habits](/images/2018-08-26-org5.png)
 
 As you can see currently I'm trying to wake early every day and workout once in two days. Also, it helped to start reading books every day.
 
@@ -155,7 +155,7 @@ As you can see currently I'm trying to wake early every day and workout once in 
 
 Last but not least I use agenda views. Todo items can be scattered throughout different files (in my case daily plan and habits are in separate files), agenda views give an overview of all todo items:
 
-![agenda](https://i.imgur.com/CKX9BL9.png)
+![agenda](/images/2018-08-26-org6.png)
 
 ### More Org mode features
 
