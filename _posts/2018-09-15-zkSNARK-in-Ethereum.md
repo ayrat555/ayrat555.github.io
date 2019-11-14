@@ -6,7 +6,7 @@ summary:    Zero-knowledge proofs in Ethereum
 categories: ethereum
 ---
 
-![crypto-lock](https://i.imgur.com/KQEORrb.jpg)
+![crypto-lock](/images/2018-09-15-lock.jpg)
 
 ### Background
 

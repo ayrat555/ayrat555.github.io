@@ -6,7 +6,7 @@ summary:    This year's results
 categories: common
 ---
 
-![resolutions](https://i.imgur.com/wJKftyQ.jpg)
+![resolutions](/images/2018-12-15-resolutions.jpg)
 
 ### Introduction
 

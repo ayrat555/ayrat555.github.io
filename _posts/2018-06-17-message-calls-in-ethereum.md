@@ -6,7 +6,7 @@ summary:    Summary of existing message calls in Ethereum
 categories: ethereum
 ---
 
-![dolls](https://i.imgur.com/yCliFxX.png)
+![dolls](/images/2018-06-17-dolls.png)
 
 ### Background
 
@@ -18,7 +18,7 @@ Below I provide a short summary related to the message calls section of [Ethereu
 
 As outlined in the Yellow Paper, message call is the function `Θ` that takes 12 arguments. See the paper for details associated with each value.
 
-![theta](https://i.imgur.com/kpxGzGK.png)
+![theta](images/2018-06-17-theta.png)
 
 **`Θ` Input values:**
 

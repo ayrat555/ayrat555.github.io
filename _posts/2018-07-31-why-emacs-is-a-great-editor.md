@@ -6,7 +6,7 @@ summary:    My thoughts on Emacs
 categories: emacs
 ---
 
-![swiss-knife](https://i.imgur.com/J5Od0Xm.png)
+![swiss-knife](/images/2018-07-31-knife.png)
 
 Often arguments arise from the fact that I use emacs as my main text editor. In this post, I'll try to explain why I think emacs is a great text editor and how it helps me be more productive every day.
 

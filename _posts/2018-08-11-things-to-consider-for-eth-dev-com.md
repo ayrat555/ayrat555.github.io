@@ -6,7 +6,7 @@ summary:    Just some inconveniences I encountered
 categories: ethereum
 ---
 
-![hide-the-pain](https://i.imgur.com/OV9UXAA.jpg)
+![hide-the-pain](/images/2018-08-11-pain.jpg)
 
 Disclaimer: In this post, I describe my own thoughts and concerns I’ve found while working with Ethereum.
 
@@ -29,7 +29,7 @@ There is a field named `comment` that I think it was meant to resolve this probl
 
 #### Backward Compatability
 
-Most Ethereum clients are backward compatible with older versions of hard forks. They run all tests for all supported hard forks (a couple of thousand tests for each hard fork). This means the ci builds take a long time (~30 minutes depending on the client) to finish. This creates a productivity issue - you must wait for the ci build to finish for every fix, even a small typo. 
+Most Ethereum clients are backward compatible with older versions of hard forks. They run all tests for all supported hard forks (a couple of thousand tests for each hard fork). This means the ci builds take a long time (~30 minutes depending on the client) to finish. This creates a productivity issue - you must wait for the ci build to finish for every fix, even a small typo.
 
 Moreover, it makes code maintenance difficult. A developer should keep all hard fork changes in the head, and in most of the clients, these changes look like dirty hacks with many conditional clauses.
 

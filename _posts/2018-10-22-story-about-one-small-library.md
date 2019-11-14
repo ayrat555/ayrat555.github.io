@@ -6,7 +6,7 @@ summary:    Ethereumex evolution
 categories: ethereum
 ---
 
-![babel](https://i.imgur.com/0lgyBVW.jpg)
+![babel](/images/2018-10-22-babel.jpg)
 
 ### Introduction
 

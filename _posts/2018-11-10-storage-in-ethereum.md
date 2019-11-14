@@ -6,7 +6,7 @@ summary:    Storage levels in the Mana-Ethereum client
 categories: ethereum
 ---
 
-![blockchain-storage](https://i.imgur.com/zUwpkeN.jpg)
+![blockchain-storage](/images/2018-11-10-storage-in-ethereum.jpg)
 
 The Ethereum blockchain's storage concepts are complex. Merkle Patricia trees are used to store data efficiently, and they provide instant and complete verifiability. While Merkle Patricia trees present challenges with reading and storing data, other storage problems also need to be handled. For example:
 
@@ -24,17 +24,17 @@ The naive storage approach is to use the Merkle Patricia Trie directly in the EV
 
 One solution is to keep all the data in Merkle Patricia trie storage. We don't delete anything. Merkle Patricia tries are defined by their root hash, so if we don't delete any data from the permanent storage we can always return to any root hash that has ever existed in the database. If the EVM execution fails, we can return to the root hash that existed before the failure. While this approach can work, it results in an extremely slow and inefficient storage process.
 
-![naive-approach](https://i.imgur.com/i9DlvN8.png)
+![naive-approach](/images/2018-11-10-naive.png)
 
 ### Cache storage for EVM execution
 
-We can improve on our initial approach by introducing a simple in-memory cache designed to store modifications that happen during EVM execution. All data is read from the permanent Merkle Patricia trie storage, but all modifications are committed to in-memory storage. This in-memory cache can be much simpler than the Merkle tree data structure, and speeds up EVM operations that write data to storage. Merkle Patricia trie updates are quite expensive, and using in-memory cache is much more efficient than traversing the entire Merkle trie for every storage operation. 
+We can improve on our initial approach by introducing a simple in-memory cache designed to store modifications that happen during EVM execution. All data is read from the permanent Merkle Patricia trie storage, but all modifications are committed to in-memory storage. This in-memory cache can be much simpler than the Merkle tree data structure, and speeds up EVM operations that write data to storage. Merkle Patricia trie updates are quite expensive, and using in-memory cache is much more efficient than traversing the entire Merkle trie for every storage operation.
 
-If we use an in-memory EVM cache, when should we commit these modifications from the cache to storage? To answer this question, we need to look at the transaction receipt. The transaction receipt is a data structure that contains information about the executed transaction (used gas etc). It also contains the state root hash that exists immediately after transaction execution (for pre-Byzantium blocks). So we have to commit changes after we receive the transaction receipt (which contains the state root hash from the Merkle Patricia trie storage). 
+If we use an in-memory EVM cache, when should we commit these modifications from the cache to storage? To answer this question, we need to look at the transaction receipt. The transaction receipt is a data structure that contains information about the executed transaction (used gas etc). It also contains the state root hash that exists immediately after transaction execution (for pre-Byzantium blocks). So we have to commit changes after we receive the transaction receipt (which contains the state root hash from the Merkle Patricia trie storage).
 
-Unfortunately, there is a problem with this approach. 
+Unfortunately, there is a problem with this approach.
 
-![evm-cache](https://i.imgur.com/ZIFq2NB.png)
+![evm-cache](/images/2018-11-10-evm.png)
 
 ### Cache storage for blocks
 
@@ -44,7 +44,7 @@ To fix this, we introduce a second cacheing level. We can use an in-memory trie 
 
 An in-memory trie will read non-existing in-memory nodes from permanent disk storage and it will write all changes to memory. Another optimization we get from the in-memory trie is that update/read speed is much faster from memory than from disk.
 
-![block-cache](https://i.imgur.com/w9w0yhQ.jpg)
+![block-cache](/images/2018-11-10-storage.jpg)
 
 We can choose to commit changes from in-memory trie storage after every valid block or after multiple valid blocks.
 

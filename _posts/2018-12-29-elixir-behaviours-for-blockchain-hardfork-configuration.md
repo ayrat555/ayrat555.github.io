@@ -6,7 +6,7 @@ summary:    Hard fork configuration at the Mana Project
 categories: ethereum
 ---
 
-![trees](https://static.vecteezy.com/system/resources/previews/000/102/765/original/free-minimalist-trees-vector.png)
+![trees](/images/2018-12-29-trees.png)
 
 ### Introduction
 
@@ -16,7 +16,7 @@ In [the Mana-Ethereum](https://github.com/mana-ethereum/mana) project, we're cre
 
 Upgrades in Ethereum are done using hard folks. A hard fork is a rule change such that the software validating according to the old rules will see the blocks produced according to the new rules as invalid. In case of a hard fork, all nodes meant to work in accordance with the new rules need to upgrade their software.
 
-![hardfork](https://i.imgur.com/GxxyGB0.png)
+![hardfork](/images/2018-12-29-hardfork.png)
 
 In Ethereum a hard fork is a way to introduce new changes to the chain. But in some cases, hard forks can occur when groups of miners and developers can't agree on updates to the software governing a particular digital token. As a result, one group continues to operate under the same rules, while another group branches off and generates a new blockchain with updated software setup. In the process, a second digital currency is generated. This is how Bitcoin Cash came to life. In mid-2017, a group of developers wanting to increase Bitcoin's block size limit prepared a code change. A hard fork took effect on 1 August 2017. As a result, the bitcoin ledger and the cryptocurrency split in two. At the time of the fork, anyone owning bitcoin was also in possession of the same number of Bitcoin Cash units.
 
