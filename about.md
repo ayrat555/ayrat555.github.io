@@ -80,3 +80,7 @@ My name is Ayrat Badykov. I am a software developer based in Moscow.
 #### Common
 
 - [Cronenberg](https://github.com/ayrat555/cronenberg) - Simple cron command entry parser in Rust
+
+### Games
+
+- [Life Balance](https://play.google.com/store/apps/details?id=com.thoughtkraken.lifebalance) - endless runner mobile game ([landing](https://thoughtkraken.com/life_balance))
