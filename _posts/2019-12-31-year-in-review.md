@@ -8,7 +8,7 @@ categories: common
 
 ![results](/images/2019-12-31-developer.jpeg)
 
-Again, it's the end of the year and it's time to take a look at what's I've been working on this year. Comparing with the previous year, I have much fewer projects this year but they have a much bigger scope. You сan take a look of my results in 2018 in [the respective blog post](https://www.badykov.com/common/2018/12/15/pride-and-prejudice/).
+Again, it's the end of the year and it's time to take a look at what's I've been working on this year. Comparing with the previous year, I have much fewer projects this year but they have a much bigger scope. You сan take a look at my results in 2018 in [the respective blog post](https://www.badykov.com/common/2018/12/15/pride-and-prejudice/).
 
 There were only two large projects for me this year:
 - [Blockscout](https://github.com/poanetwork/blockscout) - an open-source explorer for Ethereum based chains
@@ -32,7 +32,7 @@ I've been contributing to a lot of open-source projects over the past years. But
 
 There are dozens of Ethereum projects that use blockscout. Blockscout is the first large project I've been contributing extensively to with a large and active user base. I have a couple of popular small libraries but none of them can be compared to it by user activity. Users find bugs and create feature requests in GitHub issues every day so it's mutual help.
 
-With this project, I truly felt the power of open-source software. People from around the globe (from the US, Europe, India, China, etc) are using the project that I'm developing here in Moscow. It's a great feeling fulfilment.
+With this project, I truly felt the power of open-source software. People from around the globe (from the US, Europe, India, China, etc) are using the project that I'm developing here in Moscow. It's a great feeling of fulfilment.
 
 
 ### Worth mentioning
