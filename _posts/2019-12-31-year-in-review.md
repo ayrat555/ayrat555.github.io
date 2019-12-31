@@ -6,6 +6,8 @@ summary: Brief overview of my results in 2019
 categories: common
 ---
 
+![results](/images/2019-12-31-developer.jpeg)
+
 Again, it's the end of the year and it's time to take a look at what's I've been working on this year. Comparing with the previous year, I have much fewer projects this year but they have a much bigger scope. You сan take a look of my results in 2018 in [the respective blog post](https://www.badykov.com/common/2018/12/15/pride-and-prejudice/).
 
 There were only two large projects for me this year:
