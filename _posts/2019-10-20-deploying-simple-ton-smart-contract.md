@@ -10,7 +10,7 @@ categories: ton
 
 ### Intro
 
-The last couple of months have been pretty busy for the blockchain community. In June 2019 Facebook announced that they're working on Libra. I have a [post](https://www.badykov.com/blockchain/2019/06/29/libra-facebooks-ethereum-clone/) about it with comparison to Ethereum. Now (the end of September - the beginning of October 2019) Telegram released [technical papers](https://test.ton.org/) and [the project](https://github.com/ton-blockchain/ton) of Telegram Open Network (TON) - a blockchain by Telegram. If you don't know what Telegram is, Telegram is a messaging service that makes emphasis on security.
+The last couple of months have been pretty busy for the blockchain community. In June 2019 Facebook announced that they're working on Libra. I have a [post](/blockchain/2019/06/29/libra-facebooks-ethereum-clone/) about it with comparison to Ethereum. Now (the end of September - the beginning of October 2019) Telegram released [technical papers](https://test.ton.org/) and [the project](https://github.com/ton-blockchain/ton) of Telegram Open Network (TON) - a blockchain by Telegram. If you don't know what Telegram is, Telegram is a messaging service that makes emphasis on security.
 
 There are millions of Telegram users worldwide. So if the company releases its blockchain, it will be available for all Telegram users and TON may become the most massively adopted blockchain platform in the world. That's why TON is also a very promising technology to learn for developers.
 

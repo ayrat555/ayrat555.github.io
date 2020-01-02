@@ -43,7 +43,7 @@ My name is Ayrat Badykov. I am a software developer based in Moscow.
 
 ### Talks
 
-- [Mana - Ethereum client written in Elixir](https://www.badykov.com/talks/2019/03/07/mana-ethereum-client-written-elixir/)
+- [Mana - Ethereum client written in Elixir](/talks/2019/03/07/mana-ethereum-client-written-elixir/)
 
 ### Open Source projects
 

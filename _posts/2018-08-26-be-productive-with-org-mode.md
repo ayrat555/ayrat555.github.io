@@ -10,7 +10,7 @@ categories: emacs
 
 ### Introduction
 
-In my [previous post about emacs](http://www.badykov.com/emacs/2018/07/31/why-emacs-is-a-great-editor/) I mentioned [Org-mode](https://orgmode.org/), a note manager and organizer. In this post, I'll describe my day-to-day Org-mode use cases.
+In my [previous post about emacs](/emacs/2018/07/31/why-emacs-is-a-great-editor/) I mentioned [Org-mode](https://orgmode.org/), a note manager and organizer. In this post, I'll describe my day-to-day Org-mode use cases.
 
 ### Notes and to-do lists
 

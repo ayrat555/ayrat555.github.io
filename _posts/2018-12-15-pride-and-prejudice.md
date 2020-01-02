@@ -53,19 +53,19 @@ I've been using Emacs for more than 2 years. But in the summer of this year I de
 
 You're reading this post from my blog [Kraken of Thought](https://www.badykov.com/). I created it to share my thoughts and feelings about things that are interesting to me. This year I tried to be consistent and write posts every once in a while. I'm pretty proud of сontent of these post because they capture my feelings and concerns directly related to the work I was doing at a specific period of time. Here's a full list of posts:
 
-- [In Rust I trust](https://www.badykov.com/rust/2018/01/28/in-rust-i-trust/) - My thoughts on Rust.
-- [Cronenberg](https://www.badykov.com/rust/2018/02/27/cronenberg/) - Simple cron command entry parser in Rust.
-- [GraphQL subscriptions using Absinthe](https://www.badykov.com/elixir/2018/03/25/graphql-subscriptions-using-absinthe/) - GraphQL in Elixir.
-- [Ethereum Virtual Machine in Elixir](https://www.badykov.com/elixir/2018/04/29/evm-basics/) - EVM execution basics in Elixir.
-- [Ethereum's Recursive Length Prefix encoding in Elixir](https://www.badykov.com/elixir/2018/05/06/rlp/) - Implementing RLP with recursive protocols.
-- [Ethereum's node discovery in Elixir](https://www.badykov.com/elixir/2018/06/02/node-discovery/) - Mostly Kademlia in Elixir.
-- [Message calls in Ethereum](https://www.badykov.com/ethereum/2018/06/17/message-calls-in-ethereum/) - Summary of existing message calls in Ethereum.
-- [Why Emacs is a great text editor](https://www.badykov.com/emacs/2018/07/31/why-emacs-is-a-great-editor/) - My thoughts on Emacs.
-- [Things to consider for Ethereum dev community](https://www.badykov.com/ethereum/2018/08/11/things-to-consider-for-eth-dev-com/) - Just some inconveniences I encountered.
-- [Be productive with Org-mode](https://www.badykov.com/emacs/2018/08/26/be-productive-with-org-mode/) - A note manager and organizer.
-- [zkSNARK in Ethereum](https://www.badykov.com/ethereum/2018/09/15/zkSNARK-in-Ethereum/) - Zero-knowledge proofs in Ethereum.
-- [Story about one small library](https://www.badykov.com/ethereum/2018/10/22/story-about-one-small-library/) - Ethereumex evolution.
-- [Storage in Ethereum](https://www.badykov.com/ethereum/2018/11/10/storage-in-ethereum/) - Storage levels in the Mana-Ethereum client.
+- [In Rust I trust](/rust/2018/01/28/in-rust-i-trust/) - My thoughts on Rust.
+- [Cronenberg](/rust/2018/02/27/cronenberg/) - Simple cron command entry parser in Rust.
+- [GraphQL subscriptions using Absinthe](/elixir/2018/03/25/graphql-subscriptions-using-absinthe/) - GraphQL in Elixir.
+- [Ethereum Virtual Machine in Elixir](/elixir/2018/04/29/evm-basics/) - EVM execution basics in Elixir.
+- [Ethereum's Recursive Length Prefix encoding in Elixir](/elixir/2018/05/06/rlp/) - Implementing RLP with recursive protocols.
+- [Ethereum's node discovery in Elixir](/elixir/2018/06/02/node-discovery/) - Mostly Kademlia in Elixir.
+- [Message calls in Ethereum](/ethereum/2018/06/17/message-calls-in-ethereum/) - Summary of existing message calls in Ethereum.
+- [Why Emacs is a great text editor](/emacs/2018/07/31/why-emacs-is-a-great-editor/) - My thoughts on Emacs.
+- [Things to consider for Ethereum dev community](/ethereum/2018/08/11/things-to-consider-for-eth-dev-com/) - Just some inconveniences I encountered.
+- [Be productive with Org-mode](/emacs/2018/08/26/be-productive-with-org-mode/) - A note manager and organizer.
+- [zkSNARK in Ethereum](/ethereum/2018/09/15/zkSNARK-in-Ethereum/) - Zero-knowledge proofs in Ethereum.
+- [Story about one small library](/ethereum/2018/10/22/story-about-one-small-library/) - Ethereumex evolution.
+- [Storage in Ethereum](/ethereum/2018/11/10/storage-in-ethereum/) - Storage levels in the Mana-Ethereum client.
 
 ### Disappointments
 
@@ -80,7 +80,7 @@ So the current state of Rust game dev tools is not suitable for making complex g
 
 #### Inconveniences for developers in Ethereum
 
-As described in the first section of this post I was involved in the development of Ethereum client this year. I encountered a couple of inconveniences in Ethereum dev community. Below are excerpts for my post [Things to consider for Ethereum dev community](https://www.badykov.com/ethereum/2018/08/11/things-to-consider-for-eth-dev-com/):
+As described in the first section of this post I was involved in the development of Ethereum client this year. I encountered a couple of inconveniences in Ethereum dev community. Below are excerpts for my post [Things to consider for Ethereum dev community](/ethereum/2018/08/11/things-to-consider-for-eth-dev-com/):
 
 - Ethereum has common tests that protocol level developers should use when implementing the protocol itself. The problem with these tests is that they’re not documented at all and it’s very hard to understand what exactly any particular test is testing.
 - Most Ethereum clients are backward compatible with older versions of hard forks. A developer should keep all hard fork changes in the head, and in most of the clients, these changes look like dirty hacks with many conditional clauses.

@@ -30,7 +30,7 @@ Surprisingly, some people used this version, I even received [one pull request](
 
 In October of 2017, I decided to take a week-long holiday. My full-time job at the time was pretty exhausting: I was writing digital book/comic-book processing services in Java and Kotlin and physically didn't have time for anything else.
 
-On this holiday I rewrote Ethereumex from scratch. I got rid of automatic code generation, using Elixir's behaviours instead. There is a [detailed post called "Elixir macros are evil (sometimes)"](https://www.badykov.com/elixir/2017/10/18/macros-are-evil/) about this rewrite on my blog. I was satisfied with what I ended up with. I even got a comment from Jose Valim (creator of Elixir). Read my post about rewrite if you're interested.
+On this holiday I rewrote Ethereumex from scratch. I got rid of automatic code generation, using Elixir's behaviours instead. There is a [detailed post called "Elixir macros are evil (sometimes)"](/elixir/2017/10/18/macros-are-evil/) about this rewrite on my blog. I was satisfied with what I ended up with. I even got a comment from Jose Valim (creator of Elixir). Read my post about rewrite if you're interested.
 
 The rewritten library was published as `0.2.0` version. After releasing this version, I took back seat and no new features were developed by me. I only have been reviewing pull requests and releasing new versions. Also, I created a couple of issues in the GitHub repo for the community. One of these issues was to implement IPC client that uses UNIX sockets under the hood.
 
@@ -68,4 +68,4 @@ At the beginning of this post is an illustration of [the Tower of Babel](https:/
 ### See also
 
 - [Ethereumex](https://github.com/exthereum/ethereumex)
-- [Elixir macros are evil (sometimes)](https://www.badykov.com/elixir/2017/10/18/macros-are-evil/)
+- [Elixir macros are evil (sometimes)](/elixir/2017/10/18/macros-are-evil/)
