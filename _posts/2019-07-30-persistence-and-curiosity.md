@@ -6,7 +6,7 @@ summary: A couple of thoughts about the learning process.
 categories: common
 ---
 
-![img](https://i.imgur.com/WYBtP3B.jpg)
+![img](/images/2019-07-30-learning.jpg)
 
 ### Curiosity
 

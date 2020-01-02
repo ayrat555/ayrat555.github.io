@@ -6,13 +6,13 @@ summary: How block explorers verify smart contracts under the hood
 categories: ethereum
 ---
 
-![byte-smart-code](https://i.imgur.com/HbC7HFa.jpg)
+![byte-smart-code](/images/2019-02-24-smart-contract.jpg)
 
 ### Introduction
 
 The most significant feature of Ethereum is Ethereum Virtual Machine (EVM) that is used to run smart contracts. Smart contracts are little programs written in Solidity or other smart contract languages (LLL etc). EVM doesn't run these smart contracts directly. It runs its byte code.
 
-![byte-code](https://i.imgur.com/MbxuGMd.jpg)
+![byte-code](/images/2019-02-24-bytecode.jpg)
 
 Byte code is used inside EVM and it's not readable by a human. Users of smart contracts utilize blockchain explorers ([BlockScout](https://blockscout.com), [Etherscan](https://etherscan.io/)) to validate that they use correct smart contracts because they allow developers to verify their smart contracts and publish initial code written in a human-readable high-level programming language like Solidity. By the process of verification, I mean checking that byte code corresponds to the supposed smart contract.
 

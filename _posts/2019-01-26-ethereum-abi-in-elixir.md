@@ -6,7 +6,7 @@ summary:    ABI in Elixir
 categories: elixir
 ---
 
-![smart-contract](https://i.imgur.com/JiTJe6W.jpg)
+![smart-contract](/images/2019-01-26-hands.jpg)
 
 ### Background
 

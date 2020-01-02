@@ -6,7 +6,7 @@ summary: Introduction to Godot
 categories: game dev
 ---
 
-![img](https://i.imgur.com/K79Wreu.jpg)
+![gamedev](/images/2019-04-06-gamedev.jpg)
 
 ### You don't have to invent the wheel
 

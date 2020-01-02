@@ -6,7 +6,7 @@ summary: My thoughts on Facebook's blockchain
 categories: blockchain
 ---
 
-![img](https://i.imgur.com/J9lNqRu.png)
+![img](/images/2019-06-29-libra.png)
 
 Less than a month ago Facebook announced its new blockchain called Libra. A couple of days after the announcement they released a prototype written in Rust on GitHub. At first glance, it looks like Facebook is trying to catch up with the hyped technology. Let's be clear the hype around blockchains was much bigger at the end of 2018 and at the beginning of 2019. I think the development is started at this period of time.
 

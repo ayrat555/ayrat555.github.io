@@ -6,7 +6,7 @@ summary: The first look at TON
 categories: ton
 ---
 
-![img](https://davidgerard.co.uk/blockchain/wp-content/uploads/2018/12/ton-graphic.jpg)
+![img](/images/2019-10-20-ton.jpg)
 
 ### Intro
 

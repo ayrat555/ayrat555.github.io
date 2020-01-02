@@ -6,7 +6,7 @@ summary: Announcement of the game I've been working in my free time
 categories: game dev
 ---
 
-![img](https://i.imgur.com/t2tWSHN.png)
+![img](/images/2019-11-03-life-balance.png)
 
 ### Life Balance
 

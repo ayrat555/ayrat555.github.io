@@ -6,7 +6,7 @@ summary: Magit
 categories: common
 ---
 
-![cover](https://i.imgur.com/OkR7dM2.png)
+![cover](/images/2019-05-31-magit.png)
 
 Effective people optimize routine tasks to save time.
 
@@ -29,7 +29,7 @@ Magit is an interface to the version control system Git, implemented as an Emacs
 
 Help window (buffer) below shows some commands that you can use::
 
-![magit](https://i.imgur.com/A5Zh3Tu.png)
+![magit](/images/2019-05-31-magit-main.png)
 
 Let me share a few easy ways to get started with it.
 
@@ -37,25 +37,25 @@ Let me share a few easy ways to get started with it.
 
 To create a new branch all you have to do is to press `b` and choose a branch to create a new branch from:
 
-![creating-a-branch](https://i.imgur.com/uYHOUtP.png)
+![creating-a-branch](/images/2019-05-31-branch.png)
 
 ### Committing your changes
 
 You can create a new commit by pressing `c` two times. You can stage a file by pressing `s`.
 
-![commit](https://i.imgur.com/9Mj7y3H.png)
+![commit](/images/2019-05-31-commit.png)
 
 ### Pushing your branch
 
 Once you committed your changes, you can push them by pressing `p` `p` two times.
 
-![push](https://i.imgur.com/QPq3ePa.png)
+![push](/images/2019-05-31-push.png)
 
 ### Logging and blaming
 
 To use `git-blame` all you have to do is to call `magit-blame` function on a file you want to inspect
 
-![blaming](https://i.imgur.com/mItP5im.png)
+![blaming](/images/2019-05-31-blame.png)
 
 
 
