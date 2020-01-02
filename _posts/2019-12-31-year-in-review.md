@@ -8,7 +8,7 @@ categories: common
 
 ![results](/images/2019-12-31-developer.jpeg)
 
-Again, it's the end of the year and it's time to take a look at what's I've been working on this year. Comparing with the previous year, I have much fewer projects this year but they have a much bigger scope. You сan take a look at my results in 2018 in [the respective blog post](https://www.badykov.com/common/2018/12/15/pride-and-prejudice/).
+Again, it's the end of the year and it's time to take a look at what's I've been working on this year. Comparing with the previous year, I have much fewer projects this year but they have a much bigger scope. You сan take a look at my results in 2018 in [the respective blog post](/common/2018/12/15/pride-and-prejudice/).
 
 There were only two large projects for me this year:
 - [Blockscout](https://github.com/poanetwork/blockscout) - an open-source explorer for Ethereum based chains
@@ -37,4 +37,4 @@ With this project, I truly felt the power of open-source software. People from a
 
 ### Worth mentioning
 
-At the beginning of this year, I had [a talk in the Moscow Elixir meetup](https://www.badykov.com/talks/2019/03/07/mana-ethereum-client-written-elixir/) about another my open source project - Mana.
+At the beginning of this year, I had [a talk in the Moscow Elixir meetup](/talks/2019/03/07/mana-ethereum-client-written-elixir/) about another my open source project - Mana.
