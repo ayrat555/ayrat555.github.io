@@ -18,4 +18,4 @@ Enjoy the life balance adventure, featuring:
 - A couple of dozens of coins that represent different life activities
 - Beautiful and colourful art
 
-[![badge](/images/app_store_badge.png)](https://apps.apple.com/us/app/life-balance/id1495840809?ls=1)
+[![badge](/images/2020-01-26-app_store_badge.png)](https://apps.apple.com/us/app/life-balance/id1495840809?ls=1)
