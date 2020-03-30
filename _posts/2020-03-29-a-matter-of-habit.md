@@ -10,7 +10,7 @@ categories: common
 
 I think everyone gets these inspirational moments when you promise to yourself that from this day on you will start doing something consistently every day or you want to learn a new thing.  Put in other words, you want to develop a habit. And maybe you even start doing your activity for a couple of days or weeks but eventually, you drop it because life gets in the way: you are too exhausted too do it, you have other plans or you're just procrastinating I've also experienced this kind of situations in my life.
 
-Those of you who are using emacs know about org-mode. Org-mode is a note manager and organizer (you can check out my [post about it](/emacs/2018/08/26/be-productive-with-org-mode). Org-mode ships with the additional package called `org-habit`. In this post, I will share my tips for `org-mode`. But mostly this post will be about my experience using it and what I could achieve.
+Those of you who are using emacs know about org-mode. Org-mode is a note manager and organizer (you can check out my [post about it](/emacs/2018/08/26/be-productive-with-org-mode). Org-mode ships with the additional package called `org-habit`. In this post, I will share my tips for `org-habit`. But mostly this post will be about my experience using it and what I could achieve.
 
 Please keep in mind that I do activities described in this post in my free time in the evenings and weekends because I spend most of my days working like the rest of us. People underestimate what can be done if you have a couple of spare hours.
 
@@ -66,15 +66,15 @@ Also, you can choose `MIX_ENV` variable and additional parameters for mix task i
 
 I'll add documentation to the package soon after I add more keybindings for common mix tasks. But the package is already in the working state. I use it every day in my Elixir development. You can find it [here](https://github.com/ayrat555/mix.el).
 
-### Rust: el_monitorro - a web service written in Rus that can subscribe to data feeds and notify about new data.
+### Rust: el_monitorro - a web service written in Rust that can subscribe to data feeds and notify about new data.
 
 Again, it's my second try learning Rust. The first time I tried to learn Rust at the end of 2017 - the beginning of 2018. I have a couple of posts published in that period on this blog (you can find it) and one small library in Rust that I wrote - [crontab parser](https://github.com/ayrat555/cronenberg). I read through the Rust book and finished almost all [Exercsim exercises](https://github.com/ayrat-playground/exercism_rust) (Somebody starred it, lol).
 
-This time again I started re-reading Rust book. At the same time, I started writing a web app using Rocket web framework and Diesel ORM. The purpose of the app is to subscribe to data feeds (rss, twitter, instagram etc) and notify you about new entries. For now, I finished synchronization of rss feeds and started working on implementing Telegram bot to work with the app (subscribe to feeds, notifications). You can find the application [here](https://github.com/ayrat-playground/exercism_rust).
+This time again I started re-reading Rust book. At the same time, I started writing a web app using Rocket web framework and Diesel ORM. The purpose of the app is to subscribe to data feeds (rss, twitter, instagram etc) and notify you about new entries. For now, I finished synchronization of rss feeds and started working on implementing Telegram bot to work with the app (subscribe to feeds, notifications). You can find the application [here](https://github.com/ayrat555/el_monitorro).
 
 ### Book reading
 
-I started reading both fiction and non-fiction (programming) books. Every day after breakfast I read a  programming book for one hour. I already finished re-reading Pragmatic Programmer by Dave Thomas (actually, it stirred me into emacs) and I'm halfway through Design Patterns: Elements of Reusable Object-Oriented Software by Erich Gamma, John Vlissides, Richard Helm, Ralph Johnson (I spent my days writing functional languages but some patterns from this book still are very helpful).
+I started reading both fiction and non-fiction (programming) books. Every day after breakfast I read a  programming book for one hour. I already finished re-reading Pragmatic Programmer by Dave Thomas (actually, it stirred me into emacs) and I'm halfway through Design Patterns: Elements of Reusable Object-Oriented Software by Erich Gamma, John Vlissides, Richard Helm, Ralph Johnson (I spend my days writing functional languages but some patterns from this book still are very helpful).
 
 Before going to bed I read a fiction book to improve my English. As you may have guessed, English is not my native language.
 
