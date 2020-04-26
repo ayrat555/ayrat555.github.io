@@ -88,7 +88,7 @@ As I mentioned in this blog several times I worked on a [mobile game](https://th
 
 You can find more art in my [deviantart page](https://www.deviantart.com/ayratb).
 
-### Conclustion
+### Conclusion
 
 Org-habit (and org-mode in general) is not a magic pill that can make you consistent. It's only a tool that can help you keep track of activities that you want to develop into habits. Your determination is the key that can help you reach your goals and fight with procrastination.
 
