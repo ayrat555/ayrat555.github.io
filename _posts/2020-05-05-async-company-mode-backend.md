@@ -6,13 +6,15 @@ summary: Creating async company-mode backend
 categories: emacs
 ---
 
+![img](/images/2020-05-05-company.png)
+
 Recently I wrote `company-mode` backend for Elixir - [`company-elixir`](https://github.com/ayrat555/company-elixir), which uses IEx in the background to fetch completions from.
 
-Writing async backends for `company-mode` is not documented very well. In this post I'll give a brief instructions on writing an async backend.
+Writing async backends for `company-mode` is not documented very well. In this post, I'll give a brief instruction on writing an async backend.
 
 ### Reasons behind `company-elixir`
 
-You can skip this section if you only interested in emacs part.
+You can skip this section if you are only interested in the emacs part.
 
 You may ask why do you need IEx for completions when there are standalone implementations for this? There is one reason:
 
@@ -20,15 +22,15 @@ You may ask why do you need IEx for completions when there are standalone implem
 
 But it also has its disadvantages:
 
-1. Autocompletion modules for IEx are not documeted and it seems they're not meant to be used outside of IEx. But it's not a problem of `company-elixir` users.
-2. Elixir application have to be in the correct state, so it can be compiled to run IEx. If your project can not be compiled, obviously completions won't work.
-3. Running IEx as a separate process can be overhead if your application starts processes that does heavy work.
+1. Autocompletion modules for IEx are not documented and it seems they're not meant to be used outside of IEx. But it's not a problem of `company-elixir` users.
+2. Elixir application has to be in the correct state, so it can be compiled to run IEx. If your project can not be compiled, obviously completions won't work.
+3. Running IEx as a separate process can be overhead if your application starts processes that do heavy work.
 
 But I'll definitely check [`elixir-lsp`](https://github.com/elixir-lsp/elixir-ls) out after I'll be done with `company-elixir`.
 
 ### `company-mode` backend function
 
-In order to implement a `company-mode` backend you should define a single function with signature
+In order to implement a `company-mode` backend, you should define a single function with signature
 
 ```
 (command &optional arg &rest ignored)
@@ -56,29 +58,46 @@ Let's check how I defined it for `company-elixir`:
 It defines three handlers:
 
 1. The function has to be interactive and call `company-begin-backend` to init your backend when called interactively.
-2. If command is `prefix`, the function should return the expression that should be completed.
-3. Finally, `candidates` command should return comletions for the expression returned in `prefix`.
+2. If the command is `prefix`, the function should return the expression that will be completed.
+3. Finally, `candidates` command should return completions for the expression returned in `prefix`.
 
 Let's look further into `candidates` handler.
 
 ### Async candidates
 
-To define async fetching of completions we have to return cons of `:async` with the handler lambda which will return candidates, lambda should have a single parameter `callback`. If if wanted to define syncronous handler instead of return cons we could just return completions.
+Steps to define async `company-mode` backend:
 
-Steps to defind async `company-mode` backend:
-1.
+1. To define async fetching of completions we have to return cons of `:async` with the handler lambda which will return candidates, lambda should have a single parameter `callback`. If you wanted to define synchronous handler instead of returning cons you should return just completions.
+
+2. Save the callback that was passed to lambda to a global variable as I did in the example above:
+
+```lisp
+
+(defvar company-elixir--callback nil "Company callback to return candidates to.")
+
+...
+
+(setq company-elixir--callback callback)
+
+...
+
+```
 
 
+Or you can just pass this callback to the function that will return completions.
 
+I used a global variable because I couldn't pass a callback to it since I'm using a separate process to fetch completions, the output from this process is sent to my process filter.
 
-It seems `company-backends` variable documentation is the only documentation peiece for `company-mode`
+You can find more about process filters [here](https://www.gnu.org/software/emacs/manual/html_node/elisp/Filter-Functions.html).
 
+3. Return calculated completions by calling the saved callback with your completions
 
+```lisp
+(funcall company-elixir--callback completions)
+```
 
+### Conclustion
 
-Backend structrure
+Hopefully, this post gave you a basic understanding of async `company-mode` backends.
 
-Code
-
-
-Conclustion
+You can also check `company-backends` variable documentation. It seems like it is the only documentation piece for `company-mode`.
