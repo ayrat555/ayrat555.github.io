@@ -67,9 +67,9 @@ Let's look further into `candidates` handler.
 
 Steps to define async `company-mode` backend:
 
-1. To define async fetching of completions we have to return cons of `:async` with the handler lambda which will return candidates, lambda should have a single parameter `callback`. If you wanted to define synchronous handler instead of returning cons you should return just completions.
+I. To define async fetching of completions we have to return cons of `:async` with the handler lambda which will return candidates, lambda should have a single parameter `callback`. If you wanted to define synchronous handler instead of returning cons you should return just completions.
 
-2. Save the callback that was passed to lambda to a global variable as I did in the example above:
+II. Save the callback that was passed to lambda to a global variable as I did in the example above:
 
 ```lisp
 
@@ -90,7 +90,7 @@ I used a global variable because I couldn't pass a callback to it since I'm usin
 
 You can find more about process filters [here](https://www.gnu.org/software/emacs/manual/html_node/elisp/Filter-Functions.html).
 
-3. Return calculated completions by calling the saved callback with your completions
+III. Return calculated completions by calling the saved callback with your completions
 
 ```lisp
 (funcall company-elixir--callback completions)
