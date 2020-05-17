@@ -65,6 +65,8 @@ My name is Ayrat Badykov. I am a software developer based in Moscow.
 
 - [Ethereumex](https://github.com/exthereum/ethereumex) - Elixir JSON-RPC client for the Ethereum blockchain
 
+- [El Monitorro](https://github.com/ayrat555/el_monitorro) - RSS and Atom feed reader as a Telegram bot. It's written in Rust
+
 - [UploadcareEx](https://github.com/CryptoHamsters/uploadcare_ex) - Simple Elixir wrapper for Uploadcare API
 
 - [BalalaikaBear](https://github.com/BalalaikaIndustries/balalaika_bear) - VK API wrapper for Elixir
@@ -83,4 +85,12 @@ My name is Ayrat Badykov. I am a software developer based in Moscow.
 
 ### Games
 
-- [Life Balance](https://play.google.com/store/apps/details?id=com.thoughtkraken.lifebalance) - endless runner mobile game ([landing](https://thoughtkraken.com/life_balance))
+- Life Balance - endless runner mobile game ([landing](https://thoughtkraken.com/life_balance)):
+
+[Google Play](https://play.google.com/store/apps/details?id=com.thoughtkraken.lifebalance)
+[Apple Store](https://apps.apple.com/us/app/life-balance/id1495840809?ls=1)
+
+#### Emacs
+
+- [mix.el](https://github.com/ayrat555/mix.el) - Emacs Minor Mode for Mix, a build tool that ships with Elixir
+- [company-elixir](https://github.com/ayrat555/company-elixir) - company-mode completion backend for Elixir
