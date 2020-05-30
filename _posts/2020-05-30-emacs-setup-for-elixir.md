@@ -6,6 +6,8 @@ summary: My essential package list for Emacs
 categories: emacs
 ---
 
+![img](/images/2020-05-30-bicycle.jpg)
+
 I've been using Emacs with different languages for multiple years for all my programming work. For the last couple of years, I've been working with the Elixir lang as my main programming language. Over time I accumulated a set of Emacs tools that I constantly use when writing code with Elixir.
 
 In this post, I'll list the packages I use with Elixir.
