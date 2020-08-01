@@ -6,6 +6,8 @@ summary: Feed reader as a Telegram bot
 categories: rust
 ---
 
+![el-monitorro](/images/2020-07-31-el-monitorro.png)
+
 I've been using rss/atom feeds for a long time. I remember I was subscribing to my favourite blogs on LiveJournal (It's so old you may not know about it) and news feeds in the first decade of this century (the 21st century if you're reading this post in the future). I think at that period it was a peak of popularity for this technology.
 
 More than a decade later in 2019, it's a peak of popularity for another kind of service - messengers. I'm no different from an average contemporary so I'm an avid user of messengers and my messenger is Telegram. Nowadays I don't use traditional social networks like Facebook or VK (Russian Facebook copycat) and do all my messaging in Telegram.
