@@ -55,6 +55,8 @@ My name is Ayrat Badykov. I am a software developer based in Moscow.
 
 - [ExRLP](https://github.com/exthereum/ex_rlp) - Elixir implementation of Ethereum's RLP (Recursive Length Prefix) encoding
 
+- [ExABI](https://github.com/poanetwork/ex_abi/) - The Application Binary Interface (ABI) of Solidity for Elixir
+
 - [EthBloom](https://github.com/ayrat555/eth_bloom) - Ethereum's bloom filter implementation in elixir, integrated in Mana
 
 #### Cryptography
