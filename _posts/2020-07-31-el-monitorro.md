@@ -12,9 +12,9 @@ I've been using rss/atom feeds for a long time. I remember I was subscribing to 
 
 More than a decade later in 2019, it's a peak of popularity for another kind of service - messengers. I'm no different from an average contemporary so I'm an avid user of messengers and my messenger is Telegram. Nowadays I don't use traditional social networks like Facebook or VK (Russian Facebook copycat) and do all my messaging in Telegram.
 
-I started finding myself leaving Telegram only to check news sites. So I decided why not to bring news to Telegram. Telegram provides tools for writing bots. From telegram bots intro: "Bots are third-party applications that run inside Telegram. Users can interact with bots by sending them messages". Most news sites provide JSON, ATOM or RSS feeds. I checked existing solutions and there are already a couple of Feed readers for telegrams out there. But I wasn't satisfied with any of them, none of them provided instant updates of feeds.  So my idea was to create a feed reader for Telegram bot that provided instant updates. I called it "El Monitorro".
+I started finding myself leaving Telegram only to check news sites. So I decided why not to bring news to Telegram. Telegram provides tools for writing bots. From telegram bots intro: "Bots are third-party applications that run inside Telegram. Users can interact with bots by sending them messages". Most news sites provide JSON, ATOM or RSS feeds. I checked existing solutions and there are already a couple of Feed readers for Telegram out there. But I wasn't satisfied with any of them, none of them provided instant updates of feeds.  So my idea was to create a feed reader for Telegram bot that provided instant updates. I called it "El Monitorro".
 
-A side note about another feed reader bot 'the feed reader bot'. Its feed refresh rate before I released my bot was 5 minutes and it was Premium feature. After I released my bot, which has a refresh rate of 1 minute and it's free of charge, 'the feed reader bot' added new Elite level with a refresh rate of 30 seconds. What do you think about squeezing it out of business by setting an update rate to 20 seconds? LOL :)
+A side note about another feed reader bot called 'the feed reader bot'. Its feed refresh rate before I released my bot was 5 minutes and it was Premium feature. After I released my bot, which has a refresh rate of 1 minute and it's free of charge, 'the feed reader bot' added new Elite level with a refresh rate of 30 seconds. What do you think about squeezing it out of business by setting an update rate to 20 seconds? LOL :)
 
 In this post, I'll give a brief explanation about the structure of the El Monitorro bot.
 
@@ -55,7 +55,7 @@ Initially, I set the number of subscriptions limit to 5, but after some time I r
 
 Every minute it delivers feed items that weren't delivered to the user yet.
 
-It decides which items user did not read based on `publication_date` field in the `feed_items` table. `telegram_subscriptions` table has `last_delivered_at` field, the delivery process sends all feed items that have `publication_date` > `last_delivered_at` and then updates `last_delivered_at` to the latest `publication_date`. There is one issue that appears in that approach. If a feed provider uses `publication_date` not for feed items publication but another purpose, for example, for the product release date, user may not receive all messages. I encountered this issue in Metacritic feeds, they use `publication_date` for the product release date.
+It decides which items user did not read based on `publication_date` field in the `feed_items` table. `telegram_subscriptions` table has `last_delivered_at` field, the delivery process sends all feed items that have `publication_date` > `last_delivered_at` and then updates `last_delivered_at` to the latest `publication_date`. There is one issue that appears in that approach. If a feed provider uses `publication_date` not for feed item publication date but another purpose, for example, for the product release date, user may not receive all messages. I encountered this issue in Metacritic feeds, they use `publication_date` for the product release date.
 
 #### Cleaner process
 
@@ -70,7 +70,7 @@ Over the last two months users kept asking for two relatively large features for
 - ability to use it in Telegram channels
 - ability to customize messages
 
-I'm planning to implement it in the upcoming months.
+I'm planning to implement them in the upcoming months.
 
 ### Conclusion
 
