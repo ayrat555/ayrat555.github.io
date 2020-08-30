@@ -6,7 +6,7 @@ summary: El Monitorro Update
 categories: common
 ---
 
-![el-monitorro](/images/2020-08-30-bull.png)
+![el-monitorro](/images/2020-08-30-bull.jpg)
 
 If you've been following me, you know that for the last months I've been working on the feed reader bot for Telegram called El Monittorro. It's a toy project that I used to get some practice with the Rust programming language. After I launched the project in May of 2020, it gained around 100 users with over 250 feed subscriptions. I think it's a pretty good number considering the only promotion post I did was a Reddit post in the Telegram subreddit.
 
