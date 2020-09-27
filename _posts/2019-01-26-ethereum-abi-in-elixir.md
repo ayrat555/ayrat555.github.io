@@ -189,3 +189,8 @@ Complete Elixir implementation is available in [`ex_abi` GitHub repo](https://gi
 
 - [Geoff Hayes](https://github.com/hayesgm) - original `ex_abi` contributor
 - [`ex_abi` contributors](https://github.com/poanetwork/ex_abi/graphs/contributors)
+
+
+### Update 2020
+
+I completely re-wrote the encoder and made significant changes to the decoder, so this post is not up to date with the latest `ex_abi` version.
