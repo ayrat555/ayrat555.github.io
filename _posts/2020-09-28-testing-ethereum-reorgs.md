@@ -25,11 +25,11 @@ Let's see how these situations can be mitigated and tested.
 
 ### Solution
 
-A chain reorganisation can be any number of blocks. Although recently Ethereum Classic suffered a 3,693-blockchain reorganization, chain reorganization longer than a couple of blocks are rare. To mitigate reorganizations you can just check that you assumptions are true for a reasonable number of blocks. Crypto exchanges use this approach. In their terms, it's called a confirmation. Confirmations are a measure of how many blocks have passed since a transaction was added to a blockchain.
+A chain reorganisation can be any number of blocks. Although recently Ethereum Classic suffered a 3,693-blockchain reorganization, chain reorganization longer than a couple of blocks are rare. To mitigate reorganizations you can just check that your assumptions are true for a reasonable number of blocks. Crypto exchanges use this approach. In their terms, it's called a confirmation. Confirmations are a measure of how many blocks have passed since a transaction was added to a blockchain.
 
 ### Testing
 
-The easiest way to trigger reorgs and test your assumptions on a reorged chain is using Docker. One approach includes two connected to each other Ethereum nodes running behind a load balancer. Docker provides an ability to pause/unpause running containers, we would need this feature.
+The easiest way to trigger reorgs and test your assumptions on a reorged chain is using Docker. One approach includes two connected to each other Ethereum nodes running behind a load balancer. Docker provides an ability to pause/unpause running containers, we would need this feature. Long story short - by pausing/unpausing nodes, you can make state on each node differ so after nodes are connected, a reorg happens.
 
 Let's examine a pseudocode:
 
@@ -62,7 +62,7 @@ Let's examine a pseudocode:
       # wait 4 more blocks so the chain length is longer
       :ok = Client.wait_until_block_number(block_on_the_first_node + 4)
 
-      # reorg should happen when nodes will find each other, not the second node blocks are reorgs
+      # reorg should happen when nodes will find each other,  the second node blocks are reorged
       unpause_container!(@node2)
       unpause_container!(@node1)
 ```
