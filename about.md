@@ -61,7 +61,13 @@ My name is Ayrat Badykov. I am a software developer based in Moscow.
 
 #### Cryptography
 
+- [ExSecp256k1](https://github.com/omgnetwork/ex_secp256k1) - Rust Native Implemented Function (NIF) that wraps a couple functions from the libsecp256k1 Rust library. It only wraps secp256k1 functions used in Ethereum
+
 - [BN](https://github.com/poanetwork/bn) - BN128 elliptic curve operations for Elixir, used in Ethereum's zkSNARKs
+
+#### Testing
+
+- [Hornet](https://github.com/ayrat555/hornet) - simple library for stress testing
 
 #### Web
 
