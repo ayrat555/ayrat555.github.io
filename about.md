@@ -19,7 +19,11 @@ My name is Ayrat Badykov. I am a software developer based in Moscow.
 
 ### Experience
 
-- **POA Network** April 2018 - Present
+- **OMG Network** May 2020 - Present
+
+ Elixir developer (Plasma implementation)
+
+- **POA Network** April 2018 - December 2020
 
   Ethereum developer (Elixir)
   - Ethereum client in Elixir - [Mana](https://github.com/poanetwork/mana)
