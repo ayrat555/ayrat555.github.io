@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Life Balance" web version
+title: Life Balance web version
 date: 2021-02-28
-summary: "Life Balance" is available in browsers
+summary: Life Balance is available in browsers
 categories: common
 ---
 
