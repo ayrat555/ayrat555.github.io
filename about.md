@@ -101,6 +101,9 @@ My name is Ayrat Badykov. I am a software developer based in Moscow.
 
 [Google Play](https://play.google.com/store/apps/details?id=com.thoughtkraken.lifebalance)
 [Apple Store](https://apps.apple.com/us/app/life-balance/id1495840809?ls=1)
+[Web version](https://thoughtkraken.com/life_balance/play)
+[itch.io](https://ayrat555.itch.io/life-balance)
+
 
 #### Emacs
 
