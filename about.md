@@ -21,7 +21,7 @@ My name is Ayrat Badykov. I am a software developer based in Moscow.
 
 - **OMG Network** May 2020 - Present
 
- Elixir developer (Plasma implementation)
+  Elixir developer (Plasma implementation)
 
 - **POA Network** April 2018 - December 2020
 
@@ -75,6 +75,8 @@ My name is Ayrat Badykov. I am a software developer based in Moscow.
 
 #### Web
 
+- [Frankenstein](https://github.com/ayrat555/frankenstein) - Telegram bot API client for Rust
+
 - [Ethereumex](https://github.com/exthereum/ethereumex) - Elixir JSON-RPC client for the Ethereum blockchain
 
 - [El Monitorro](https://github.com/ayrat555/el_monitorro) - RSS and Atom feed reader as a Telegram bot. It's written in Rust
@@ -93,6 +95,8 @@ My name is Ayrat Badykov. I am a software developer based in Moscow.
 
 #### Common
 
+- [Fang](https://github.com/ayrat555/fang) - Background job processing library for Rust.
+
 - [Cronenberg](https://github.com/ayrat555/cronenberg) - Simple cron command entry parser in Rust
 
 ### Games
@@ -108,4 +112,5 @@ My name is Ayrat Badykov. I am a software developer based in Moscow.
 #### Emacs
 
 - [mix.el](https://github.com/ayrat555/mix.el) - Emacs Minor Mode for Mix, a build tool that ships with Elixir
+- [cargo-mode](https://github.com/ayrat555/cargo-mode) - Emacs minor mode which allows to dynamically select cargo command
 - [company-elixir](https://github.com/ayrat555/company-elixir) - company-mode completion backend for Elixir
