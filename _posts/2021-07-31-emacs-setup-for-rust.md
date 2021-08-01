@@ -18,15 +18,15 @@ I divided packages into two lists. The first list is packages specific for Rust,
 
 #### Rust packages
 
-- rust-mode - major mode for Rust. Every programming language needs its major mode in Emacs. A major mode handles indentation and syntax highlighting. Rust mode does this job.
+- [rust-mode](https://github.com/rust-lang/rust-mode) - major mode for Rust. Every programming language needs its major mode in Emacs. A major mode handles indentation and syntax highlighting. Rust mode does this job.
 
-- cargo-mode -  Emacs minor mode which allows to dynamically select a Cargo command. I wrote it myself. The reasons behind this package can be found in [the post](https://www.badykov.com/emacs/2021/05/29/emacs-cargo-mode/).
+- [cargo-mode](https://github.com/ayrat555/cargo-mode) - Emacs minor mode which allows to dynamically select a Cargo command. I wrote it myself. The reasons behind this package can be found in [the post](https://www.badykov.com/emacs/2021/05/29/emacs-cargo-mode/).
 
 - [rust-analyzer](https://github.com/rust-analyzer/rust-analyzer) (through [lsp-mode](https://github.com/emacs-lsp/lsp-mode)). From its Readme, Rust-analyzer is an implementation of Language Server Protocol for the Rust programming language. It provides features like completion and goto definition. Rust analyzer can be used in emacs through Lsp-mode - Emacs client for the Language Server Protocol.
 
 #### General Packages
 
-- More Lsp Packages. You can find more extensions in [lsp-mode's guides](https://emacs-lsp.github.io/lsp-mode/). I use lsp-ui, lsp-ivy, lsp-treemacs.
+- More Lsp Packages. You can find more extensions in [lsp-mode's guides](https://emacs-lsp.github.io/lsp-mode/). I use [lsp-ui](https://github.com/emacs-lsp/lsp-ui), [lsp-ivy](https://github.com/emacs-lsp/lsp-ivy), [lsp-treemacs](https://github.com/emacs-lsp/lsp-treemacs).
 
 - [projectile](https://github.com/bbatsov/projectile) - Project interaction library
 
