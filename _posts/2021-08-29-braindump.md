@@ -10,7 +10,7 @@ categories: common
 
 Exactly 6 months ago I wrote a [post](/common/2021/03/28/org-roam/) about zettelkasten and [org-roam](https://github.com/org-roam/org-roam).
 
-Now I accumulated a set of useful knowledge nuggets that I'm returning to again and again. I think these notes can be useful not only for myself. So I decided to export them into [my braindump](https://braindump.badykov.com/) - a static site with my notes.
+Now I accumulated a set of useful knowledge nuggets that I'm returning to again and again. I think these notes can be useful not only for myself. So I decided to export them into [my braindump](https://braindump.badykov.com/about) - a static site with my notes.
 
 In this post, I'll describe simple steps to create a static site with your braindump.
 
@@ -42,6 +42,6 @@ The last step is to deploy a braindump. I used github pages for that. You can ho
 
 - [https://github.com/ayrat555/cortex-dark](https://github.com/ayrat555/cortex-dark) - dark theme for braindump (hugo)
 - [https://github.com/ayrat555/braindump](https://github.com/ayrat555/braindump) - source code for my braindump
-- [https://braindump.badykov.com/](https://braindump.badykov.com/) - my braindump
+- [https://braindump.badykov.com/](https://braindump.badykov.com/about) - my braindump
 
 The task for next weekend is to figure out a way to smoothly export my public notes. ;)
