@@ -6,7 +6,7 @@ summary: Exporting your notes into a static site
 categories: common
 ---
 
-![brain](/images/29-08-2021-brain.png)
+![brain](/images/2021-08-29-brain.png)
 
 Exactly 6 months ago I wrote a [post](/common/2021/03/28/org-roam/) about zettelkasten and [org-roam](https://github.com/org-roam/org-roam).
 
