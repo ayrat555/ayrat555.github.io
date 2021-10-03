@@ -1,5 +1,4 @@
 ---
-layout:     post
 title:      zkSNARK in Ethereum
 date:       2018-09-15
 summary:    Zero-knowledge proofs in Ethereum

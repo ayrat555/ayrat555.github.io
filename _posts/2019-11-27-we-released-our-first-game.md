@@ -1,5 +1,4 @@
 ---
-layout: post
 title: We released our first game!
 date: 2019-11-27
 summary: The game is out of open beta

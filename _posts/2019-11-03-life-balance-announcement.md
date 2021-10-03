@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Life Balance Announcement
 date: 2019-11-03
 summary: Announcement of the game I've been working in my free time

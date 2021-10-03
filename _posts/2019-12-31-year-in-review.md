@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Year in review
 date: 2019-12-31
 summary: Brief overview of my results in 2019

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Hacking Elixir tools in Emacs
 date: 2020-04-26
 summary: Emacs packages I've been developing recently

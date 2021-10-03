@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Emacs setup for Elixir
 date: 2020-05-30
 summary: My essential package list for Emacs

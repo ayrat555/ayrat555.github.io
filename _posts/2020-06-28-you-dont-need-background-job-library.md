@@ -1,5 +1,4 @@
 ---
-layout: post
 title: You don't need a background job framework in Rust
 date: 2020-06-28
 summary: My experience trying to find a suitable library for background job processing

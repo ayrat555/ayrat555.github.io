@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Emacs setup for Rust
 date: 2021-07-31
 summary: My essential package list for Rust

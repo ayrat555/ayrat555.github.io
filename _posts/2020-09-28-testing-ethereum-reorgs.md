@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Testing Ethereum reorgs
 date: 2020-09-27
 summary: A couple of notes on Ethereum reorgs

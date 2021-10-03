@@ -1,5 +1,4 @@
 ---
-layout:     post
 title:      Lisp interpreter in Lisp
 date:       2017-11-04
 summary:    SICP course culmination

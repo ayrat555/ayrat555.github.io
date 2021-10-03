@@ -1,5 +1,4 @@
 ---
-layout:     post
 title:      Pride and Prejudice
 date:       2018-12-15
 summary:    This year's results

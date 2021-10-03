@@ -1,5 +1,4 @@
 ---
-layout:     post
 title:      Message calls in Ethereum
 date:       2018-06-17
 summary:    Summary of existing message calls in Ethereum

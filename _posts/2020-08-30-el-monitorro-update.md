@@ -1,5 +1,4 @@
 ---
-layout: post
 title: The last big features of El Monitorro
 date: 2020-08-30
 summary: El Monitorro Update

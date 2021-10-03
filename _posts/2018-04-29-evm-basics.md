@@ -1,5 +1,4 @@
 ---
-layout:     post
 title:      Ethereum Virtual Machine in Elixir
 date:       2018-04-29
 summary:    EVM execution basics in Elixir

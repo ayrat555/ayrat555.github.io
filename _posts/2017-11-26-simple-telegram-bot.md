@@ -1,5 +1,4 @@
 ---
-layout:     post
 title:      Simple Telegram bot in Elixir
 date:       2017-11-26
 summary:    Yet another telegram bot

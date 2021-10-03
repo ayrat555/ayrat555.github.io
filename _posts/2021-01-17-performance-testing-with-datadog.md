@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Performance testing with Datadog
 date: 2021-01-17
 summary: Performance testing with Datadog

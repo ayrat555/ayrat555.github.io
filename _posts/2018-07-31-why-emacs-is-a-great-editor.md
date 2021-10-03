@@ -1,5 +1,4 @@
 ---
-layout:     post
 title:      Why Emacs is a great text editor
 date:       2018-07-31
 summary:    My thoughts on Emacs

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Git at your fingertips
 date: 2019-05-31
 summary: Magit

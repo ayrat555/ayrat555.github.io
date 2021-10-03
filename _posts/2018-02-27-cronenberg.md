@@ -1,5 +1,4 @@
 ---
-layout:     post
 title:      Cronenberg
 date:       2018-02-27
 summary:    Simple cron command entry parser

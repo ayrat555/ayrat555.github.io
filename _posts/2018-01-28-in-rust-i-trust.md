@@ -1,5 +1,4 @@
 ---
-layout:     post
 title:      In Rust I trust
 date:       2018-01-28
 summary:    My thoughts on Rust

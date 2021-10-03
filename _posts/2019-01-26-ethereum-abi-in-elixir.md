@@ -1,5 +1,4 @@
 ---
-layout:     post
 title:      Ethereum Contract Application Binary Interface (ABI) in Elixir
 date:       2019-01-26
 summary:    ABI in Elixir

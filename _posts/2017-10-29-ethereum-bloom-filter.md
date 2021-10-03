@@ -1,5 +1,4 @@
 ---
-layout:     post
 title:      Bloom filters in Ethereum
 date:       2017-10-29
 summary:    Let’s examine Ethereum's bloom filters

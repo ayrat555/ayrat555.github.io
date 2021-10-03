@@ -1,9 +1,11 @@
 ---
-layout:     post
-title:      Elixir macros are evil (sometimes)
-date:       2017-10-18
-summary:    Exciting story of dynamic code generation.
-categories: elixir
+title: "Elixir macros are evil (sometimes)"
+date: 2017-10-18
+categories:
+  - elixir
+tags:
+  - macros
+  - programming
 ---
 
 ![hydra](/images/2017-10-18-hydra.jpg)

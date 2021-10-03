@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Frankenstein
 date: 2021-04-30
 summary: Telegram bot API client for Rust

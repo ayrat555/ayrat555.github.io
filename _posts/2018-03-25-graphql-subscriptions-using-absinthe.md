@@ -1,5 +1,4 @@
 ---
-layout:     post
 title:      GraphQL subscriptions using Absinthe
 date:       2018-03-25
 summary:    GraphQL in Elixir

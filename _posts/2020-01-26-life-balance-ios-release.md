@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Our game Life Balance released on iOS!
 date: 2020-01-26
 summary: Life Balance iOS release

@@ -1,5 +1,4 @@
 ---
-layout:     post
 title:      Elixir behaviours for blockchain hard fork configurations
 date:       2018-12-29
 summary:    Hard fork configuration at the Mana Project

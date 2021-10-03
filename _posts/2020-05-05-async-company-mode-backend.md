@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Async autocompletion in Emacs
 date: 2020-05-05
 summary: Creating async company-mode backend

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Libra - Facebook's Ethereum clone
 date: 2019-06-29
 summary: My thoughts on Facebook's blockchain

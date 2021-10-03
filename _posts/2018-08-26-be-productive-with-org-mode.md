@@ -1,5 +1,4 @@
 ---
-layout:     post
 title:      Be productive with Org-mode
 date:       2018-08-26
 summary:    A note manager and organizer

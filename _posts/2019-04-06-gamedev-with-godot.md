@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Gamedev with Godot
 date: 2019-04-06
 summary: Introduction to Godot

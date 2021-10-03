@@ -1,5 +1,4 @@
 ---
-layout: post
 title: My Braindump
 date: 2021-08-29
 summary: Exporting your notes into a static site

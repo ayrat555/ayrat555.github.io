@@ -1,5 +1,4 @@
 ---
-layout: post
 title: A Matter of Habit
 date: 2020-03-29
 summary: Consistency with org-habit

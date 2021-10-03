@@ -1,5 +1,4 @@
 ---
-layout:     post
 title:      Things to consider for Ethereum dev community
 date:       2018-08-11
 summary:    Just some inconveniences I encountered

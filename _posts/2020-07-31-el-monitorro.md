@@ -1,5 +1,4 @@
 ---
-layout: post
 title: El Monitorro - Feed reader in Rust
 date: 2020-07-31
 summary: Feed reader as a Telegram bot
