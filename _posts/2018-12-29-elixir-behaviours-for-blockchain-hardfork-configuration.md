@@ -3,6 +3,9 @@ title:      Elixir behaviours for blockchain hard fork configurations
 date:       2018-12-29
 summary:    Hard fork configuration at the Mana Project
 categories: ethereum
+
+redirect_from:
+  - /ethereum/2018/12/29/elixir-behaviours-for-blockchain-hardfork-configuration/
 ---
 
 ![trees](/images/2018-12-29-trees.png)

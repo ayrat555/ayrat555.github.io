@@ -5,7 +5,7 @@ summary:    Just some inconveniences I encountered
 categories: ethereum
 
 redirect_from:
-  - /2018/08/11/things-to-consider-for-eth-dev-com/
+  - /ethereum/2018/08/11/things-to-consider-for-eth-dev-com/
 ---
 
 ![hide-the-pain](/images/2018-08-11-pain.jpg)

@@ -3,6 +3,9 @@ title: Smart Contract Verification in Ethereum
 date: 2019-02-24
 summary: How block explorers verify smart contracts under the hood
 categories: ethereum
+
+redirect_from:
+  - /ethereum/2019/02/24/smart-contract-verification/
 ---
 
 ![byte-smart-code](/images/2019-02-24-smart-contract.jpg)

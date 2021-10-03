@@ -3,6 +3,9 @@ title:      Ethereum Contract Application Binary Interface (ABI) in Elixir
 date:       2019-01-26
 summary:    ABI in Elixir
 categories: elixir
+
+redirect_from:
+  - /elixir/2019/01/26/ethereum-abi-in-elixir/
 ---
 
 ![smart-contract](/images/2019-01-26-hands.jpg)

@@ -3,6 +3,9 @@ title:      Pride and Prejudice
 date:       2018-12-15
 summary:    This year's results
 categories: common
+
+redirect_from:
+  - /common/2018/12/15/pride-and-prejudice/
 ---
 
 ![resolutions](/images/2018-12-15-resolutions.jpg)

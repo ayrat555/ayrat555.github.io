@@ -3,6 +3,9 @@ title:      Storage in Ethereum
 date:       2018-11-10
 summary:    Storage levels in the Mana-Ethereum client
 categories: ethereum
+
+redirect_from:
+  - /ethereum/2018/11/10/storage-in-ethereum/
 ---
 
 ![blockchain-storage](/images/2018-11-10-storage-in-ethereum.jpg)

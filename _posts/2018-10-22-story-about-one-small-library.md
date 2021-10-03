@@ -3,6 +3,10 @@ title:      Story about one small library
 date:       2018-10-22
 summary:    Ethereumex evolution
 categories: ethereum
+
+redirect_from:
+  - /ethereum/2018/10/15/story-about-one-small-library/
+  - /ethereum/2018/10/22/story-about-one-small-library/
 ---
 
 ![babel](/images/2018-10-22-babel.jpg)

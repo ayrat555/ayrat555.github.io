@@ -60,7 +60,7 @@ plugins:
 author:
   name   : "Ayrat Badykov"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Your favourite software developer."
+  bio    : "Software developer, hobby artist."
   links:
     - label: "Braindump"
       icon: "fas fa-fw fa-link"
