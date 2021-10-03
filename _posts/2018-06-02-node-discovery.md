@@ -1,8 +1,12 @@
 ---
 title:      Ethereum's node discovery in Elixir
-date:       2018-06-02
+ndate:       2018-06-02
 summary:    Mostly Kademlia in Elixir
 categories: elixir
+
+redirect_from:
+  - /elixir/2018/06/02/node-discovery/
+  - /elixir/2018/05/13/node-discovery/
 ---
 
 ![net](/images/2018-06-02-discovery.png)

@@ -3,6 +3,9 @@ title:      zkSNARK in Ethereum
 date:       2018-09-15
 summary:    Zero-knowledge proofs in Ethereum
 categories: ethereum
+
+redirect_from:
+  - /2018/09/15/zkSNARK-in-Ethereum/
 ---
 
 ![crypto-lock](/images/2018-09-15-lock.jpg)
