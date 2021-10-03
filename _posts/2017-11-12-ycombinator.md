@@ -3,6 +3,9 @@ title:      Y combinator
 date:       2017-11-12
 summary:    also known as WTF combinator
 categories: general
+
+redirect_from:
+  - /general/2017/11/12/ycombinator/
 ---
 
 ![mit-logo](/images/2017-11-12-mit-logo.svg)

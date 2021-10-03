@@ -3,6 +3,9 @@ title:      Simple Telegram bot in Elixir
 date:       2017-11-26
 summary:    Yet another telegram bot
 categories: elixir
+
+redirect_from:
+  - /elixir/2017/11/26/simple-telegram-bot/
 ---
 
 ![robot](/images/2017-11-26-robot.jpg)

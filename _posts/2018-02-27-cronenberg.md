@@ -3,6 +3,9 @@ title:      Cronenberg
 date:       2018-02-27
 summary:    Simple cron command entry parser
 categories: rust
+
+redirect_from:
+  - /rust/2018/02/27/cronenberg/
 ---
 
 ![time](/images/2018-02-27-time.jpg)

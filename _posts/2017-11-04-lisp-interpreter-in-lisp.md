@@ -3,6 +3,9 @@ title:      Lisp interpreter in Lisp
 date:       2017-11-04
 summary:    SICP course culmination
 categories: general
+
+redirect_from:
+  - /general/2017/11/04/lisp-interpreter-in-lisp/
 ---
 
 ![wizard](/images/2017-11-04-wizard.jpg)

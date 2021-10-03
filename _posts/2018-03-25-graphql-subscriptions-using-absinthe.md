@@ -3,6 +3,9 @@ title:      GraphQL subscriptions using Absinthe
 date:       2018-03-25
 summary:    GraphQL in Elixir
 categories: elixir
+
+redirect_from:
+  - /elixir/2018/03/25/graphql-subscriptions-using-absinthe/
 ---
 
 ![absinthe](/images/2018-03-25-absinthe.png)

@@ -6,6 +6,9 @@ categories:
 tags:
   - macros
   - programming
+
+redirect_from:
+  - /elixir/2017/10/18/macros-are-evil/
 ---
 
 ![hydra](/images/2017-10-18-hydra.jpg)

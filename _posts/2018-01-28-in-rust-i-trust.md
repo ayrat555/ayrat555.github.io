@@ -3,6 +3,9 @@ title:      In Rust I trust
 date:       2018-01-28
 summary:    My thoughts on Rust
 categories: rust
+
+redirect_from:
+  - /rust/2018/01/28/in-rust-i-trust/
 ---
 
 ![rusty gears](/images/2018-01-28-gears.jpg)

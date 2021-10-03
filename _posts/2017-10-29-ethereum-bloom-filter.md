@@ -3,6 +3,9 @@ title:      Bloom filters in Ethereum
 date:       2017-10-29
 summary:    Let’s examine Ethereum's bloom filters
 categories: ethereum
+
+redirect_from:
+  - /ethereum/2017/10/29/ethereum-bloom-filter/
 ---
 
 ![bloom](/images/2017-10-29-tom-thumb.jpg)
