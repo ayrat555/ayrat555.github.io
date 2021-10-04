@@ -9,6 +9,7 @@ tags:
 
 redirect_from:
   - /general/2017/10/17/first-post/
+  - /general/elixir/2017/10/17/first-post/
 ---
 
 Hello World!
