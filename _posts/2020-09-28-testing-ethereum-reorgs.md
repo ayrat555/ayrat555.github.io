@@ -3,6 +3,9 @@ title: Testing Ethereum reorgs
 date: 2020-09-27
 summary: A couple of notes on Ethereum reorgs
 categories: ethereum
+
+redirect_from:
+   - /ethereum/2020/09/27/testing-ethereum-reorgs/
 ---
 
 ![img](/images/2020-09-28-testing-ethereum-reorgs.jpg)

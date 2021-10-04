@@ -3,6 +3,9 @@ title: Mana - Ethereum client written in Elixir (Talk)
 date: 2019-03-07
 summary: The talk I gave on the ElixirLangMocow #9 (Warning: The talk is in Russian)
 categories: talks
+
+redirect_from:
+   - /talks/2019/03/07/mana-ethereum-client-written-elixir/
 ---
 
 ### Slides

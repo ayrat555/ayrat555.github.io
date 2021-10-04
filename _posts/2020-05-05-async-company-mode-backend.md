@@ -3,6 +3,9 @@ title: Async autocompletion in Emacs
 date: 2020-05-05
 summary: Creating async company-mode backend
 categories: emacs
+
+redirect_from:
+   - /emacs/2020/05/05/async-company-mode-backend/
 ---
 
 ![img](/images/2020-05-05-company.png)

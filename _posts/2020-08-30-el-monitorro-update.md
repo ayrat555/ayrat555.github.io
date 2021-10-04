@@ -3,6 +3,9 @@ title: The last big features of El Monitorro
 date: 2020-08-30
 summary: El Monitorro Update
 categories: common
+
+redirect_from:
+   - /common/2020/08/30/el-monitorro-update/
 ---
 
 ![el-monitorro](/images/2020-08-30-bull.jpg)

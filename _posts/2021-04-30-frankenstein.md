@@ -3,6 +3,9 @@ title: Frankenstein
 date: 2021-04-30
 summary: Telegram bot API client for Rust
 categories: rust
+
+redirect_from:
+   - /rust/2021/04/30/frankenstein/
 ---
 
 ![frank](/images/2021-04-30-frank.png)

@@ -3,6 +3,9 @@ title: We released our first game!
 date: 2019-11-27
 summary: The game is out of open beta
 categories: game dev
+
+redirect_from:
+  - /game/dev/2019/11/27/we-released-our-first-game/
 ---
 
 ![img](/images/2019-11-27-life-balance.jpg)

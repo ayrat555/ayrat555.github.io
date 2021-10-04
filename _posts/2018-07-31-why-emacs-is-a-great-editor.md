@@ -3,6 +3,9 @@ title:      Why Emacs is a great text editor
 date:       2018-07-31
 summary:    My thoughts on Emacs
 categories: emacs
+
+redirect_from:
+  - /emacs/2018/07/31/why-emacs-is-a-great-editor/
 ---
 
 ![swiss-knife](/images/2018-07-31-knife.png)

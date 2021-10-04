@@ -3,6 +3,9 @@ title: You don't need a background job framework in Rust
 date: 2020-06-28
 summary: My experience trying to find a suitable library for background job processing
 categories: rust
+
+redirect_from:
+   - /rust/2020/06/28/you-dont-need-background-job-library/
 ---
 
 ![img](/images/2020-06-28-iceberg.jpg)

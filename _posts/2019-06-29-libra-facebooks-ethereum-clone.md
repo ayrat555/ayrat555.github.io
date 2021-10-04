@@ -3,6 +3,9 @@ title: Libra - Facebook's Ethereum clone
 date: 2019-06-29
 summary: My thoughts on Facebook's blockchain
 categories: blockchain
+
+redirect_from:
+   - /blockchain/2019/06/29/libra-facebooks-ethereum-clone/
 ---
 
 ![img](/images/2019-06-29-libra.png)

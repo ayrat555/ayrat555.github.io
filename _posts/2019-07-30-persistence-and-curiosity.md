@@ -3,6 +3,9 @@ title: Persistence and curiosity
 date: 2019-07-30
 summary: A couple of thoughts about the learning process.
 categories: common
+
+redirect_from:
+   - /common/2019/07/30/persistence-and-curiosity/
 ---
 
 ![img](/images/2019-07-30-learning.jpg)

@@ -3,6 +3,9 @@ title: My Braindump
 date: 2021-08-29
 summary: Exporting your notes into a static site
 categories: common
+
+redirect_from:
+   - /common/2021/08/29/braindump/
 ---
 
 ![brain](/images/2021-08-29-brain.png)

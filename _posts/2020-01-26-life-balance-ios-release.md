@@ -3,6 +3,9 @@ title: Our game Life Balance released on iOS!
 date: 2020-01-26
 summary: Life Balance iOS release
 categories: game dev
+
+redirect_from:
+   - /game/dev/2020/01/26/life-balance-ios-release/
 ---
 
 ![img](/images/2020-01-26-life-balance.png)

@@ -3,6 +3,9 @@ title: Year in review
 date: 2019-12-31
 summary: Brief overview of my results in 2019
 categories: common
+
+redirect_from:
+   - /common/2019/12/31/year-in-review/
 ---
 
 ![results](/images/2019-12-31-developer.jpeg)

@@ -3,6 +3,9 @@ title:      Message calls in Ethereum
 date:       2018-06-17
 summary:    Summary of existing message calls in Ethereum
 categories: ethereum
+
+redirect_from:
+  - /ethereum/2018/06/17/message-calls-in-ethereum/
 ---
 
 ![dolls](/images/2018-06-17-dolls.png)

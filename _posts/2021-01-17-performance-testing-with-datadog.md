@@ -3,6 +3,9 @@ title: Performance testing with Datadog
 date: 2021-01-17
 summary: Performance testing with Datadog
 categories: common
+
+redirect_from:
+   - /common/2021/01/17/performance-testing-with-datadog/
 ---
 
 ![cover](/images/2021-01-17-datadog.jpeg)

@@ -3,6 +3,9 @@ title: Gamedev with Godot
 date: 2019-04-06
 summary: Introduction to Godot
 categories: game dev
+
+redirect_from:
+   - /game/dev/2019/04/06/gamedev-with-godot/
 ---
 
 ![gamedev](/images/2019-04-06-gamedev.jpg)

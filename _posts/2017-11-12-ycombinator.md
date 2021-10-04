@@ -6,6 +6,8 @@ categories: general
 
 redirect_from:
   - /general/2017/11/12/ycombinator/
+  - /general/2017/11/12/y-combinator/
+  - /general/2017/11/04/y-combinator/
 ---
 
 ![mit-logo](/images/2017-11-12-mit-logo.svg)

@@ -3,6 +3,9 @@ title: A Matter of Habit
 date: 2020-03-29
 summary: Consistency with org-habit
 categories: common
+
+redirect_from:
+   - /common/2020/03/29/a-matter-of-habit/
 ---
 
 ![cover](/images/2020-03-29-org-habit.png)

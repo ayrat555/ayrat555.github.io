@@ -3,6 +3,9 @@ title: Solidity bytecode metadata
 date: 2019-08-22
 summary: Useful info encoded in Solidity bytecode.
 categories: ethereum
+
+redirect_from:
+   - /ethereum/2019/08/22/solidity-bytecode-metadata/
 ---
 
 ![img](/images/2019-08-22-bytecode.jpg)

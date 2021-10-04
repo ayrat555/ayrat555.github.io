@@ -3,6 +3,9 @@ title: Life Balance web version
 date: 2021-02-28
 summary: Life Balance is available in browsers
 categories: common
+
+redirect_from:
+   - /common/2021/02/28/life-balance-web-version/
 ---
 
 ![cover](/images/2021-02-28-life.png)

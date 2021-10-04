@@ -3,6 +3,9 @@ title: Emacs setup for Rust
 date: 2021-07-31
 summary: My essential package list for Rust
 categories: emacs
+
+redirect_from:
+   - /emacs/2021/07/31/emacs-setup-for-rust/
 ---
 
 ![img](/images/2021-07-31-crab.png)

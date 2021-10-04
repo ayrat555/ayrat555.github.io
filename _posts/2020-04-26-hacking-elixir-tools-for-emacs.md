@@ -3,6 +3,10 @@ title: Hacking Elixir tools in Emacs
 date: 2020-04-26
 summary: Emacs packages I've been developing recently
 categories: emacs
+
+redirect_from:
+   - /emacs/2020/03/29/hacking-elixir-tools-for-emacs/
+   - /emacs/2020/04/26/hacking-elixir-tools-for-emacs/
 ---
 
 ![cover](/images/2020-04-26-emacs.png)

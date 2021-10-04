@@ -3,6 +3,9 @@ title: Emacs setup for Elixir
 date: 2020-05-30
 summary: My essential package list for Emacs
 categories: emacs
+
+redirect_from:
+   - /emacs/2020/05/30/emacs-setup-for-elixir/
 ---
 
 ![img](/images/2020-05-30-bicycle.jpg)

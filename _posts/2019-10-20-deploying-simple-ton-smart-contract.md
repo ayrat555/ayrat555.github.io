@@ -3,6 +3,9 @@ title: Deploying a simple Telegram Open Network smart contract
 date: 2019-10-20
 summary: The first look at TON
 categories: ton
+
+redirect_from:
+  - /ton/2019/10/20/deploying-simple-ton-smart-contract/
 ---
 
 ![img](/images/2019-10-20-ton.jpg)

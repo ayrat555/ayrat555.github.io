@@ -3,6 +3,9 @@ title: Git at your fingertips
 date: 2019-05-31
 summary: Magit
 categories: common
+
+redirect_from:
+   - /common/2019/05/31/git-at-your-fingertips/
 ---
 
 ![cover](/images/2019-05-31-magit.png)

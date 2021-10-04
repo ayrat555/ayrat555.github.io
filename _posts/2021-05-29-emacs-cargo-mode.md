@@ -3,6 +3,9 @@ title: Cargo mode for Emacs
 date: 2021-05-29
 summary: Emacs minor mode for the Rust package manager
 categories: emacs
+
+redirect_from:
+   - /emacs/2021/05/29/emacs-cargo-mode/
 ---
 
 ![frank](/images/2021-05-29-cargo.jpeg)
