@@ -17,7 +17,7 @@ The site is built from org-mode files with [github actions](https://github.com/f
 
 Let's take a look at its steps to get an overview of what's going on:
 
-    1. Fetch the project and its theme
+###  Fetch the project and its theme
 ```yml
       - uses: actions/checkout@v2
         with:
@@ -27,7 +27,7 @@ Let's take a look at its steps to get an overview of what's going on:
 
 This step is straightforward. It just fetches the project and its submodule [hugo theme](https://github.com/ayrat555/cortex-dark).
 
-    2.  Install sqlite
+###  Install sqlite
 ```yml
    - name: Install org-roam dependencies
         run: |
@@ -37,7 +37,7 @@ This step is straightforward. It just fetches the project and its submodule [hug
 
 [org-roam](https://www.badykov.com/common/org-roam/) uses the SQLite database to store metadata about notes and provide search features. That's why we have to install SQLite
 
-    3. Install emacs
+### Install emacs
 
 ```yml
       - name: Install emacs
@@ -49,7 +49,7 @@ This step is straightforward. It just fetches the project and its submodule [hug
 This step installs emacs and [ox-hugo](https://github.com/kaushalmodi/ox-hugo) which are used to convert org-mode files into hugo markdown files.
 
 
-    4. Convert org-mode files to hugo markdown
+### Convert org-mode files to hugo markdown
 
 ```yml
       - name: Convert org files to hugo
@@ -59,7 +59,7 @@ This step installs emacs and [ox-hugo](https://github.com/kaushalmodi/ox-hugo) w
 This step does the actual conversion. We will take a closer look into it a little bit later.
 
 
-    5. Build and deploy with Hugo
+### Build and deploy with Hugo
 ```yml
 
       - name: Setup Hugo
@@ -170,6 +170,7 @@ org2hugo:
 ;;; init.el ends here
 
 ```
+
 ## Conclusion
 
 You can check out the original scripts in [my braindump repo](https://github.com/ayrat555/braindump).
