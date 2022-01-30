@@ -7,6 +7,10 @@ header:
   overlay_color: "#000"
   overlay_filter: "0.5"
   overlay_image: /images/2022-01-30-cover.jpeg
+  actions:
+    - label: "GitHub"
+      url: "https://github.com/ayrat555/cryptopunk"
+excerpt:  I developed a crypto wallet library for Elixir called [cryptopunk](https://github.com/ayrat555/cryptopunk). And in this post, I'll describe how you can use it
 ---
 
 Only a few years ago cryptocurrencies were considered "money for nerds", a technology that doesn't have any potential. But now the blockchain became mainstream. Artists are selling their art as NFTs, Elon Musk keeps pumping Dogecoin in his tweets, many countries are in the process of developing regulation rules for cryptocurrencies.
@@ -200,3 +204,5 @@ More currencies and bitcoin address types will be added soon.
 ## Conclustion
 
 Hopefully, this post will be useful for anyone interested in blockchain technology or people trying to integrate them into their projects
+
+The library can be found [here](https://github.com/ayrat555/cryptopunk).
