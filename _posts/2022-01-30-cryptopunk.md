@@ -3,6 +3,10 @@ title: We’re on the Brink of Cryptopunk
 date: 2022-01-30
 summary: My elixir HD wallet library
 categories: elixir
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /images/2022-01-30-cover.jpeg
 ---
 
 Only a few years ago cryptocurrencies were considered "money for nerds", a technology that doesn't have any potential. But now the blockchain became mainstream. Artists are selling their art as NFTs, Elon Musk keeps pumping Dogecoin in his tweets, many countries are in the process of developing regulation rules for cryptocurrencies.
@@ -58,7 +62,7 @@ So the seed is sufficient to backup, recover and import all your private keys an
 
 A special kind of deterministic wallet is an HD wallet. HD wallets allow deriving a tree of keys
 
-![cover](/images/2022-01-30-hd-wallet.jpeg)
+![wallet](/images/2022-01-30-hd-wallet.jpeg)
 
 Cryptopunk implements this kind of wallet.
 
@@ -124,23 +128,23 @@ These BIPs defines a logical hierarchy for deterministic wallets based on an alg
 
 It defines 5 levels of derivation path - `m / purpose' / coin_type' / account' / change / address_index` :
 
-1. the first part is the type of derived key: `m` - private key, `M` - public key
-2. the second part is the purpose. it's set to 44, indicating that its subtree is created according to BIP44
-3. the third part is the coin type. so you can use the same master key / seed with different cryptocurrencies
+- the first part is the type of derived key: `m` - private key, `M` - public key
+- the second part is the purpose. it's set to 44, indicating that its subtree is created according to BIP44
+- the third part is the coin type. so you can use the same master key / seed with different cryptocurrencies
 
-You can find the registered coin list [here](https://github.com/satoshilabs/slips/blob/master/slip-0044.md)
+   You can find the registered coin list [here](https://github.com/satoshilabs/slips/blob/master/slip-0044.md)
 
-4. the fourth part is the account.
+- the fourth part is the account.
 
-Users can use these accounts to organize the funds in the same fashion as bank accounts
+   Users can use these accounts to organize the funds in the same fashion as bank accounts
 
-5. the fifth part is the change
+-  the fifth part is the change
 
-This field is specific to blockchains that use outputs. Outputs can;t be spent partially so some part of them should be returned to the same wallet as change.
+   This field is specific to blockchains that use outputs. Outputs can;t be spent partially so some part of them should be returned to the same wallet as change.
 
-And on the programmatic level, you'll detect which addresses are payment addresses and which are change addresses based on this field.
+   And on the programmatic level, you'll detect which addresses are payment addresses and which are change addresses based on this field.
 
-6. the last part is the index of the address
+- the last part is the index of the address
 
 Apostrophes in the path indicate that hardened derivation is used.
 
