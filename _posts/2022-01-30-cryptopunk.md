@@ -144,7 +144,7 @@ It defines 5 levels of derivation path - `m / purpose' / coin_type' / account' /
 
 -  the fifth part is the change
 
-   This field is specific to blockchains that use outputs. Outputs can;t be spent partially so some part of them should be returned to the same wallet as change.
+   This field is specific to blockchains that use outputs. Outputs can't be spent partially so some part of them should be returned to the same wallet as change.
 
    And on the programmatic level, you'll detect which addresses are payment addresses and which are change addresses based on this field.
 
@@ -187,11 +187,11 @@ In practice, you won't have to think about what type of derivation you should us
 
 Cryptopunk extensively uses Rust NIFs:
 
-- [ex_secp256k1](https://github.com/omgnetwork/ex_secp256k1) - secp256k1 ellictic curve functions
+- [ex_secp256k1](https://github.com/omgnetwork/ex_secp256k1) - secp256k1 elliptic curve functions
 - [ex_pbkdf2](https://github.com/ayrat555/ex_pbkdf2) -  Password-Based Key Derivation Function v2 (PBKDF2). It's used for seed creation
 - [ex_keccak](https://github.com/tzumby/ex_keccak) - Keccak hash. It's used for Ethereum address creation
 
-The only disadvantage of using Rust Nifs is you have to bring Rust into your project. But on the other hand, C Nif requires a couple of dependencies to be installed.
+The only disadvantage of using Rust Nifs is you have to bring Rust into your project. But on the other hand, C Nifs usually require a couple of dependencies to be installed.
 
 So Rust can be considered just one more dependency.
 
