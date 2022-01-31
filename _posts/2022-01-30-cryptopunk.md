@@ -128,7 +128,7 @@ Although you already can use your master key in your blockchain transactions to 
 
 ### [BIP-44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki) and [BIP-43](https://github.com/bitcoin/bips/blob/master/bip-0043.mediawiki)
 
-These BIPs defines a logical hierarchy for deterministic wallets based on an algorithm described in BIP-32. We'll get to it a little bit later.
+These BIPs define a logical hierarchy for deterministic wallets based on an algorithm described in BIP-32. We'll get to it a little bit later.
 
 It defines 5 levels of derivation path - `m / purpose' / coin_type' / account' / change / address_index` :
 
@@ -201,7 +201,7 @@ Currently, cryptopunk supports addresses for Ethereum, Bitcoin and Dogecoin.
 
 More currencies and bitcoin address types will be added soon.
 
-## Conclustion
+## Conclusion
 
 Hopefully, this post will be useful for anyone interested in blockchain technology or people trying to integrate them into their projects
 
