@@ -3,6 +3,10 @@ title: Bitcoin address types
 date: 2022-03-06
 summary: My elixir HD wallet library
 categories: bitcoin
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /images/2022-03-06-btc.jpeg
 ---
 
 Recently I started diving into bitcoin more. One of the interesting things I discovered is bitcoin has several types of address formats. For example:
@@ -50,7 +54,7 @@ Examples:
 
 It's calculated as hash160 of the public key encoded in base58 format. It's considered legacy address type and it's used for receiving P2PKH (pay to public key hash) outputs.
 
-Fees sending P2PKH transactions is higher compared to newer segwit compatible address types because transactions are larger for legacy addresses.
+Fees sending P2PKH transactions are higher compared to newer segwit compatible address types because transactions are larger for legacy addresses.
 
 ## Segwit (Segregated Witness) types
 
