@@ -9,7 +9,9 @@ header:
   overlay_image: /images/2022-03-06-btc.jpeg
 ---
 
-Recently I started diving into bitcoin more. One of the interesting things I discovered is bitcoin has several types of address formats. For example:
+Recently I started diving into bitcoin more. One of the interesting things I discovered is bitcoin has several types of address formats.
+
+For example:
 
 - `1JfhAmwWjbGJ3RW2hjoRdmpKaKXgCjSwEL` - starts with 1 (`mainnet`)
 - `397Y4wveZFbdEo8rTzXSPHWYuamfKs2GWd` - starts with 3 (`mainnet`)
