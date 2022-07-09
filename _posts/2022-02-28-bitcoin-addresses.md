@@ -22,7 +22,7 @@ In this post, I'll give a brief overview of common bitcoin address types that ar
 
 ## Addresses
 
-Addresses are created from the user wallet's public keys which are derived from the associated private keys. You can find out more about crypto wallets in my [previous post](elixir/cryptopunk/).
+Addresses are created from the user wallet's public keys which are derived from the associated private keys. You can find out more about crypto wallets in my [previous post](/elixir/cryptopunk/).
 
 Public keys are just points on the elliptic curve. They can be represented in two formats:
 
