@@ -52,13 +52,16 @@ Async provides significantly reduced CPU and memory overhead, especially for wor
   <footer><cite title="Async book">From the Rust's Async book</cite></footer>
 </blockquote>
 
-For some lightweight background tasks, it's cheaper to run them on the same thread using async instead of starting one thread per worker.
+For some lightweight background tasks, it's cheaper to run them on the same thread using async instead of starting one thread per worker. That's why we implemented this kind of processing in fang. Its key features:
 
-
-The threaded processing uses the [diesel](https://github.com/diesel-rs/diesel) ORM which blocks the thread
-
+- Each worker is started as a tokio task
+- If any worker fails during task execution, it's restarted
+- Tasks are saved to a Postgres database. Instead of diesel, [tokio-postgres](https://github.com/sfackler/rust-postgres) is used to interact with a db
+- The implementation is based on traits so it's easy to implement additonal backends (redis, in-memory) to store tasks. The threaded processing uses the [diesel](https://github.com/diesel-rs/diesel) ORM which blocks the thread.
 
 ## Usage
+
+### Define a job
 
 ```rust
 use fang::serde::{Deserialize, Serialize};
@@ -75,6 +78,8 @@ impl MyTask {
     }
 }
 ```
+
+### Implement the AsyncRunnable trait
 
 ```rust
 use fang::async_trait;
@@ -101,6 +106,8 @@ impl AsyncRunnable for MyTask {
 
 ```
 
+### Init queue
+
 ```rust
 use fang::asynk::async_queue::AsyncQueue;
 
@@ -111,6 +118,9 @@ let mut queue = AsyncQueue::builder()
     .duplicated_tasks(true)
     .build();
 ```
+
+
+### Start workers
 
 ```rust
 use fang::asynk::async_worker_pool::AsyncWorkerPool;
@@ -124,6 +134,8 @@ let mut pool: AsyncWorkerPool<AsyncQueue<NoTls>> = AsyncWorkerPool::builder()
 pool.start().await;
 ```
 
+### Insert tasks
+
 ```rust
 let task = MyTask::new(0);
 
@@ -132,3 +144,9 @@ queue
     .await
     .unwrap();
 ```
+
+Pitfalls
+
+- async traits
+- heavy tasks
+  separate runtime or threaded processing
