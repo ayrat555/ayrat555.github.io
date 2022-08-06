@@ -1,12 +1,12 @@
 ---
 title: Fang, async background processing for Rust
-date: 2022-08-08
+date: 2022-08-06
 summary: Async background processing for rust with tokio and postgres
 categories: rust
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /images/2022-08-08-factory.png
+  overlay_image: /images/2022-08-06-factory.png
 ---
 
 Even though the first stable version of Rust was released in 2015, there are still some holes in its ecosystem for solving common tasks. One of which is background processing.
