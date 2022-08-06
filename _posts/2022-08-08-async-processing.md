@@ -1,5 +1,5 @@
 ---
-title: Fang: Async background processing for rust
+title: Fang, async background processing for Rust
 date: 2022-08-08
 summary: Async background processing for rust with tokio and postgres
 categories: rust
