@@ -24,7 +24,7 @@ Most programming languages have go-to background processing frameworks/libraries
 
 The async programming (async/await) can be used for background processing but it has several major disadvantages if used directly:
 
-- It doesn't give control to the number of tasks that are being executed at any given time. So a lot of spawned tasks can overload a thread/threads that they're started on.
+- It doesn't give control of the number of tasks that are being executed at any given time. So a lot of spawned tasks can overload a thread/threads that they're started on.
 - It doesn't provide any monitoring which can be useful to investigate your system and find bottlenecks
 - Tasks are not persistent. So all enqueued tasks are lost on every application restart
 
@@ -37,7 +37,7 @@ Fang is a background processing library for rust. The first version of Fang was 
 - Each worker is started in a separate thread
 - A Postgres table is used as the task queue
 
-This implementation was written for a specific use case - [el monitorro bot](https://github.com/ayrat555/el_monitorro). This specific implementation of background processing was provided by time. Each day it processes more and more feeds every minute (the current number is more than 3000). Some users host a bot on their infrastructure.
+This implementation was written for a specific use case - [el monitorro bot](https://github.com/ayrat555/el_monitorro). This specific implementation of background processing was proved by time. Each day it processes more and more feeds every minute (the current number is more than 3000). Some users host the bot on their infrastructure.
 
 You can find out more about the threaded processing in fang in [this blog post](https://www.badykov.com/rust/fang/).
 
@@ -86,7 +86,7 @@ impl MyTask {
 }
 ```
 
-Fang re-exports `serde` so it's not required to add it Cargo.toml file
+Fang re-exports `serde` so it's not required to add it to the `Cargo.toml` file
 
 
 ### Implement the AsyncRunnable trait
@@ -172,7 +172,7 @@ There are a couple of features planned for fang:
 - Retries with different backoff modes
 - Additional backends (in-memory, redis)
 - Graceful shutdown for async workers (for the threaded processing this feature is implemented)
-- Cron job
+- Cron jobs
 
 ## Conclusion
 
