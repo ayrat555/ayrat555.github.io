@@ -9,8 +9,6 @@ header:
   overlay_image: /images/2022-08-08-factory.png
 ---
 
-## Introduction
-
 Even though the first stable version of Rust was released in 2015, there are still some holes in its ecosystem for solving common tasks. One of which is background processing.
 
 In software engineering background processing is a common approach for solving several problems:
