@@ -1,7 +1,7 @@
 ---
 title: Submitting transactions in TON with Elixir
 date: 2023-01-21
-summary: My thoughts on Ton and TON SDK for Elixir
+summary: TON transactions with Elixir
 categories: elixir ton
 header:
   overlay_color: "#000"
@@ -9,13 +9,13 @@ header:
   overlay_image: /images/2023-01-08-ton.jpeg
 ---
 
-In my previous post I wrote my thoughts on the TON blockchain and breifly mentioned a project I wrote for the Elixir programming language to interact with TON. In this post I'll give a step by step instruction for submitting transaction using my library.
+In [my previous post](/elixir/blockchain/ton/) I wrote my thoughts on the TON blockchain and briefly mentioned a project I wrote for the Elixir programming language to interact with TON. In this post, I'll give a step by step instructions for submitting transactions using my library.
 
 ## TON SDK for Elixir
 
-[ton](https://github.com/ayrat555/ton) has basic funtionailty for working with user wallets and submmitting transactions. Its features:
+[ton](https://github.com/ayrat555/ton) has basic functionality for working with user wallets and submitting transactions. Its features:
 
-- Create a secret and public key pair from a mnemonic
+- Create a key pair from a mnemonic
 - Deploy a [v4r2](https://ton.org/docs/participate/wallets/contracts#wallet-v4) wallet contract
 - Parse a TON address
 - Create transaction data (boc) which can be submitted using TON API
@@ -29,7 +29,7 @@ Interestingly enough, to receive transactions a contract doesn't have to be depl
 
 ### I. Generate mnemonic
 
-A mnemonic is a combination of 24 easy to remember words used to generate a public key and a secret key. The algorithm for mnemonic generation in `ton` is exactly the same as the one used in Bitcoin and Ethereum. It's implemented in [mnemoniac](https://github.com/ayrat555/mnemoniac) which I extracted from [cryptopunk](/elixir/cryptopunk/)
+A mnemonic is a combination of 24 easy-to-remember words used to generate a public key and a secret key. The algorithm for mnemonic generation in `ton` is the same as the one used in Bitcoin and Ethereum. It's implemented in [mnemoniac](https://github.com/ayrat555/mnemoniac) which I extracted from [cryptopunk](/elixir/cryptopunk/)
 
 ```elixir
 mnemonic = Ton.generate_mnemonic()
@@ -37,7 +37,7 @@ mnemonic = Ton.generate_mnemonic()
 # word word word word word word word word word word word word word word word word word word word word word word word word
 ```
 
-Let's imagine that we generated the most unsecure mnemonic possible - `word word word word word word word word word word word word word word word word word word word word word word word word`. We will use it in the next steps.
+Let's imagine that we generated the most unsafe mnemonic possible - `word word word word word word word word word word word word word word word word word word word word word word word word`. We will use it in the next steps.
 
 ### II. Generate public and private keys
 
@@ -84,14 +84,14 @@ wallet = Ton.create_wallet(keypair.public_key)
 # }
 ```
 
-Every contract is defined by its code and its initial data. Under the hood  `create_wallet/1` function initializes a contract by:
+Every contract is defined by its code and its initial data. Under the hood, `create_wallet/1` function initializes a contract by:
 
 - reading the hardcoded `v4r2` wallet contract code into a data structure called `cell` used for data storage
-- converting inital data (`public_key`, `workchain` and `wallet_id`) into a `cell`. `workchain` and `wallet_id` have default values but they can be overriden
+- converting initial data (`public_key`, `workchain` and `wallet_id`) into a `cell`. `workchain` and `wallet_id` have default values but they can be overridden
 
 The wallet is just a structure that will be used in the next steps
 
-### IV. Displaying a friendly addresss
+### IV. Displaying a friendly address
 
 Let's check how our wallet's address looks
 
@@ -100,13 +100,13 @@ Ton.wallet_to_friendly_address(wallet)
 # EQD2_2SN1-PCRRfHVbmM5Q0vf680bZAnIGR7EIQsMzQdHG4d
 ```
 
-The address `EQD2_2SN1-PCRRfHVbmM5Q0vf680bZAnIGR7EIQsMzQdHG4d` can be used to receive transactions. Under the hood we the library hashed cells created on the previous cell.
+The address `EQD2_2SN1-PCRRfHVbmM5Q0vf680bZAnIGR7EIQsMzQdHG4d` can be used to receive transactions. Under the hood, the library hashed cells created in the previous step.
 
 ### V. Generate transaction boc
 
-Before sending a transaction, we have to know the wallet's `seqno`. The value used to prevent replay attacks, it's the number of transactions executed by a wallet. If familiar with Ethereum, it's similar to `nonce`.
+Before sending a transaction, we have to know the wallet's `seqno`. The value used to prevent replay attacks, it's the number of transactions executed by a wallet. If you're familiar with Ethereum, `seqno` is similar to `nonce`.
 
-Since our wallet is brand new (at least at the time of writing), it didn't send any transactions. So seqno is 0. In the future, to know `seqno` we will have to call TON HTTP API's `/runGetMethod` with parameters
+Since our wallet is brand new (at least at the time of writing this post), it didn't send any transactions. So `seqno` is 0. In the future, to know `seqno` we will have to call TON HTTP API's `/runGetMethod` with parameters
 
 ```json
 {
@@ -137,8 +137,8 @@ boc = Ton.create_transfer_boc(wallet, params)
 
 Let's go over each of the parameters:
 
-- seqno - the number of transaction sent by the wallet. if seqno is 0, when sending a transaction, the code of the contract will be deployed
-- bounce - if the destination smart contract does not exist, or if it throws an unhandled exception while processing this message, the message will be "bounced" back carrying the remainder of the original value if the parameter set to true
+- seqno - the number of transactions sent by the wallet. if `seqno` is 0, when sending a transaction, the code of the contract will be deployed
+- bounce - if the destination smart contract does not exist, or if it throws an unhandled exception while processing this message, the message will be "bounced" back carrying the remainder of the original value if the parameter is set to true
 - secret_key - the key used to sign the transaction
 - value - the value that will be sent. the value 1 = 0.0000000001 Tons, 1_000_0000 = 1 Ton
 - to_address - the destination address. it should be a `Ton.Address` struct, that's why we parsed the to_address first
