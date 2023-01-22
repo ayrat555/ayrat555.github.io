@@ -1,6 +1,6 @@
 ---
 title: Submitting transactions in TON with Elixir
-date: 2023-01-21
+date: 2023-01-22
 summary: TON transactions with Elixir
 categories: elixir ton
 header:
