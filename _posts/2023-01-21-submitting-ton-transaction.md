@@ -6,7 +6,7 @@ categories: elixir ton
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /images/2023-01-08-ton.jpeg
+  overlay_image: /images/2023-01-22-ton.jpeg
 ---
 
 In [my previous post](/elixir/blockchain/ton/) I wrote my thoughts on the TON blockchain and briefly mentioned a project I wrote for the Elixir programming language to interact with TON. In this post, I'll give a step by step instructions for submitting transactions using my library.
