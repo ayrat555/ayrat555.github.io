@@ -108,7 +108,7 @@ Before sending a transaction, we have to know the wallet's `seqno`. The value us
 
 Since our wallet is brand new (at least at the time of writing this post), it didn't send any transactions. So `seqno` is 0. In the future, to know `seqno` we will have to call TON HTTP API's `/runGetMethod` with parameters
 
-```json
+```
 {
   address: 'EQD2_2SN1-PCRRfHVbmM5Q0vf680bZAnIGR7EIQsMzQdHG4d',
   method: 'seqno',
