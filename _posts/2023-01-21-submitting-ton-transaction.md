@@ -110,8 +110,8 @@ Since our wallet is brand new (at least at the time of writing this post), it di
 
 ```json
 {
-  address: "EQD2_2SN1-PCRRfHVbmM5Q0vf680bZAnIGR7EIQsMzQdHG4d", // address
-  method: "seqno",
+  address: 'EQD2_2SN1-PCRRfHVbmM5Q0vf680bZAnIGR7EIQsMzQdHG4d',
+  method: 'seqno',
   stack: []
 }
 ```
