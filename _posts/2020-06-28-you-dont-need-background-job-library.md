@@ -10,6 +10,9 @@ redirect_from:
 
 ![img](/images/2020-06-28-iceberg.jpg)
 
+Update. A lot of things changed after I wrote this post. Here's a background jobs library for rust - [fang](https://github.com/ayrat555/fang)
+{: .notice--info}
+
 From the beginning of this year, I've been writing feed reader as a Telegram bot in Rust. Its functionality is simple: it allows a user to subscribe to RSS, Atom or JSON feeds and sends new feed items.
 
 I released it last month and I'm happy to report that it acquired some users and it functions perfectly. It's deployed at [https://t.me/el_monitorro_bot](https://t.me/el_monitorro_bot). Its code is available on Github - [el_monitorro](https://github.com/ayrat555/el_monitorro). Hopefully, I'll write a post about in the near future.
