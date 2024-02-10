@@ -6,7 +6,7 @@ categories: blockchain ton
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /images/2023-01-08-ton.jpeg
+  overlay_image: /images/2024-02-10-bounty.png
 ---
 
 In my line of work, I engage with various blockchains, including [TON](https://ton.org/). Working with the TON blockchain has been particularly enjoyable for me. On my blog, you'll find several posts about it:
