@@ -1,15 +1,17 @@
 ---
-title: Bugs to Riches: My TON Bug Bounty Story
-date: 2024-02-12
-summary:
-categories: blockchain ton
+title: Bugs to Riches - My TON Bug Bounty Story
+date: 2024-02-10
+summary: TON Bug Bounty Story
+categories: ton
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
   overlay_image: /images/2024-02-10-bounty.png
 ---
 
-In my line of work, I engage with various blockchains, including [TON](https://ton.org/). Working with the TON blockchain has been particularly enjoyable for me. On my blog, you'll find several posts about it:
+In my line of work, I engage with various blockchains, including [TON](https://ton.org/). Working with the TON blockchain has been particularly enjoyable for me.
+
+On my blog, you'll find several posts about it:
 
 - [TON](https://www.badykov.com/elixir/blockchain/ton/): This post reflects my general thoughts on TON, which became quite popular and even got translated into [Chinese](https://mp.weixin.qq.com/s/PfwLnv9Kcl8N8xTvMChInw).
 - [Deploying a simple Telegram Open Network smart contract](https://www.badykov.com/ton/deploying-simple-ton-smart-contract/]): Here, I share a postmortem of my participation in the TON hackathon in 2019.
