@@ -1,7 +1,7 @@
 ---
-title: TON
+title: Bugs to Riches: My TON Bug Bounty Story
 date: 2024-02-12
-summary: My thoughts on Ton and TON SDK for Elixir
+summary:
 categories: blockchain ton
 header:
   overlay_color: "#000"
@@ -9,34 +9,36 @@ header:
   overlay_image: /images/2023-01-08-ton.jpeg
 ---
 
-Due to the nature of my work, I work with different blockchains. One of these blockchains is [TON](https://ton.org/). I really enjoyed working with the TON blockchain. You can find several posts about it on my blog:
+In my line of work, I engage with various blockchains, including [TON](https://ton.org/). Working with the TON blockchain has been particularly enjoyable for me. On my blog, you'll find several posts about it:
 
-- [TON](https://www.badykov.com/elixir/blockchain/ton/) - a general thoughts about ton. the post got so popular it got translated to [the chinese language](https://mp.weixin.qq.com/s/PfwLnv9Kcl8N8xTvMChInw)
-- [Deploying a simple Telegram Open Network smart contract](https://www.badykov.com/ton/deploying-simple-ton-smart-contract/]) - Postmortem of my participation in the ton hackathon in 2019.
-- [Submitting transactions in TON with Elixir](https://www.badykov.com/elixir/ton/submitting-ton-transaction/) - step by step guide how to submit transactions with the [ton](https://github.com/ayrat555/ton) elixir library
+- [TON](https://www.badykov.com/elixir/blockchain/ton/): This post reflects my general thoughts on TON, which became quite popular and even got translated into [Chinese](https://mp.weixin.qq.com/s/PfwLnv9Kcl8N8xTvMChInw).
+- [Deploying a simple Telegram Open Network smart contract](https://www.badykov.com/ton/deploying-simple-ton-smart-contract/]): Here, I share a postmortem of my participation in the TON hackathon in 2019.
+- [Submitting transactions in TON with Elixir](https://www.badykov.com/elixir/ton/submitting-ton-transaction/): This post provides a step-by-step guide on submitting transactions using the [TON Elixir library](https://github.com/ayrat555/ton).
 
-The last post in this list gives an intro to the elixir library that I wrote for interacting with the ton blockchain - [ton](https://github.com/ayrat555/ton). It took me a couple of months to write and test it porting the official library written in another language.
+The last post in this list introduces the Elixir library I developed for interacting with the TON blockchain - [ton](https://github.com/ayrat555/ton). It took me a couple of months to write and test, as I had to port the functionality from the official library written in another language.
 
-In this post I'll share a short story how I got a bug bounty for the issue I discovered in the ton software that we use in our production system.
+In this post, I'll share a short story about how I received a bug bounty for uncovering an issue in the TON software used in our production system.
 
 ## Ton Problems
 
-As I said earlier my responsibilites at work include working with different blockchains, integrating them to our system, making sure that transactions are getting processed correctly.
+As mentioned earlier, my job involves handling various blockchains, integrating them into our system, and ensuring smooth transaction processing.
 
-Our ton integration has been working fine without any major issues until recently. Recently we had two issues related to the TON blockchain. [The first issue](https://telegra.ph/7-Dec-2023-12-07) was a big problem related to the increase in the number of transactions which caused the blockchain to stop accepting new transactions. The second problem had a smaller overall impact but actually got a bug bounty for the ton foundation.
+Our integration with TON had been running smoothly without any significant issues until recently. However, we encountered two problems related to the TON blockchain. [The first issue](https://telegra.ph/7-Dec-2023-12-07) was a significant challenge caused by a surge in transaction volume, leading to the blockchain's inability to accept new transactions. The second issue, although less impactful overall, was trickier to debug and resolve. It resulted in a bug bounty from the TON foundation.
 
-Now let's describe the problem.
+Now, let's delve into the specifics of the problem.
 
 ## Bug bounty problem
 
-A user complained to our customer support team that his deposit didn't appear on our system. Initially I thought the issue is on our applicate logic side, maybe it's an edge case that we didn't consider. Uplon further investigation, I discovered the API of [the service](https://github.com/toncenter/ton-indexer) that we deployed to synchronize the blockchain data was missing the user's transaction.
+A user reached out to our customer support team regarding a missing deposit in our system. Initially, I suspected an issue with our application logic, perhaps an overlooked edge case. However, upon further investigation, I discovered that the API of [the service](https://github.com/toncenter/ton-indexer) we deployed to synchronize blockchain data was not registering the user's transaction.
 
-Then I created an [issue](https://github.com/toncenter/ton-indexer/issues/44) in the [ton-indexer's](https://github.com/toncenter/ton-indexer) repo. And contracted one of the developers of this project since I had his contract from the previous issues/questions about his project. He pointed out that [the offical instance of the ton-indexer](https://toncenter.com/api/index/) has the missing transaction in its response. Comparing the responses from our instance and the official one , I found that 5 transactions are different.
+Subsequently, I opened an [issue](https://github.com/toncenter/ton-indexer/issues/44) on the [ton-indexer's](https://github.com/toncenter/ton-indexer) repository and contacted one of the developers of the project, whose contact information I had from previous interactions regarding the project. He pointed out that [the official instance of the ton-indexer](https://toncenter.com/api/index/) displayed the missing transaction in its response. By comparing the responses from our instance and the official one, I identified the difference in five transactions.
 
-And finally theh developer of the indexer service found the problem in the pagination and [fixed it](https://github.com/toncenter/ton-indexer/pull/45)
+Finally, the developer of the indexer service identified and resolved the issue with pagination -  [the fix](https://github.com/toncenter/ton-indexer/pull/45).
 
 ## Conclustion
 
-For the discovery, report I received 200 tons (~400$ at the time of writing this post).  It was very unexpected and at the same time fullfilling coincednce. It seems my work in my company not only beneficial to the company but the ton commninuty as well.
+I received a bug bounty of 200 tons (~$400 at the time of writing) for the discovery from the ton foundation. It was a pleasantly unexpected and fulfilling coincidence. It seems my work not only benefits my company but also the TON community.
 
-Thank you for reading this post. As a bonus, I'm sharing here my hobby creating nfts which combines my love to drawing and blockchain. [Collections I created on the ton blockchain so far](https://getgems.io/user/EQADLRBbbfImjN1yaN6fqWPwkO3sN2fCdg8BD_g8LW_8Dj-G#collections)
+I want to give a special thanks to Valeria Shamanova for helping finding this issue; the bounty was split with her.
+
+Thank you for reading this post. As a bonus, I'm sharing my hobby of creating NFTs, which combines my love for drawing and blockchain. Here are the collections I've created on the TON blockchain so far. [Collections I created on the ton blockchain so far](https://getgems.io/user/EQADLRBbbfImjN1yaN6fqWPwkO3sN2fCdg8BD_g8LW_8Dj-G#collections)
