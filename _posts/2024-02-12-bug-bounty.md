@@ -13,9 +13,9 @@ In my line of work, I engage with various blockchains, including [TON](https://t
 
 On my blog, you'll find several posts about it:
 
-- [TON](https://www.badykov.com/elixir/blockchain/ton/): This post reflects my general thoughts on TON, which became quite popular and even got translated into [Chinese](https://mp.weixin.qq.com/s/PfwLnv9Kcl8N8xTvMChInw).
-- [Deploying a simple Telegram Open Network smart contract](https://www.badykov.com/ton/deploying-simple-ton-smart-contract/]): Here, I share a postmortem of my participation in the TON hackathon in 2019.
-- [Submitting transactions in TON with Elixir](https://www.badykov.com/elixir/ton/submitting-ton-transaction/): This post provides a step-by-step guide on submitting transactions using the [TON Elixir library](https://github.com/ayrat555/ton).
+- [TON](/elixir/blockchain/ton/): This post reflects my general thoughts on TON, which became quite popular and even got translated into [Chinese](https://mp.weixin.qq.com/s/PfwLnv9Kcl8N8xTvMChInw).
+- [Deploying a simple Telegram Open Network smart contract](/ton/deploying-simple-ton-smart-contract/): Here, I share a postmortem of my participation in the TON hackathon in 2019.
+- [Submitting transactions in TON with Elixir](/elixir/ton/submitting-ton-transaction/): This post provides a step-by-step guide on submitting transactions using the [TON Elixir library](https://github.com/ayrat555/ton).
 
 The last post in this list introduces the Elixir library I developed for interacting with the TON blockchain - [ton](https://github.com/ayrat555/ton). It took me a couple of months to write and test, as I had to port the functionality from the official library written in another language.
 
