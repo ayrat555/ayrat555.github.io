@@ -1,5 +1,5 @@
 ---
-title: Timeless Solitaire Collection - My TON Bug Bounty Story
+title: Timeless Solitaire Collection
 date: 2025-10-14
 summary: A Calm Hobby Project About Classic Games
 categories: hobby
